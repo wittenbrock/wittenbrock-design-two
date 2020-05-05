@@ -1,1 +1,1 @@
-import 'tailwindcss/dist/base.css'
+import "tailwindcss/dist/base.css";
