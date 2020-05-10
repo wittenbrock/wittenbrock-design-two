@@ -9,11 +9,8 @@ import {
   bounceInTop,
 } from './style';
 
-const wittenbrockDesignLogo = () => (
-  <figure
-    class="wittenbrock-logo-container"
-    tw="sm:h-32 md:h-40 xl:h-48 sm:w-32 md:w-40 xl:w-48"
-  >
+const WittenbrockLogoAnimated = () => (
+  <figure tw="sm:h-32 md:h-40 xl:h-48 sm:w-32 md:w-40 xl:w-48">
     <svg
       tw="h-full w-full"
       xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +18,7 @@ const wittenbrockDesignLogo = () => (
     >
       <title>Wittenbrock Design</title>
       <g
-        css={(tw`opacity-0 text-purple-darker fill-current`, slideInFwdCenter)}
+        css={[tw`opacity-0 text-purple-darker fill-current`, slideInFwdCenter]}
       >
         <path d="M151.437,145.677h-18.5v-98h18.5Z" />
         <path d="M265.555,66.177v21.25h28v18.5h-28v21.25h28v18.5h-46.5v-98h46.5v18.5Z" />
@@ -40,26 +37,26 @@ const wittenbrockDesignLogo = () => (
         <path d="M244.641,303.078a30.646,30.646,0,0,0,30.611,30.612h.238V312.334H258.533V293.992h35.3v58.04H275.252a48.954,48.954,0,0,1,0-97.908h18.581v18.343H275.252A30.646,30.646,0,0,0,244.641,303.078Z" />
       </g>
       <circle
-        css={
-          ((tw = `text-purple-darker stroke-current`),
+        css={[
+          tw`text-purple-darker stroke-current`,
           logoStrokeSize,
-          bounceInTop)
-        }
+          bounceInTop,
+        ]}
         cx="200"
         cy="200"
         r="39.625"
       />
       <polyline
-        css={
-          (tw`text-purple-darker stroke-current`,
+        css={[
+          tw`text-purple-darker stroke-current`,
           logoSquareBorder,
           logoStrokeSize,
-          draw)
-        }
+          draw,
+        ]}
         points="8.138 20.204 382.613 20.204 382.613 379.796 17.387 379.796 17.387 20.212"
       />
     </svg>
   </figure>
 );
 
-export default wittenbrockDesignLogo;
+export default WittenbrockDesignLogoAnimated;
