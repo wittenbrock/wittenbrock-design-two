@@ -2,6 +2,7 @@ import React from 'react';
 import tw from 'twin.macro';
 
 import {
+  fillNone,
   logoStrokeSize,
   logoSquareBorder,
   draw,
@@ -10,15 +11,23 @@ import {
 } from './style';
 
 const WittenbrockLogoAnimated = () => (
-  <figure tw="sm:h-32 md:h-40 xl:h-48 sm:w-32 md:w-40 xl:w-48">
+  <figure
+    css={tw`h-32 md:h-40 xl:h-48 w-32 md:w-40 xl:w-48 mb-32 md:mb-40 xl:mb-48`}
+  >
     <svg
-      tw="h-full w-full"
+      css={tw`h-full w-full`}
+      aria-hidden="true"
+      focusable="false"
+      role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 400 400"
     >
       <title>Wittenbrock Design</title>
       <g
-        css={[tw`opacity-0 text-purple-darker fill-current`, slideInFwdCenter]}
+        css={[
+          tw`opacity-0 text-purple-darker fill-current stroke-current`,
+          slideInFwdCenter,
+        ]}
       >
         <path d="M151.437,145.677h-18.5v-98h18.5Z" />
         <path d="M265.555,66.177v21.25h28v18.5h-28v21.25h28v18.5h-46.5v-98h46.5v18.5Z" />
@@ -41,6 +50,7 @@ const WittenbrockLogoAnimated = () => (
           tw`text-purple-darker stroke-current`,
           logoStrokeSize,
           bounceInTop,
+          fillNone,
         ]}
         cx="200"
         cy="200"
@@ -52,6 +62,7 @@ const WittenbrockLogoAnimated = () => (
           logoSquareBorder,
           logoStrokeSize,
           draw,
+          fillNone,
         ]}
         points="8.138 20.204 382.613 20.204 382.613 379.796 17.387 379.796 17.387 20.212"
       />
@@ -59,4 +70,4 @@ const WittenbrockLogoAnimated = () => (
   </figure>
 );
 
-export default WittenbrockDesignLogoAnimated;
+export default WittenbrockLogoAnimated;

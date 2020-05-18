@@ -1,6 +1,10 @@
 import { keyframes } from '@emotion/core';
 import { css } from '@emotion/core';
 
+export const fillNone = css`
+  fill: none;
+`;
+
 export const logoStrokeSize = css`
   stroke-miterlimit: 10;
   stroke-width: 18.5px;
