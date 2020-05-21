@@ -5,7 +5,7 @@ import tw from 'twin.macro';
 import StyledLink from './style';
 
 const ButtonDown = ({ scrollTo, hasBounceDown }) => (
-  <div css={[tw`flex justify-center`]}>
+  <div css={tw`flex justify-center`}>
     <StyledLink href={scrollTo} hasBounceDown={hasBounceDown}>
       <span css={tw`sr-only`}>View the next section.</span>
       <svg

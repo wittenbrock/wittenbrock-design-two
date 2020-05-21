@@ -11,7 +11,7 @@ const SectionOne = () => (
     <h1 css={tw`sr-only`}>Wittenbrock Design</h1>
     <div>
       <WittenbrockLogoAnimated />
-      <ButtonDown scrollTo={'#0'} hasBounceDown={true} />
+      <ButtonDown scrollTo={'#0'} hasBounceDown />
     </div>
   </section>
 );
