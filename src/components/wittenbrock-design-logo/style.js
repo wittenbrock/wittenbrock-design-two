@@ -1,5 +1,5 @@
 import { keyframes } from '@emotion/core';
-import { css } from '@emotion/core';
+import { css } from 'twin.macro';
 
 export const fillNone = css`
   fill: none;

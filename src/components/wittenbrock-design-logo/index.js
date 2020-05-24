@@ -11,11 +11,9 @@ import {
 } from './style';
 
 const WittenbrockLogoAnimated = () => (
-  <figure
-    css={tw`h-32 md:h-40 xl:h-48 w-32 md:w-40 xl:w-48 mb-32 md:mb-40 xl:mb-48`}
-  >
+  <figure tw="h-32 md:h-40 xl:h-48 w-32 md:w-40 xl:w-48 mb-32 md:mb-40 xl:mb-48">
     <svg
-      css={tw`h-full w-full`}
+      tw="h-full w-full"
       aria-hidden="true"
       focusable="false"
       role="img"

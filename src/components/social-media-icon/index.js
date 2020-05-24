@@ -33,7 +33,7 @@ const createSocialMediaIcon = specs => {
         jelloHorizontalOnHover,
       ]}
     >
-      <span css={tw`sr-only`}>{text}</span>
+      <span tw="sr-only">{text}</span>
       <img src={image} alt={imageAlt} aria-hidden="true" focusable="false" />
     </a>
   );
