@@ -1,7 +1,5 @@
 import { keyframes } from '@emotion/core';
-import { css } from '@emotion/core';
-import tw from 'twin.macro';
-import styled from '@emotion/styled/macro';
+import tw, { styled, css } from 'twin.macro';
 
 /*
  * Bounce-down was made by Brandon Gregory with some modifications by me
@@ -59,7 +57,7 @@ const bounceDown = css`
 `;
 
 const StyledLink = styled.a(({ hasBounceDown }) => [
-  tw`inline-block bg-orange p-2 no-underline rounded-full hover:bg-orange-darker hover:scale-110 hover:cursor-pointer active:bg-orange-darker`,
+  tw`inline-block bg-orange p-1 no-underline rounded-full hover:bg-orange-darker hover:scale-110 hover:cursor-pointer active:bg-orange-darker`,
   hasBounceDown && bounceDown,
 ]);
 
