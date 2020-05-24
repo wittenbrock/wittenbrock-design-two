@@ -6,14 +6,18 @@ module.exports = {
     },
     colors: {
       purple: {
-        darker: 'hsl(233, 14%, 13%)',
+        darker: '#1d1e26',
       },
       orange: {
-        default: 'hsl(11, 70%, 60%)',
-        darker: 'hsl(11, 70%, 50%)',
+        default: '#e06c52',
+        darker: '#d94726',
       },
-      white: 'hsl(0, 100%, 100%)',
-      black: 'hsl(0, 100%, 0%)',
+      white: '#fff',
+      black: '#000',
+      grey: {
+        lighter: '#e3e3e3',
+        default: '#544f4f',
+      },
     },
   },
 };
