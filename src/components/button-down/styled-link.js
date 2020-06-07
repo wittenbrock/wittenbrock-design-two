@@ -56,9 +56,39 @@ const bounceDown = css`
   opacity: 0;
 `;
 
-const StyledLink = styled.a(({ hasBounceDown }) => [
-  tw`inline-block bg-orange p-1 no-underline rounded-full hover:bg-orange-darker hover:scale-110 hover:cursor-pointer active:bg-orange-darker`,
+export const buttonStyles = [
+  tw`relative bg-orange no-underline appearance-none focus:outline-none hover:cursor-pointer`,
+
+  css`
+    &:active {
+      transform: translateY(0.2rem);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      border-radius: 9999px;
+      opacity: 0;
+      transform: scale(0.2);
+      background-color: #d94726;
+      height: 100%;
+      width: 100%;
+      transition: all 0.25s ease-out;
+    }
+
+    &:hover::after {
+      transform: scale(1);
+      opacity: 1;
+    }
+  `,
+];
+
+export const StyledLink = styled.a(({ hasBounceDown }) => [
+  tw`inline-block p-5 rounded-full`,
+  buttonStyles,
   hasBounceDown && bounceDown,
 ]);
-
-export default StyledLink;

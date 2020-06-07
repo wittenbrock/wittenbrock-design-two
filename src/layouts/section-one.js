@@ -2,7 +2,7 @@ import React from 'react';
 import tw from 'twin.macro';
 
 import WittenbrockLogoAnimated from '../components/wittenbrock-design-logo/index';
-import ButtonDown from '../components/button-down/index';
+import { ButtonDown } from '../components/button-down/button-down';
 
 const SectionOne = () => (
   <section
