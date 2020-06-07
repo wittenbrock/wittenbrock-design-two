@@ -40,6 +40,7 @@ const jelloHorizontalKeyframe = keyframes`
 `;
 
 const jelloHorizontalOnHover = css`
+  &:focus,
   &:hover {
     animation: ${jelloHorizontalKeyframe} 0.9s both;
   }

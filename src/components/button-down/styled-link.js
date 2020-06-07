@@ -57,11 +57,11 @@ const bounceDown = css`
 `;
 
 export const buttonStyles = [
-  tw`relative bg-orange no-underline appearance-none focus:outline-none hover:cursor-pointer`,
+  tw`relative bg-orange no-underline appearance-none focus:outline-none hover:cursor-pointer focus:bg-aqua`,
 
   css`
     &:active {
-      transform: translateY(0.2rem);
+      transform: scale(0.9);
     }
 
     &::after {
