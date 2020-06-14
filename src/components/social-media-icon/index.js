@@ -4,7 +4,7 @@ import tw from 'twin.macro';
 
 import LinkedinIcon from './linkedin-icon';
 import GitHubIcon from './github-icon';
-import jelloHorizontalOnHover from './style';
+import { pulsateBack } from '../button-down/styled-link';
 
 const linkedInSpecs = {
   url: `https://www.linkedin.com/in/william-wittenbrock/`,
@@ -17,7 +17,6 @@ const gitHubSpecs = {
   text: `Visit William's Github profile.`,
   icon: <GitHubIcon />,
 };
-console.log('github icon', gitHubSpecs.icon);
 
 // A function that returns a social media icon wrapped in HTML
 const createSocialMediaIcon = specs => {
@@ -28,8 +27,8 @@ const createSocialMediaIcon = specs => {
       target="_blank"
       rel="noopener noreferrer"
       css={[
-        tw`inline-block hover:cursor-pointer no-underline h-6 w-6 text-white focus:text-aqua focus:outline-none appearance-none`,
-        jelloHorizontalOnHover,
+        tw`inline-block hover:cursor-pointer no-underline h-6 w-6 text-white focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,
+        pulsateBack,
       ]}
     >
       <span tw="sr-only">{text}</span>

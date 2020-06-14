@@ -5,19 +5,32 @@ module.exports = {
       body: ['Noto Sans JP', 'sans-serif'],
     },
     colors: {
-      purple: {
-        darker: '#1d1e26',
+      transparent: 'transparent',
+      white: '#fff',
+      black: '#000',
+      grey: {
+        lighter: '#F1F5F8',
+        default: '#B8C2CC',
+        darker: '#606F7B',
       },
       orange: {
         default: '#e06c52',
         darker: '#d94726',
       },
-      white: '#fff',
-      black: '#000',
-      grey: {
-        lighter: '#e3e3e3',
-        default: '#544f4f',
+      blue: {
+        lighter: '#00c1e6',
+        default: '#37a5eb',
       },
+      indigo: {
+        default: '#6574CD',
+        darkest: '#1d1e26',
+      },
+    },
+    inset: {
+      '0': 0,
+      '6': '0.375rem',
+      '10': '0.625rem',
+      '1/2': '50%',
     },
   },
 };

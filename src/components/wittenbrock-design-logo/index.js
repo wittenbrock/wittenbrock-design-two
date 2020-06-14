@@ -23,7 +23,7 @@ const WittenbrockLogoAnimated = () => (
       <title>Wittenbrock Design</title>
       <g
         css={[
-          tw`opacity-0 text-purple-darker fill-current stroke-current`,
+          tw`opacity-0 text-indigo-darkest fill-current stroke-current`,
           slideInFwdCenter,
         ]}
       >
@@ -45,7 +45,7 @@ const WittenbrockLogoAnimated = () => (
       </g>
       <circle
         css={[
-          tw`text-purple-darker stroke-current`,
+          tw`text-indigo-darkest stroke-current`,
           logoStrokeSize,
           bounceInTop,
           fillNone,
@@ -56,7 +56,7 @@ const WittenbrockLogoAnimated = () => (
       />
       <polyline
         css={[
-          tw`text-purple-darker stroke-current`,
+          tw`text-indigo-darkest stroke-current`,
           logoSquareBorder,
           logoStrokeSize,
           draw,
