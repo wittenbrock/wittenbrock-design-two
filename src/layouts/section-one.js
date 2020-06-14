@@ -9,7 +9,7 @@ const SectionOne = () => (
     <h1 tw="sr-only">Wittenbrock Design</h1>
     <div>
       <WittenbrockLogoAnimated />
-      <ButtonDown scrollTo={'#0'} hasBounceDown />
+      <ButtonDown scrollTo={'#introduction'} hasBounceDown />
     </div>
   </section>
 );

@@ -22,7 +22,7 @@ const SectionTwo = () => (
       </p>
       <p css={tw`font-body text-lg lg:text-xl`}>I love what I do.</p>
     </header>
-    <ButtonDown scrollTo={'#1'} />
+    <ButtonDown scrollTo={'#contact'} />
   </section>
 );
 
