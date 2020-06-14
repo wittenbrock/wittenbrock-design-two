@@ -6,7 +6,7 @@ import { ButtonDown } from '../components/button-down/button-down';
 const SectionTwo = () => (
   <section
     id="introduction"
-    css={tw`w-full min-h-screen bg-purple-darker flex flex-col justify-center items-center`}
+    css={tw`w-full min-h-screen py-24 xl:py-32 bg-indigo-darkest flex flex-col justify-center items-center`}
   >
     <header css={tw`text-center text-white mb-32 md:mb-40 xl:mb-48`}>
       <h2

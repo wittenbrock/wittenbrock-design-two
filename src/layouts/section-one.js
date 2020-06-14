@@ -1,14 +1,12 @@
 import React from 'react';
-import tw from 'twin.macro';
+import 'twin.macro';
 
 import WittenbrockLogoAnimated from '../components/wittenbrock-design-logo/index';
 import { ButtonDown } from '../components/button-down/button-down';
 
 const SectionOne = () => (
-  <section
-    css={tw`w-full min-h-screen flex flex-col justify-center items-center`}
-  >
-    <h1 css={tw`sr-only`}>Wittenbrock Design</h1>
+  <section tw="w-full min-h-screen py-24 xl:py-32 flex flex-col justify-center items-center">
+    <h1 tw="sr-only">Wittenbrock Design</h1>
     <div>
       <WittenbrockLogoAnimated />
       <ButtonDown scrollTo={'#0'} hasBounceDown />
