@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import tw, { css } from 'twin.macro';
+import 'twin.macro';
 
 import { StyledLink } from './styled-link';
 import chevronDownSvg from '../../images/cheveron-down.svg';
-
-export const translate50 = css`
-  transform: translate(-50%, -50%);
-`;
 
 export const ButtonDown = ({ scrollTo, hasBounceDown }) => (
   <div tw="flex justify-center">
@@ -21,7 +17,7 @@ export const ButtonDown = ({ scrollTo, hasBounceDown }) => (
         src={chevronDownSvg}
         alt="Chevron down"
         aria-hidden="true"
-        css={[tw`h-6 w-6 absolute z-20 block top-1/2 left-1/2`, translate50]}
+        tw="h-6 w-6 relative z-20 block"
       />
     </StyledLink>
   </div>

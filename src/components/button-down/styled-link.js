@@ -33,6 +33,7 @@ const bounceDownKeyframe = keyframes`
  * w: http://animista.net, t: @cssanimista
  *
  * focus-in-expand
+ * animation pulsate-bck
  */
 
 const focusInExpandKeyframe = keyframes`
@@ -50,20 +51,37 @@ const focusInExpandKeyframe = keyframes`
 
 const bounceDown = css`
   animation: ${focusInExpandKeyframe} 0.8s 3.65s
-      cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) 1 forwards,
     ${bounceDownKeyframe} 2s 4.7s ease 1;
   transform-origin: bottom;
   opacity: 0;
 `;
 
+const pulsateBackKeyframe = keyframes`
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+`;
+
+export const pulsateBack = css`
+  &:active,
+  &:focus {
+    animation: ${pulsateBackKeyframe} 0.3s ease-in-out both;
+  }
+`;
+
 export const buttonStyles = [
-  tw`relative bg-orange no-underline appearance-none focus:outline-none hover:cursor-pointer focus:bg-aqua`,
+  tw`relative bg-orange no-underline appearance-none focus:outline-none hover:cursor-pointer focus:bg-blue-lighter`,
 
   css`
-    &:active {
-      transform: scale(0.9);
-    }
-
     &::after {
       content: '';
       display: block;
@@ -88,7 +106,7 @@ export const buttonStyles = [
 ];
 
 export const StyledLink = styled.a(({ hasBounceDown }) => [
-  tw`inline-block p-5 rounded-full`,
+  tw`inline-block p-1 xl:p-2 rounded-full`,
+  hasBounceDown ? bounceDown : pulsateBack,
   buttonStyles,
-  hasBounceDown && bounceDown,
 ]);
