@@ -34,7 +34,7 @@ const netlifyEncode = data => {
 };
 
 // Contact form component
-export default () => {
+const ContactForm = () => {
   return (
     <Formik
       initialValues={{
@@ -67,7 +67,7 @@ export default () => {
           .finally(() => actions.setSubmitting(false));
       }}
     >
-      {props => (
+      {({isValid, dirty}) => (
         <StyledDiv>
           <Form
             name="contact-demo"
@@ -97,10 +97,12 @@ export default () => {
               placeholder="Message"
               rows="5"
             />
-            <SubmitButton disabled={!(props.isValid && props.dirty)} />
+            <SubmitButton disabled={!(isValid && dirty)} />
           </Form>
         </StyledDiv>
       )}
     </Formik>
   );
 };
+
+export default ContactForm;

@@ -27,7 +27,7 @@ const fieldStyles = css`
 `;
 
 // Creates an input or textarea field with a label and error message
-export default ({ label, ...props }) => {
+const FormField = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   const { type } = props;
   return (
@@ -59,3 +59,5 @@ export default ({ label, ...props }) => {
     </p>
   );
 };
+
+export default FormField;

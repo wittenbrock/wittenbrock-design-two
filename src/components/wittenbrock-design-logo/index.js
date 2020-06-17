@@ -10,7 +10,7 @@ import {
   bounceInTop,
 } from './style';
 
-const WittenbrockLogoAnimated = () => (
+const WittenbrockDesignLogo = () => (
   <figure tw="h-32 md:h-40 xl:h-48 w-32 md:w-40 xl:w-48 mb-32 md:mb-40 xl:mb-48">
     <svg
       tw="h-full w-full"
@@ -68,4 +68,4 @@ const WittenbrockLogoAnimated = () => (
   </figure>
 );
 
-export default WittenbrockLogoAnimated;
+export default WittenbrockDesignLogo;

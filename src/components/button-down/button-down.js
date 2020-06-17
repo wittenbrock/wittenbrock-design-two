@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'twin.macro';
 
-import { StyledLink } from './styled-link';
+import StyledLink from './styled-link';
 import chevronDownSvg from '../../images/cheveron-down.svg';
 
-export const ButtonDown = ({ scrollTo, hasBounceDown }) => (
+const ButtonDown = ({ scrollTo, hasBounceDown }) => (
   <div tw="flex justify-center">
     <StyledLink
       href={scrollTo}
@@ -22,6 +22,8 @@ export const ButtonDown = ({ scrollTo, hasBounceDown }) => (
     </StyledLink>
   </div>
 );
+
+export default ButtonDown;
 
 ButtonDown.propTypes = {
   scrollTo: PropTypes.string,

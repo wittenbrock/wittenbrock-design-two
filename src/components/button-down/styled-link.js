@@ -110,3 +110,5 @@ export const StyledLink = styled.a(({ hasBounceDown }) => [
   hasBounceDown ? bounceDown : pulsateBack,
   buttonStyles,
 ]);
+
+export default StyledLink;

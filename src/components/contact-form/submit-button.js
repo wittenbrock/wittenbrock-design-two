@@ -10,7 +10,7 @@ const StyledButton = styled.button(({ disabled }) => [
   disabled ? tw`hover:cursor-not-allowed opacity-75` : buttonStyles,
 ]);
 
-export default props => (
+const SubmitButton = props => (
   <div tw="flex justify-center mt-3 lg:mt-0 xl:mt-6">
     <StyledButton type="submit" {...props}>
       <span tw="sr-only">Submit form</span>
@@ -24,3 +24,5 @@ export default props => (
     </StyledButton>
   </div>
 );
+
+export default SubmitButton;

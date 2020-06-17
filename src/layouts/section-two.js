@@ -1,7 +1,7 @@
 import React from 'react';
 import 'twin.macro';
 
-import { ButtonDown } from '../components/button-down/button-down';
+import ButtonDown from '../components/button-down/button-down';
 
 const SectionTwo = () => (
   <section
