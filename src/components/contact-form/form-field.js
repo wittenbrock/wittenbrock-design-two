@@ -23,7 +23,7 @@ export const pulsateBackGentle = css`
 `;
 
 const fieldStyles = css`
-  ${tw`bg-grey-lighter px-3 py-2 sm:py-3 w-full shadow-none placeholder-grey-darker rounded-none focus:bg-blue-lighter active:bg-blue-lighter focus:text-white active:text-white focus:placeholder-white active:placeholder-white appearance-none focus:outline-none`}
+  ${tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none placeholder-gray-darker rounded-none focus:bg-blue-lighter active:bg-blue-lighter focus:text-white active:text-white focus:placeholder-white active:placeholder-white appearance-none focus:outline-none`}
 `;
 
 // Creates an input or textarea field with a label and error message

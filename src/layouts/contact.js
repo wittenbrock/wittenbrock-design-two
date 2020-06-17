@@ -6,11 +6,11 @@ import ContactForm from '../components/contact-form/contact-form';
 
 const StyledDiv = styled.div(() => [
   tw`lg:flex flex-wrap`,
-  
+
   css`
     max-width: 90rem;
     margin: auto;
-  `
+  `,
 ]);
 
 const StyledHeader = styled.header(() => [

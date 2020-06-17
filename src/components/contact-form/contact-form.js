@@ -20,7 +20,7 @@ const formStyles = css`
   @media screen and (min-width: 640px) {
     height: 28rem;
   }
-  
+
   @media screen and (min-width: 1280px) {
     height: 32rem;
   }
