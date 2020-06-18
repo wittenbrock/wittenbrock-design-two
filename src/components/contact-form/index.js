@@ -67,7 +67,7 @@ const ContactForm = () => {
           .finally(() => actions.setSubmitting(false));
       }}
     >
-      {({isValid, dirty}) => (
+      {({ isValid, dirty }) => (
         <StyledDiv>
           <Form
             name="contact-demo"

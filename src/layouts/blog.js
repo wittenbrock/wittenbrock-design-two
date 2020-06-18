@@ -1,9 +1,9 @@
 import React from 'react';
 import 'twin.macro';
 
-import BlogCard from '../components/blog-card/blog-card';
+import BlogCard from '../components/blog-card';
 
-export default () => (
+const Blog = () => (
   <section tw="relative bg-gray pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-24 lg:px-8">
     <div tw="absolute inset-0">
       <div tw="bg-white h-1/3 sm:h-2/3"></div>
@@ -25,3 +25,5 @@ export default () => (
     </div>
   </section>
 );
+
+export default Blog;

@@ -2,7 +2,7 @@ import React from 'react';
 import 'twin.macro';
 
 import WittenbrockLogoAnimated from '../components/wittenbrock-design-logo/index';
-import ButtonDown from '../components/button-down/button-down';
+import ButtonDown from '../components/button-down/index';
 
 const SectionOne = () => (
   <section tw="w-full min-h-screen py-24 xl:py-32 flex flex-col justify-center items-center">

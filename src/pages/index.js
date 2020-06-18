@@ -1,10 +1,7 @@
 import React from 'react';
 
-import SEO from '../components/seo';
-import SectionOne from '../layouts/section-one';
-import SectionTwo from '../layouts/section-two';
-import Contact from '../layouts/contact';
-import Blog from '../layouts/blog';
+import { SEO } from '../components';
+import { SectionOne, SectionTwo, Blog, Contact } from '../layouts';
 
 const IndexPage = () => (
   <>
