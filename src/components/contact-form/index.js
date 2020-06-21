@@ -73,7 +73,7 @@ const ContactForm = () => {
             name="contact-demo"
             data-netlify={true}
             css={[
-              tw`bg-white w-full max-w-sm sm:max-w-md xl:max-w-lg px-10 pt-10 sm:px-12 sm:pt-12 xl:px-16 xl:pt-16 mx-4 mb-4 text-indigo-darkest text-sm lg:text-base`,
+              tw`bg-white w-full max-w-sm sm:max-w-md xl:max-w-lg px-10 pt-10 sm:px-12 sm:pt-12 xl:px-16 xl:pt-16 mb-4 text-indigo-darkest text-sm lg:text-base`,
               formStyles,
             ]}
           >

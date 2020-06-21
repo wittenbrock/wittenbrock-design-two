@@ -6,7 +6,7 @@ import ButtonDown from '../components/button-down/index';
 const SectionTwo = () => (
   <section
     id="introduction"
-    tw="w-full min-h-screen py-24 xl:py-32 bg-indigo-darkest flex flex-col justify-center items-center"
+    tw="w-full min-h-screen px-4 py-24 xl:py-32 bg-indigo-darkest flex flex-col justify-center items-center"
   >
     <header tw="text-center text-white mb-32 md:mb-40 xl:mb-48">
       <h2 tw="font-display font-bold text-3xl md:text-4xl xl:text-5xl mb-4 md:mb-8 xl:mb-12">
@@ -18,7 +18,7 @@ const SectionTwo = () => (
       </p>
       <p tw="font-body text-lg lg:text-xl">I love what I do.</p>
     </header>
-    <ButtonDown scrollTo={'#contact'} />
+    <ButtonDown scrollTo={'#blog'} />
   </section>
 );
 

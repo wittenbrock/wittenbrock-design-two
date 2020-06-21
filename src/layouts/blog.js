@@ -4,22 +4,24 @@ import 'twin.macro';
 import BlogCard from '../components/blog-card';
 
 const Blog = () => (
-  <section tw="relative bg-gray pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-24 lg:px-8">
-    <div tw="absolute inset-0">
-      <div tw="bg-white h-1/3 sm:h-2/3"></div>
-    </div>
-    <div tw="relative max-w-7xl mx-auto">
-      <div tw="text-center">
-        <h2 tw="text-3xl leading-9 tracking-tight font-extrabold text-gray-darker sm:text-4xl sm:leading-10">
+  <section
+    id="blog"
+    tw="bg-indigo-darkest py-24 xl:py-32 px-4 sm:px-6 lg:pt-24 lg:pb-24 lg:px-8"
+  >
+    <div tw="max-w-7xl mx-auto">
+      <header tw="text-center text-white mb-24 max-w-lg xl:max-w-2xl mx-auto">
+        <h2 tw="font-display font-bold text-3xl sm:text-4xl xl:text-5xl mb-2 sm:mb-3 xl:mb-4">
           From the blog
         </h2>
-        <p tw="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray sm:mt-4">
+        <p tw="font-body font-normal text-lg sm:text-xl xl:text-2xl">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero
           labore natus atque, ducimus sed.
         </p>
-      </div>
+      </header>
 
-      <div tw="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+      <div tw="grid gap-12 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+        <BlogCard />
+        <BlogCard />
         <BlogCard />
       </div>
     </div>
