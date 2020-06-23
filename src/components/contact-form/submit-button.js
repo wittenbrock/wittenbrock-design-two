@@ -2,12 +2,12 @@ import React from 'react';
 import tw, { styled } from 'twin.macro';
 
 import sendSvg from '../../images/send.svg';
-import { buttonStyles } from '../button-down/styled-link';
+import { buttonStyles, pulsateBack } from '../button-down/styled-link';
 
 const StyledButton = styled.button(({ disabled }) => [
   tw`bg-orange rounded-full py-2 px-16 xl:px-20 relative`,
 
-  disabled ? tw`hover:cursor-not-allowed opacity-75` : buttonStyles,
+  disabled ? tw`hover:cursor-not-allowed opacity-75` : buttonStyles, pulsateBack,
 ]);
 
 const SubmitButton = props => (
