@@ -23,13 +23,19 @@ export const pulsateBackGentle = css`
 `;
 
 const fieldStyles = css`
-  ${tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none placeholder-gray-darker rounded-none focus:bg-blue-lighter active:bg-blue-lighter focus:text-white active:text-white focus:placeholder-white active:placeholder-white appearance-none focus:outline-none`}
+  ${tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none placeholder-gray-darker rounded-none focus:bg-blue-lighter active:bg-blue-lighter focus:text-white active:text-white focus:placeholder-white active:placeholder-white appearance-none focus:outline-none border border-solid border-transparent`}
+`;
+
+const invalidStyles = css`
+  ${tw`bg-red-lightest placeholder-red border-red-darker`}
 `;
 
 // Creates an input or textarea field with a label and error message
 const FormField = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   const { type } = props;
+  const fieldValidationError = meta.touched && meta.error;
+
   return (
     <p tw="pb-6 sm:pb-8 relative">
       <label tw="sr-only" htmlFor={props.id || props.name}>
@@ -38,21 +44,21 @@ const FormField = ({ label, ...props }) => {
 
       {/* Create an input if type="text" or type="email" */}
       {(type === 'text' || type === 'email') && (
-        <input css={[fieldStyles, pulsateBackGentle]} {...field} {...props} />
+        <input css={[fieldStyles, pulsateBackGentle, fieldValidationError && invalidStyles]} {...field} {...props} />
       )}
 
       {/* Create a textarea if type="textarea" */}
       {type === 'textarea' && (
         <textarea
-          css={[tw`block`, fieldStyles, pulsateBackGentle]}
+          css={[tw`block`, fieldStyles, pulsateBackGentle, fieldValidationError && invalidStyles]}
           {...field}
           {...props}
         ></textarea>
       )}
 
       {/* Create an error message */}
-      {meta.touched && meta.error ? (
-        <div tw="absolute bottom-6 lg:bottom-10 text-xs lg:text-sm">
+      {fieldValidationError ? (
+        <div tw="absolute bottom-6 lg:bottom-10 text-xs lg:text-sm text-red">
           {meta.error}
         </div>
       ) : null}
