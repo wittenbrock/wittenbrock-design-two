@@ -1,14 +1,5 @@
 module.exports = {
   theme: {
-    extend: {
-      height: {
-        '1/3': '33.333333%',
-        '2/3': '66.666666%',
-      },
-      maxWidth: {
-        '7xl': '80rem',
-      },
-    },
     fontFamily: {
       display: ['Spartan', 'sans-serif'],
       body: ['Noto Sans JP', 'sans-serif'],
@@ -18,9 +9,10 @@ module.exports = {
       white: '#fff',
       black: '#000',
       gray: {
-        lighter: '#F1F5F8',
-        default: '#B8C2CC',
-        darker: '#606F7B',
+        lighter: '#E5E7EB',
+        default: '#9fa6b2',
+        dark: '#6b7280',
+        darker: '#4b5563',
       },
       orange: {
         default: '#e06c52',
@@ -34,6 +26,11 @@ module.exports = {
         default: '#6574CD',
         darkest: '#1d1e26',
       },
+      red: {
+        lightest: '#FED7D7',
+        default: '#E53E3E',
+        darker: '#C53030',
+      },
     },
     inset: {
       '0': '0',
@@ -42,4 +39,5 @@ module.exports = {
       '1/2': '50%',
     },
   },
+  plugins: [require('@tailwindcss/ui')],
 };
