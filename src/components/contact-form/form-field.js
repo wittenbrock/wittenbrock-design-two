@@ -23,11 +23,11 @@ export const pulsateBackGentle = css`
 `;
 
 const fieldStyles = css`
-  ${tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none placeholder-gray-darker rounded-none focus:bg-blue-lighter active:bg-blue-lighter focus:text-white active:text-white focus:placeholder-white active:placeholder-white appearance-none focus:outline-none border border-solid border-transparent`}
+  ${tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none placeholder-gray-darker rounded-none focus:bg-blue-lighter active:bg-blue-lighter focus:text-white active:text-white focus:placeholder-white active:placeholder-white appearance-none focus:outline-none`}
 `;
 
 const invalidStyles = css`
-  ${tw`bg-red-lightest placeholder-red border-red-darker`}
+  ${tw`bg-red-lightest placeholder-red`}
 `;
 
 // Creates an input or textarea field with a label and error message
@@ -44,13 +44,26 @@ const FormField = ({ label, ...props }) => {
 
       {/* Create an input if type="text" or type="email" */}
       {(type === 'text' || type === 'email') && (
-        <input css={[fieldStyles, pulsateBackGentle, fieldValidationError && invalidStyles]} {...field} {...props} />
+        <input
+          css={[
+            fieldStyles,
+            pulsateBackGentle,
+            fieldValidationError && invalidStyles,
+          ]}
+          {...field}
+          {...props}
+        />
       )}
 
       {/* Create a textarea if type="textarea" */}
       {type === 'textarea' && (
         <textarea
-          css={[tw`block`, fieldStyles, pulsateBackGentle, fieldValidationError && invalidStyles]}
+          css={[
+            tw`block`,
+            fieldStyles,
+            pulsateBackGentle,
+            fieldValidationError && invalidStyles,
+          ]}
           {...field}
           {...props}
         ></textarea>
