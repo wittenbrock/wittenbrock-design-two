@@ -102,6 +102,10 @@ export const buttonStyles = [
       transform: scale(1);
       opacity: 1;
     }
+
+    &:active::after {
+      background-color: #00c1e6;
+    }
   `,
 ];
 

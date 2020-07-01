@@ -1,58 +1,71 @@
 import React from 'react';
-import 'twin.macro';
+import tw, { styled } from 'twin.macro';
+
+import { pulsateBackGentle } from '../contact-form/form-field';
+
+const StyledLink = styled.a(() => [
+  tw`block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer`,
+  pulsateBackGentle,
+]);
+
+const StyledSpan = styled.span`
+  position: relative;
+  z-index: 20;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.9em;
+    right: 0;
+    height: 0.4em;
+    z-index: 10;
+    background-color: rgba(101, 125, 225, 0.4);
+    transition: all .25s cubic-bezier(.694,.048,.335,1);
+    width: 0;
+  }
+
+  ${StyledLink}:hover &::before {
+    width: 100%;
+    left: 0;
+  }
+
+`;
 
 const BlogCard = () => (
-  <div tw="flex flex-col rounded-lg shadow-lg overflow-hidden">
-    <div tw="flex-shrink-0">
-      <img
-        tw="h-48 w-full object-cover"
-        src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-        alt=""
-      />
-    </div>
-    <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
-      <div tw="flex-1">
-        <p tw="text-sm leading-5 font-medium text-indigo">
-          <a href="/" tw="hover:underline">
-            Blog
-          </a>
-        </p>
-        <a href="/" tw="block">
-          <h3 tw="mt-2 text-xl leading-7 font-semibold text-gray">
-            Boost your conversion rate
+  <StyledLink
+    aria-label="Boost your conversion rate"
+    href="/"
+  >
+    <div tw="flex flex-col overflow-hidden">
+      <div tw="flex-shrink-0">
+        <img
+          tw="h-48 w-full object-cover"
+          src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+          alt=""
+        />
+      </div>
+      <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
+        <div tw="flex-1">
+          <p tw="text-sm leading-5 font-medium text-indigo">Blog</p>
+          <h3 tw="text-indigo-darkest font-display mt-2 text-xl leading-7 font-semibold">
+            <StyledSpan>Boost your conversion rate</StyledSpan>
           </h3>
-          <p tw="mt-3 text-base leading-6 text-gray">
+          <p tw="font-body font-light text-gray-dark mt-3 text-base leading-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
             accusantium praesentium eius, ut atque fuga culpa, similique sequi
             cum eos quis dolorum.
           </p>
-        </a>
-      </div>
-      <div tw="mt-6 flex items-center">
-        <div tw="flex-shrink-0">
-          <a href="/">
-            <img
-              tw="h-10 w-10 rounded-full"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
-            />
-          </a>
         </div>
-        <div tw="ml-3">
-          <p tw="text-sm leading-5 font-medium text-gray">
-            <a href="/" tw="hover:underline">
-              Roel Aufderhar
-            </a>
-          </p>
-          <div tw="flex text-sm leading-5 text-gray">
-            <time datetime="2020-03-16">Mar 16, 2020</time>
+        <div tw="mt-6 flex items-center">
+          <p tw="flex text-sm leading-5 text-gray-dark">
+            <time datetime="2020-03-16">March 16, 2020</time>
             <span tw="mx-1">&middot;</span>
             <span>6 min read</span>
-          </div>
+          </p>
         </div>
       </div>
     </div>
-  </div>
+  </StyledLink>
 );
 
 export default BlogCard;
