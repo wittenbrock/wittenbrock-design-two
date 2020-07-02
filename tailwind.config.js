@@ -5,6 +5,7 @@ module.exports = {
       body: ['Noto Sans JP', 'sans-serif'],
     },
     colors: {
+      inherit: 'inherit',
       transparent: 'transparent',
       white: '#fff',
       black: '#000',

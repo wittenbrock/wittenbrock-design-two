@@ -22,12 +22,41 @@ export const pulsateBackGentle = css`
   }
 `;
 
-const fieldStyles = css`
-  ${tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none placeholder-gray-darker rounded-none focus:bg-blue-lighter active:bg-blue-lighter focus:text-white active:text-white focus:placeholder-white active:placeholder-white appearance-none focus:outline-none`}
-`;
+const fieldStyles = [
+  tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none rounded-none appearance-none focus:outline-none`,
+  
+  css`
+    ::placeholder {
+      color: #4b5563;
+    }
+
+    &:hover {
+      color: #6574CD;
+      ::placeholder {
+        color: inherit;
+      }
+    } 
+
+    &:focus,
+    &:active {
+      color: #fff;
+      background-color: #00c1e6;
+      ::placeholder {
+        color: #fff;
+      }
+    }
+  `
+];
 
 const invalidStyles = css`
-  ${tw`bg-red-lightest placeholder-red`}
+  background-color: #FED7D7;
+  ::placeholder {
+    color: #C53030;
+  }
+
+  &:hover {
+    color: #C53030;
+  }
 `;
 
 // Creates an input or textarea field with a label and error message
