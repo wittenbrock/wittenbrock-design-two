@@ -1,8 +1,9 @@
 module.exports = {
   theme: {
     fontFamily: {
-      display: ['Spartan', 'sans-serif'],
-      body: ['Noto Sans JP', 'sans-serif'],
+      display: ['League Spartan', 'sans-serif'],
+      'body-title': ['Sailec Medium', 'sans-serif'],
+      body: ['Sailec Regular', 'sans-serif'],
     },
     colors: {
       inherit: 'inherit',

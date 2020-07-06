@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Sailec Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sailec Regular'), local('Sailec-Regular'),
+    url('../fonts/Sailec-Regular.woff2') format('woff2'),
+    url('../fonts/Sailec-Regular.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Sailec Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Sailec Medium'), local('Sailec-Medium'),
+    url('../fonts/Sailec-Medium.woff2') format('woff2'),
+    url('../fonts/Sailec-Medium.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  src: local('League Spartan Bold'), local('LeagueSpartan-Bold'),
+    url('../fonts/leaguespartan-bold.woff2') format('woff2'),
+    url('../fonts/leaguespartan-bold.woff') format('woff');
+}
+
+html {
+  background-color: #1d1e26;
+  font-size: 100%;
+  font-family: 'Sailec Regular', sans-serif;
+  font-weight: 400;
+  height: 100%;
+}
