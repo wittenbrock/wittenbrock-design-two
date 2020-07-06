@@ -6,7 +6,7 @@ import BlogCard from '../components/blog-card';
 const Blog = () => (
   <section
     id="blog"
-    tw="bg-indigo-darkest py-24 xl:py-32 px-4 sm:px-6 lg:pt-24 lg:pb-24 lg:px-8"
+    tw="py-24 xl:py-32 px-4 sm:px-6 lg:pt-24 lg:pb-24 lg:px-8"
   >
     <div tw="max-w-7xl mx-auto">
       <header tw="text-center text-white mb-24 max-w-lg xl:max-w-2xl mx-auto">

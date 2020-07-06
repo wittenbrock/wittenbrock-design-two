@@ -24,7 +24,7 @@ const StyledHeader = styled.header(() => [
 const Contact = () => (
   <section
     id="contact"
-    tw="w-full bg-indigo-darkest px-4 pt-24 xl:pt-32 sm:pb-24 xl:pb-32"
+    tw="w-full px-4 pt-24 xl:pt-32 sm:pb-24 xl:pb-32"
   >
     <StyledDiv>
       <StyledHeader>
