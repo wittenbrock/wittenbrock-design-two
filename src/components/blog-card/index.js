@@ -20,7 +20,7 @@ const StyledSpan = styled.span`
     height: 0.4em;
     z-index: 10;
     background-color: rgba(101, 125, 225, 0.4);
-    transition: all .25s cubic-bezier(.694,.048,.335,1);
+    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
     width: 0;
   }
 
@@ -28,14 +28,10 @@ const StyledSpan = styled.span`
     width: 100%;
     left: 0;
   }
-
 `;
 
 const BlogCard = () => (
-  <StyledLink
-    aria-label="Boost your conversion rate"
-    href="/"
-  >
+  <StyledLink aria-label="Boost your conversion rate" href="/">
     <div tw="flex flex-col overflow-hidden">
       <div tw="flex-shrink-0">
         <img
@@ -46,8 +42,8 @@ const BlogCard = () => (
       </div>
       <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
         <div tw="flex-1">
-          <p tw="text-sm leading-5 font-medium text-indigo">Blog</p>
-          <h3 tw="text-indigo-darkest font-display mt-2 text-xl leading-7 font-semibold">
+          <p tw="font-body font-medium text-sm leading-5 text-indigo">Blog</p>
+          <h3 tw="text-indigo-darkest font-body-title mt-2 text-xl leading-7 font-semibold">
             <StyledSpan>Boost your conversion rate</StyledSpan>
           </h3>
           <p tw="font-body font-light text-gray-dark mt-3 text-base leading-6">
@@ -57,7 +53,7 @@ const BlogCard = () => (
           </p>
         </div>
         <div tw="mt-6 flex items-center">
-          <p tw="flex text-sm leading-5 text-gray-dark">
+          <p tw="font-body font-normal flex text-sm leading-5 text-gray-dark">
             <time datetime="2020-03-16">March 16, 2020</time>
             <span tw="mx-1">&middot;</span>
             <span>6 min read</span>

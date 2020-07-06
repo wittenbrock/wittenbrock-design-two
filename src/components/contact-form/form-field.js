@@ -23,19 +23,19 @@ export const pulsateBackGentle = css`
 `;
 
 const fieldStyles = [
-  tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none rounded-none appearance-none focus:outline-none`,
-  
+  tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none rounded-none appearance-none focus:outline-none font-body font-normal`,
+
   css`
     ::placeholder {
       color: #4b5563;
     }
 
     &:hover {
-      color: #6574CD;
+      color: #6574cd;
       ::placeholder {
         color: inherit;
       }
-    } 
+    }
 
     &:focus,
     &:active {
@@ -45,17 +45,17 @@ const fieldStyles = [
         color: #fff;
       }
     }
-  `
+  `,
 ];
 
 const invalidStyles = css`
-  background-color: #FED7D7;
+  background-color: #fed7d7;
   ::placeholder {
-    color: #C53030;
+    color: #c53030;
   }
 
   &:hover {
-    color: #C53030;
+    color: #c53030;
   }
 `;
 
@@ -100,7 +100,7 @@ const FormField = ({ label, ...props }) => {
 
       {/* Create an error message */}
       {fieldValidationError ? (
-        <div tw="absolute bottom-6 lg:bottom-10 text-xs lg:text-sm text-red">
+        <div tw="absolute bottom-6 lg:bottom-10 text-xs lg:text-sm text-red font-body font-normal">
           {meta.error}
         </div>
       ) : null}
