@@ -1,5 +1,5 @@
 import { keyframes } from '@emotion/core';
-import tw, { styled, css } from 'twin.macro';
+import tw, { css } from 'twin.macro';
 
 /*
  * Bounce-down was made by Brandon Gregory with some modifications by me
@@ -49,7 +49,7 @@ const focusInExpandKeyframe = keyframes`
   }
 `;
 
-const bounceDown = css`
+export const bounceDown = css`
   animation: ${focusInExpandKeyframe} 0.8s 3.65s
       cubic-bezier(0.25, 0.46, 0.45, 0.94) 1 forwards,
     ${bounceDownKeyframe} 2s 4.7s ease 1;
@@ -108,11 +108,3 @@ export const buttonStyles = [
     }
   `,
 ];
-
-export const StyledLink = styled.a(({ hasBounceDown }) => [
-  tw`inline-block p-1 xl:p-2 rounded-full`,
-  hasBounceDown ? bounceDown : pulsateBack,
-  buttonStyles,
-]);
-
-export default StyledLink;

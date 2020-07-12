@@ -18,7 +18,7 @@ const SectionTwo = () => (
       </p>
       <p tw="font-body text-lg lg:text-xl">I love what I do.</p>
     </header>
-    <ButtonDown scrollTo={'#blog'} />
+    <ButtonDown to={'blog'} smooth={true} />
   </section>
 );
 

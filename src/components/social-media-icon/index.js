@@ -4,7 +4,7 @@ import tw from 'twin.macro';
 
 import LinkedinIcon from './linkedin-icon';
 import GitHubIcon from './github-icon';
-import { pulsateBack } from '../button-down/styled-link';
+import { pulsateBack } from '../button-down/styles';
 
 const linkedInSpecs = {
   url: `https://www.linkedin.com/in/william-wittenbrock/`,
