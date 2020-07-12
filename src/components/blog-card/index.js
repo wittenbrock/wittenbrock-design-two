@@ -1,5 +1,5 @@
 import React from 'react';
-import tw, { styled } from 'twin.macro';
+import tw, { css, styled } from 'twin.macro';
 
 import { pulsateBackGentle } from '../contact-form/form-field';
 
@@ -30,12 +30,20 @@ const StyledSpan = styled.span`
   }
 `;
 
+const StyledImage = styled.img(() => [
+  tw`h-48 w-full object-cover transition duration-700 ease-in-out`,
+  css`
+    ${StyledLink}:hover & {
+      transform: scale(1.05);
+    }
+  `
+]);
+
 const BlogCard = () => (
   <StyledLink aria-label="Boost your conversion rate" href="/">
     <div tw="flex flex-col overflow-hidden">
-      <div tw="flex-shrink-0">
-        <img
-          tw="h-48 w-full object-cover"
+      <div tw="flex-shrink-0 overflow-hidden">
+        <StyledImage
           src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
           alt=""
         />
