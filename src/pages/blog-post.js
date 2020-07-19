@@ -2,12 +2,10 @@ import React from 'react';
 import { SEO } from '../components';
 import { BlogPost } from '../layouts';
 
-const BlogPostPage= () => (
+const BlogPostPage = () => (
   <>
     <SEO title="Home" />
-    <main>
-      <BlogPost />
-    </main>
+    <BlogPost />
   </>
 );
 

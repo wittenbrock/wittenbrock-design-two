@@ -36,7 +36,7 @@ const StyledImage = styled.img(() => [
     ${StyledLink}:hover & {
       transform: scale(1.05);
     }
-  `
+  `,
 ]);
 
 const BlogCard = () => (
@@ -62,7 +62,7 @@ const BlogCard = () => (
         </div>
         <div tw="mt-6 flex items-center">
           <p tw="font-body font-normal flex text-sm leading-5 text-gray-dark">
-            <time datetime="2020-03-16">March 16, 2020</time>
+            <time datetime="2020-06-23T18:52:03Z">March 16, 2020</time>
             <span tw="mx-1">&middot;</span>
             <span>6 min read</span>
           </p>
