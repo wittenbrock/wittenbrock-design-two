@@ -19,7 +19,7 @@ const StyledSpan = styled.span`
     right: 0;
     height: 0.4em;
     z-index: 10;
-    background-color: rgba(101, 125, 225, 0.4);
+    background-color: rgba(101, 116, 205, 0.4);
     transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
     width: 0;
   }
