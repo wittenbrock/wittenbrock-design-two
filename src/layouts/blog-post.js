@@ -48,7 +48,7 @@ const BlogPost = () => {
           </header>
           <div tw="prose prose-sm sm:prose py-10">
             <h2>This is an h2 heading</h2>
-            <hr/>
+            <hr />
             <h3>Test</h3>
             <h4>Test</h4>
             <p>
@@ -129,10 +129,7 @@ const BlogPost = () => {
         </div>
       </div>
       <footer tw="font-body border-t border-gray-600 border-solid">
-        <nav
-          tw="border-b border-gray-600 border-solid"
-          aria-label="pagination"
-        >
+        <nav tw="border-b border-gray-600 border-solid" aria-label="pagination">
           <div tw="mt-10 mb-8">
             <h2 tw="text-gray-400 font-normal uppercase text-xs tracking-wide">
               Previous Article
