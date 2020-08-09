@@ -23,7 +23,7 @@ export const pulsateBackGentle = css`
 `;
 
 const fieldStyles = [
-  tw`bg-gray-lighter px-3 py-2 sm:py-3 w-full shadow-none rounded-none appearance-none focus:outline-none font-body font-normal`,
+  tw`bg-gray-200 px-3 py-2 sm:py-3 w-full shadow-none rounded-none appearance-none focus:outline-none font-body font-normal`,
 
   css`
     ::placeholder {

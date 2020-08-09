@@ -23,12 +23,12 @@ const BlogPost = () => {
     <div tw="max-w-3xl mx-auto py-16 px-4 sm:px-6 xl:px-0">
       <main>
         <article>
-          <header tw="pt-1 pb-10 border-b border-gray-darker border-solid">
+          <header tw="pt-1 pb-10 border-b border-gray-600 border-solid">
             <div tw="space-y-1 text-center">
               <dl tw="space-y-10 mb-3">
                 <div>
                   <dt tw="sr-only">Published on</dt>
-                  <dd tw="font-body text-gray font-normal text-sm sm:text-base xl:text-lg">
+                  <dd tw="font-body text-gray-400 font-normal text-sm sm:text-base xl:text-lg">
                     <time datetime="2020-06-23T18:52:03Z">
                       Tuesday, June 23, 2020
                     </time>
@@ -36,7 +36,7 @@ const BlogPost = () => {
                 </div>
               </dl>
               <div>
-                <h1 tw="text-white font-display font-bold text-2xl sm:text-3xl lg:text-4xl pb-4">
+                <h1 tw="text-white font-heading font-bold text-2xl sm:text-3xl lg:text-4xl pb-4">
                   Introducing linting for Tailwind CSS IntelliSense
                 </h1>
                 <dl tw="sr-only">
@@ -114,7 +114,7 @@ const BlogPost = () => {
           />
         </figure>
         <div>
-          <h2 tw="text-gray font-normal uppercase text-sm tracking-wide mb-1">
+          <h2 tw="text-gray-400 font-normal uppercase text-sm tracking-wide mb-1">
             About the author
           </h2>
           <p tw="text-white text-sm sm:text-base mb-2">
@@ -128,13 +128,13 @@ const BlogPost = () => {
           </div>
         </div>
       </div>
-      <footer tw="font-body border-t border-gray-darker border-solid">
+      <footer tw="font-body border-t border-gray-600 border-solid">
         <nav
-          tw="border-b border-gray-darker border-solid"
+          tw="border-b border-gray-600 border-solid"
           aria-label="pagination"
         >
           <div tw="mt-10 mb-8">
-            <h2 tw="text-gray font-normal uppercase text-xs tracking-wide">
+            <h2 tw="text-gray-400 font-normal uppercase text-xs tracking-wide">
               Previous Article
             </h2>
             <Link
@@ -145,7 +145,7 @@ const BlogPost = () => {
             </Link>
           </div>
           <div tw="mb-10">
-            <h2 tw="text-gray font-normal uppercase text-xs tracking-wide">
+            <h2 tw="text-gray-400 font-normal uppercase text-xs tracking-wide">
               Next Article
             </h2>
             <Link

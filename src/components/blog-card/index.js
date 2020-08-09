@@ -51,17 +51,17 @@ const BlogCard = () => (
       <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
         <div tw="flex-1">
           <p tw="font-body font-medium text-sm leading-5 text-indigo">Blog</p>
-          <h3 tw="text-indigo-darkest font-body-title mt-2 text-xl leading-7 font-semibold">
+          <h3 tw="text-indigo-darkest font-subheading mt-2 text-xl leading-7 font-semibold">
             <StyledSpan>Boost your conversion rate</StyledSpan>
           </h3>
-          <p tw="font-body font-light text-gray-dark mt-3 text-base leading-6">
+          <p tw="font-body font-light text-gray-500 mt-3 text-base leading-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
             accusantium praesentium eius, ut atque fuga culpa, similique sequi
             cum eos quis dolorum.
           </p>
         </div>
         <div tw="mt-6 flex items-center">
-          <p tw="font-body font-normal flex text-sm leading-5 text-gray-dark">
+          <p tw="font-body font-normal flex text-sm leading-5 text-gray-500">
             <time datetime="2020-06-23T18:52:03Z">March 16, 2020</time>
             <span tw="mx-1">&middot;</span>
             <span>6 min read</span>

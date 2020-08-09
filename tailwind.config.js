@@ -1,8 +1,8 @@
 module.exports = {
   theme: {
     fontFamily: {
-      display: ['League Spartan', 'sans-serif'],
-      'body-title': ['Sailec Medium', 'sans-serif'],
+      heading: ['League Spartan', 'sans-serif'],
+      subheading: ['Sailec Medium', 'sans-serif'],
       body: ['Sailec Regular', 'sans-serif'],
     },
     typography: {
@@ -88,10 +88,6 @@ module.exports = {
       white: '#fff',
       black: '#000',
       gray: {
-        lighter: '#E5E7EB',
-        default: '#9fa6b2',
-        dark: '#6b7280',
-        darker: '#4b5563',
         50: '#f9fafb',
         100: '#f4f5f7',
         200: '#e5e7eb',
@@ -112,13 +108,13 @@ module.exports = {
         default: '#37a5eb',
       },
       indigo: {
-        default: '#6574CD',
+        default: '#6574cd',
         darkest: '#1d1e26',
       },
       red: {
-        lightest: '#FED7D7',
-        default: '#E53E3E',
-        darker: '#C53030',
+        lightest: '#fed7d7',
+        default: '#e53e3e',
+        darker: '#c53030',
       },
     },
     inset: {

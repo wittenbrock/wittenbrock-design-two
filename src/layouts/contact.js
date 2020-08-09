@@ -25,11 +25,11 @@ const Contact = () => (
   <section id="contact" tw="w-full px-4 pt-24 xl:pt-32 sm:pb-24 xl:pb-32">
     <StyledDiv>
       <StyledHeader>
-        <h2 tw="font-display font-bold text-3xl sm:text-4xl xl:text-5xl mb-2 sm:mb-3 xl:mb-4">
-          I can build your website.
+        <h2 tw="font-heading font-bold text-3xl sm:text-4xl xl:text-5xl mb-2 sm:mb-3 xl:mb-4">
+          Drop me a line.
         </h2>
         <p tw="font-body font-normal text-lg sm:text-xl xl:text-2xl mb-8 sm:mb-10 xl:mb-12">
-          Let's turn your idea into something great.
+          I'm always happy to help.
         </p>
         <div tw="flex justify-between w-40">
           <SocialMediaIcon linkedIn />
