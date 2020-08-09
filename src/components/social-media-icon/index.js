@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import tw, {css} from 'twin.macro';
+import tw, { css } from 'twin.macro';
 
 import LinkedinIcon from './linkedin-icon';
 import GitHubIcon from './github-icon';
@@ -30,7 +30,9 @@ const createSocialMediaIcon = (specs, size, color) => {
         tw`inline-block hover:cursor-pointer no-underline text-white focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,
         pulsateBack,
         size === 'small' ? tw`h-5 w-5` : tw`h-6 w-6`,
-        css`color: ${color}`
+        css`
+          color: ${color};
+        `,
       ]}
     >
       <span tw="sr-only">{text}</span>
@@ -40,7 +42,7 @@ const createSocialMediaIcon = (specs, size, color) => {
 };
 
 // React component - render the social media icon and its HTML
-const SocialMediaIcon = ({ linkedIn, gitHub, size, color}) => {
+const SocialMediaIcon = ({ linkedIn, gitHub, size, color }) => {
   if (linkedIn) {
     return <div>{createSocialMediaIcon(linkedInSpecs, size, color)}</div>;
   }

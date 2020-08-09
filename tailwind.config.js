@@ -8,14 +8,76 @@ module.exports = {
     typography: {
       default: {
         css: {
-          color: '#fff',
           a: {
-            color: '#9fa6b2',
+            color: '#fff',
             textDecoration: 'none',
+            fontFamily: 'Sailec Bold',
+            fontWeight: '800',
+            backgroundImage:
+              'linear-gradient(180deg, transparent 85%, rgba(101, 116, 205) 0)',
+          },
+          p: {
+            color: '#d2d6dc',
+            fontFamily: 'Sailec Regular',
+            fontWeight: '400',
+          },
+          h1: {
+            color: '#fff',
+            fontFamily: 'Sailec Medium',
+            fontWeight: '800',
+          },
+          h2: {
+            color: '#fff',
+            fontFamily: 'Sailec Bold',
+            fontWeight: '800',
+          },
+          h3: {
+            color: '#fff',
             fontFamily: 'Sailec Medium',
             fontWeight: '600',
-            backgroundImage:
-              'linear-gradient(180deg, transparent 70%, rgba(101, 116, 205, 0.6) 0)',
+          },
+          h4: {
+            color: '#fff',
+            fontFamily: 'Sailec Medium',
+            fontWeight: '600',
+          },
+          pre: {
+            color: '#d2d6dc',
+          },
+          'pre code': {
+            fontFamily: 'Source Code Pro',
+          },
+          code: {
+            color: '#d2d6dc',
+            fontFamily: 'Source Code Pro',
+            fontWeight: 700,
+          },
+          strong: {
+            color: '#fff',
+            fontFamily: 'Sailec Bold',
+            fontWeight: '800',
+          },
+          blockquote: {
+            color: '#fff',
+            borderLeftColor: '#6b7280',
+          },
+          'blockquote p': {
+            color: '#fff',
+          },
+          figcaption: {
+            color: '#d2d6dc',
+          },
+          'ol li': {
+            color: '#d2d6dc',
+          },
+          'ol > li::before': {
+            color: '#6b7280',
+          },
+          'ul li': {
+            color: '#d2d6dc',
+          },
+          'ul > li::before': {
+            backgroundColor: '#6b7280',
           },
         },
       },

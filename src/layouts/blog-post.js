@@ -20,10 +20,10 @@ const BlogPost = () => {
     }
   `);
   return (
-    <div tw="max-w-3xl mx-auto px-4 sm:px-6 xl:px-0">
+    <div tw="max-w-3xl mx-auto py-16 px-4 sm:px-6 xl:px-0">
       <main>
         <article>
-          <header tw="pt-6 pb-10 border-b border-gray-darker border-solid">
+          <header tw="pt-1 pb-10 border-b border-gray-darker border-solid">
             <div tw="space-y-1 text-center">
               <dl tw="space-y-10 mb-3">
                 <div>
@@ -46,8 +46,11 @@ const BlogPost = () => {
               </div>
             </div>
           </header>
-          <div tw="prose-sm sm:prose py-10">
+          <div tw="prose prose-sm sm:prose py-10">
             <h2>This is an h2 heading</h2>
+            <hr/>
+            <h3>Test</h3>
+            <h4>Test</h4>
             <p>
               this is the article. And this right here
               <a href="/">is a link</a>
@@ -60,10 +63,16 @@ const BlogPost = () => {
             </p>
 
             <p>
-              Simon is a talented developer, an amazing teacher, and has such a
+              <strong>Simon is a talented developer</strong>, an amazing
+              teacher, <em>and has such a</em>
               contagious enthusiasm for the sort of work we do that we knew we
-              had to have him on the team if we ever had the chance.
+              had to have him on the team if we ever had the chance.{' '}
+              <code>sudo rm apache2</code>
             </p>
+
+            <pre>
+              <code>sudo apt install apache2</code>
+            </pre>
 
             <p>
               He’s joining in a product and community focused role, and will be
@@ -72,7 +81,27 @@ const BlogPost = () => {
               people have success with Tailwind CSS.
             </p>
 
+            <blockquote>
+              <p>
+                Sagittis scelerisque nulla cursus in enim consectetur quam.
+                Dictum urna sed consectetur neque tristique pellentesque.
+                Blandit amet, sed aenean erat arcu morbi.
+              </p>
+            </blockquote>
+
             <p>We couldn’t be more excited to be welcoming him to the team!</p>
+            <ul>
+              <li>Chicken</li>
+              <li>Beans</li>
+              <li>Rice</li>
+            </ul>
+            <figcaption>figure's captions - this is a neat picture</figcaption>
+
+            <ol>
+              <li>beans</li>
+              <li>carrots</li>
+              <li>broccoli</li>
+            </ol>
           </div>
         </article>
       </main>
