@@ -11,19 +11,22 @@ const StyledScrollLink = styled(ScrollLink)`
   ${({ hasBounceDown }) => (hasBounceDown ? bounceDown : pulsateBack)}
 `;
 
-const ButtonDown = ({ to, smooth, hasBounceDown }) => (
+const ButtonDown = ({ to, smooth, hasBounceDown, tab }) => (
   <div tw="flex justify-center">
     <StyledScrollLink
       to={to}
       smooth={smooth}
       hasBounceDown={hasBounceDown}
       css={[tw`inline-block p-1 xl:p-2 rounded-full`, buttonStyles]}
+      tabindex={tab}
     >
       <span tw="sr-only">Scroll down to the next section.</span>
       <img
         src={chevronDownSvg}
         alt="Chevron down"
         aria-hidden="true"
+        height="24"
+        width="24"
         tw="h-6 w-6 relative z-20 block"
       />
     </StyledScrollLink>

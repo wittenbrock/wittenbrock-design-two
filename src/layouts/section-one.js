@@ -9,7 +9,7 @@ const SectionOne = () => (
     <h1 tw="sr-only">Wittenbrock Design</h1>
     <div>
       <WittenbrockLogoAnimated />
-      <ButtonDown to={'introduction'} smooth={true} hasBounceDown />
+      <ButtonDown to={'introduction'} smooth={true} hasBounceDown tab={'1'} />
     </div>
   </section>
 );

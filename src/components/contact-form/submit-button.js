@@ -20,6 +20,8 @@ const SubmitButton = props => (
         alt="Submit icon"
         aria-hidden="true"
         focasable="false"
+        height="16"
+        width="16"
         tw="h-4 w-4 relative z-20 block"
       />
     </StyledButton>

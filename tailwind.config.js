@@ -14,7 +14,15 @@ module.exports = {
             fontFamily: 'Sailec Bold',
             fontWeight: '800',
             backgroundImage:
-              'linear-gradient(180deg, transparent 85%, rgba(101, 116, 205) 0)',
+              'linear-gradient(180deg, transparent 85%, #e06c52 0)',
+            transition: 'all',
+            transitionDuration: '150ms',
+            transitionTimingFunction: 'ease-in-out',
+
+            '&:hover': {
+              backgroundImage:
+                'linear-gradient(180deg, transparent 85%, #6574cd 0)',
+            },
           },
           p: {
             color: '#d2d6dc',
@@ -50,7 +58,17 @@ module.exports = {
           code: {
             color: '#d2d6dc',
             fontFamily: 'Source Code Pro',
-            fontWeight: 700,
+            fontWeight: 400,
+            backgroundColor: '#2d3748',
+            display: 'inline-block',
+            padding: '0.2em 0.5em',
+            borderRadius: '0.25rem',
+          },
+          'code::before': {
+            content: '""',
+          },
+          'code::after': {
+            content: '""',
           },
           strong: {
             color: '#fff',
@@ -65,7 +83,12 @@ module.exports = {
             color: '#fff',
           },
           figcaption: {
-            color: '#d2d6dc',
+            color: '#fff',
+            fontStyle: 'italic',
+            display: 'table',
+            padding: '0.75em 2em 0.75em 0',
+            margin: '0 auto',
+            wordBreak: 'break-word',
           },
           'ol li': {
             color: '#d2d6dc',
@@ -78,6 +101,17 @@ module.exports = {
           },
           'ul > li::before': {
             backgroundColor: '#6b7280',
+          },
+          kbd: {
+            color: '#fff',
+            fontFamily: 'Source Code Pro',
+            fontWeight: 400,
+            fontSize: '0.8em',
+            padding: '0.3em 0.6em',
+            border: '1px solid #fff',
+            borderRadius: '0.125rem',
+            boxShadow: '1px 1px 0 #fff, 2px 2px 0 #fff',
+            margin: '0 0.25rem',
           },
         },
       },

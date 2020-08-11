@@ -66,8 +66,9 @@ const BlogPost = () => {
               <strong>Simon is a talented developer</strong>, an amazing
               teacher, <em>and has such a</em>
               contagious enthusiasm for the sort of work we do that we knew we
-              had to have him on the team if we ever had the chance.{' '}
-              <code>sudo rm apache2</code>
+              had to have him on the team if we ever had the chance. Run the
+              following command: <code>sudo rm apache2</code> how is the space?
+              does it feel wierd
             </p>
 
             <pre>
@@ -90,12 +91,22 @@ const BlogPost = () => {
             </blockquote>
 
             <p>We couldn’t be more excited to be welcoming him to the team!</p>
+
+            <p>
+              this is some keyboard shit yo <kbd>Cmd</kbd> + <kbd>Shift</kbd> +{' '}
+              <kbd>T</kbd>
+            </p>
             <ul>
               <li>Chicken</li>
               <li>Beans</li>
               <li>Rice</li>
             </ul>
-            <figcaption>figure's captions - this is a neat picture</figcaption>
+            <figcaption>
+              figure's captions - this is a neat picture Sagittis scelerisque
+              nulla cursus in enim consectetur quam. Dictum urna sed consectetur
+              neque tristique pellentesque. Blandit amet, sed aenean erat arcu
+              morbi.
+            </figcaption>
 
             <ol>
               <li>beans</li>
@@ -118,8 +129,7 @@ const BlogPost = () => {
             About the author
           </h2>
           <p tw="text-white text-sm sm:text-base mb-2">
-            William Wittenbrock is one of the most talented web developers in
-            the world.
+            William Wittenbrock is web developer and a ramen aficionado.
           </p>
           <div tw="flex justify-between w-40">
             <SocialMediaIcon linkedIn size="small" color="#d2d6dc" />
@@ -157,7 +167,7 @@ const BlogPost = () => {
         <div tw="text-base leading-5 mt-10 mb-12 sm:mb-16">
           <Link
             to="/#blog"
-            tw="text-sm text-white bg-transparent hover:text-orange md:hover:text-white md:hover:bg-orange focus:text-blue-lighter md:focus:text-white md:focus:bg-blue-lighter rounded-full sm:py-2 sm:px-5 outline-none transition ease-in-out duration-150 sm:-ml-6"
+            tw="text-sm text-white bg-transparent hover:text-indigo md:hover:text-white md:hover:bg-indigo focus:text-blue-lighter md:focus:text-white md:focus:bg-blue-lighter rounded-full sm:py-2 sm:px-5 outline-none transition ease-in-out duration-150 sm:-ml-6"
           >
             <svg
               tw="inline fill-current h-5 w-5 mb-1 -ml-2"

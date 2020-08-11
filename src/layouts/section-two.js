@@ -18,7 +18,7 @@ const SectionTwo = () => (
       </p>
       <p tw="font-body text-lg lg:text-xl">I love what I do.</p>
     </header>
-    <ButtonDown to={'blog'} smooth={true} />
+    <ButtonDown to={'blog'} smooth={true} tab={'2'} />
   </section>
 );
 

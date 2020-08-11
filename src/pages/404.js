@@ -30,6 +30,8 @@ const NotFoundPage = () => (
         alt="Home icon"
         aria-hidden="true"
         focasable="false"
+        height="16"
+        width="16"
         tw="h-4 w-4 relative z-20 inline-block -ml-1 mr-2 mb-1"
       />
       <span tw="relative z-20">Return home</span>

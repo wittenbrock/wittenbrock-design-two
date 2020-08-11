@@ -43,19 +43,22 @@
        url('../fonts/source-code-pro-v11-latin-regular.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'Source Code Pro';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Source Code Pro Bold'), local('SourceCodePro-Bold'),
-       url('../fonts/source-code-pro-v11-latin-700.woff2') format('woff2'),
-       url('../fonts/source-code-pro-v11-latin-700.woff') format('woff');
-}
-
 html {
   background-color: #1d1e26;
   font-size: 100%;
   font-family: 'Sailec Regular', sans-serif;
   font-weight: 400;
   height: 100%;
+}
+
+/* Tailwind.config has a hard time with content: url() */
+figcaption::before {
+  content: url('../images/camera.svg');
+  height: 1em;
+  width: 1.75em;
+  padding-right: 0.6em;
+  display: table-cell;
+  vertical-align: baseline;
+  position: relative;
+  top: 0.2em;
 }
