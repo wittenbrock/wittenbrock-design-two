@@ -9,19 +9,44 @@ module.exports = {
       default: {
         css: {
           a: {
+            position: 'relative',
             color: '#fff',
             textDecoration: 'none',
             fontFamily: 'Sailec Bold',
             fontWeight: '800',
-            backgroundImage:
-              'linear-gradient(180deg, transparent 85%, #e06c52 0)',
-            transition: 'all',
-            transitionDuration: '150ms',
-            transitionTimingFunction: 'ease-in-out',
+            outline: '0',
+            appearance: 'none',
 
-            '&:hover': {
-              backgroundImage:
-                'linear-gradient(180deg, transparent 85%, #6574cd 0)',
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: '0.9em',
+              right: '0',
+              height: '0.15em',
+              zIndex: '10',
+              backgroundColor: '#e06c52',
+              width: '100%',
+              left: '0',
+            },
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              top: '0.9em',
+              right: '0',
+              height: '0.15em',
+              zIndex: '20',
+              backgroundColor: '#6574cd',
+              transition: 'all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1)',
+              width: '0',
+            },
+            '&:hover::after': {
+              width: '100%',
+              left: '0',
+            },
+            '&:focus::after': {
+              width: '100%',
+              left: '0',
+              backgroundColor: '#37a5eb',
             },
           },
           p: {
@@ -116,6 +141,17 @@ module.exports = {
         },
       },
     },
+    extend: {
+      inset: {
+        '0': '0',
+        '6': '0.375rem',
+        '10': '0.625rem',
+        '1/2': '50%',
+      },
+      minHeight: {
+        '112': '28rem',
+      },
+    },
     colors: {
       inherit: 'inherit',
       transparent: 'transparent',
@@ -150,12 +186,6 @@ module.exports = {
         default: '#e53e3e',
         darker: '#c53030',
       },
-    },
-    inset: {
-      '0': '0',
-      '6': '0.375rem',
-      '10': '0.625rem',
-      '1/2': '50%',
     },
   },
   plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],

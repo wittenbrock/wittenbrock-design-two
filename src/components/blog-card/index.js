@@ -4,7 +4,7 @@ import tw, { css, styled } from 'twin.macro';
 import { pulsateBackGentle } from '../contact-form/form-field';
 
 const StyledLink = styled.a(() => [
-  tw`block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer`,
+  tw`block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer lg:min-h-112`,
   pulsateBackGentle,
 ]);
 
@@ -41,7 +41,7 @@ const StyledImage = styled.img(() => [
 
 const BlogCard = () => (
   <StyledLink aria-label="Boost your conversion rate" href="/">
-    <div tw="flex flex-col overflow-hidden">
+    <div tw="flex flex-col overflow-hidden h-full">
       <div tw="flex-shrink-0 overflow-hidden">
         <StyledImage
           src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
