@@ -1,24 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import tw from 'twin.macro';
-import styled from '@emotion/styled';
 import { Link as ScrollLink } from 'react-scroll';
 
 import { buttonStyles, bounceDown, pulsateBack } from './styles';
 import chevronDownSvg from '../../images/cheveron-down.svg';
 
-const StyledScrollLink = styled(ScrollLink)`
-  ${({ hasBounceDown }) => (hasBounceDown ? bounceDown : pulsateBack)}
-`;
-
-const ButtonDown = ({ to, smooth, hasBounceDown, tab }) => (
+const ButtonDown = ({ to, smooth, hasbouncedown, tab }) => (
   <div tw="flex justify-center">
-    <StyledScrollLink
+    <ScrollLink
       to={to}
       smooth={smooth}
-      hasBounceDown={hasBounceDown}
-      css={[tw`inline-block p-1 xl:p-2 rounded-full`, buttonStyles]}
-      tabindex={tab}
+      css={[
+        tw`inline-block p-1 xl:p-2 rounded-full`,
+        buttonStyles,
+        hasbouncedown ? bounceDown : pulsateBack,
+      ]}
+      tabIndex={tab}
     >
       <span tw="sr-only">Scroll down to the next section.</span>
       <img
@@ -29,7 +27,7 @@ const ButtonDown = ({ to, smooth, hasBounceDown, tab }) => (
         width="24"
         tw="h-6 w-6 relative z-20 block"
       />
-    </StyledScrollLink>
+    </ScrollLink>
   </div>
 );
 
@@ -37,5 +35,5 @@ export default ButtonDown;
 
 ButtonDown.propTypes = {
   scrollTo: PropTypes.string,
-  hasBounceDown: PropTypes.bool,
+  hasbouncedown: PropTypes.bool,
 };

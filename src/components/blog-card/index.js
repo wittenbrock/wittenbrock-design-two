@@ -1,12 +1,10 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import tw, { css, styled } from 'twin.macro';
 
-import { pulsateBackGentle } from '../contact-form/form-field';
-
-const StyledLink = styled.a(() => [
-  tw`block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer lg:min-h-112`,
-  pulsateBackGentle,
-]);
+const StyledLink = tw(
+  Link
+)`block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer`;
 
 const StyledSpan = styled.span`
   position: relative;
@@ -33,43 +31,46 @@ const StyledSpan = styled.span`
 const StyledImage = styled.img(() => [
   tw`h-48 w-full object-cover transition duration-700 ease-in-out`,
   css`
-    ${StyledLink}:hover & {
+    ${StyledLink}:hover &,
+    ${StyledLink}:focus & {
       transform: scale(1.05);
     }
+    
   `,
 ]);
 
-const BlogCard = () => (
-  <StyledLink aria-label="Boost your conversion rate" href="/">
-    <div tw="flex flex-col overflow-hidden h-full">
-      <div tw="flex-shrink-0 overflow-hidden">
-        <StyledImage
-          src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-          alt=""
-        />
-      </div>
-      <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
-        <div tw="flex-1">
-          <p tw="font-body font-medium text-sm leading-5 text-indigo">Blog</p>
-          <h3 tw="text-indigo-darkest font-subheading mt-2 text-xl leading-7 font-semibold">
-            <StyledSpan>Boost your conversion rate</StyledSpan>
-          </h3>
-          <p tw="font-body font-light text-gray-500 mt-3 text-base leading-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-            accusantium praesentium eius, ut atque fuga culpa, similique sequi
-            cum eos quis dolorum.
-          </p>
+const BlogCard = props => {
+  const { path, title, summary, date, timeToRead } = props;
+  return (
+    <StyledLink to={path} aria-label={title}>
+      <div tw="flex flex-col overflow-hidden">
+        <div tw="flex-shrink-0 overflow-hidden">
+          <StyledImage
+            src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+            alt=""
+          />
         </div>
-        <div tw="mt-6 flex items-center">
-          <p tw="font-body font-normal flex text-sm leading-5 text-gray-500">
-            <time datetime="2020-06-23T18:52:03Z">March 16, 2020</time>
-            <span tw="mx-1">&middot;</span>
-            <span>6 min read</span>
-          </p>
+        <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div tw="flex-1">
+            <p tw="font-body font-medium text-sm leading-5 text-indigo">Blog</p>
+            <h3 tw="text-indigo-darkest font-subheading mt-2 text-xl leading-7 font-semibold">
+              <StyledSpan>{title}</StyledSpan>
+            </h3>
+            <p tw="font-body font-light text-gray-500 mt-3 text-base leading-6">
+              {summary}
+            </p>
+          </div>
+          <div tw="mt-6 flex items-center">
+            <p tw="font-body font-normal flex text-sm leading-5 text-gray-500">
+              <time dateTime={date}>{date}</time>
+              <span tw="mx-1">&middot;</span>
+              <span>{timeToRead} min</span>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </StyledLink>
-);
+    </StyledLink>
+  );
+};
 
 export default BlogCard;
