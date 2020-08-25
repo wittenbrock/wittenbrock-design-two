@@ -1,5 +1,4 @@
 ---
-path: '/my-secon-post'
 title: 'My second post'
 date: '2020-10-15'
 summary: 'This is a short summary about how interesting this article is.'

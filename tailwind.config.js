@@ -56,23 +56,23 @@ module.exports = {
           },
           h1: {
             color: '#fff',
-            fontFamily: 'Sailec Medium',
-            fontWeight: '800',
+            fontFamily: 'League Spartan',
+            fontWeight: '700',
           },
           h2: {
             color: '#fff',
-            fontFamily: 'Sailec Bold',
-            fontWeight: '800',
+            fontFamily: 'League Spartan',
+            fontWeight: '700',
           },
           h3: {
             color: '#fff',
-            fontFamily: 'Sailec Medium',
-            fontWeight: '600',
+            fontFamily: 'League Spartan',
+            fontWeight: '700',
           },
           h4: {
             color: '#fff',
-            fontFamily: 'Sailec Medium',
-            fontWeight: '600',
+            fontFamily: 'League Spartan',
+            fontWeight: '700',
           },
           pre: {
             color: '#d2d6dc',

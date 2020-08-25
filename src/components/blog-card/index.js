@@ -40,9 +40,9 @@ const StyledImage = styled.img(() => [
 ]);
 
 const BlogCard = props => {
-  const { path, title, summary, date, timeToRead } = props;
+  const { slug, title, summary, date, timeToRead } = props;
   return (
-    <StyledLink to={path} aria-label={title}>
+    <StyledLink to={`blog${slug}`} aria-label={title}>
       <div tw="flex flex-col overflow-hidden">
         <div tw="flex-shrink-0 overflow-hidden">
           <StyledImage

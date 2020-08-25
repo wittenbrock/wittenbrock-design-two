@@ -5,21 +5,8 @@ import BlogCard from '../components/blog-card';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const Blog = () => {
-  const data = useStaticQuery(graphql`
-    query BlogPostPreview {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-        nodes {
-          timeToRead
-          frontmatter {
-            title
-            path
-            summary
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-  `);
+  const data = useStaticQuery(query);
+
   return (
     <section
       id="blog"
@@ -34,12 +21,11 @@ const Blog = () => {
             Essays, opinions, and advice on computer programming.
           </p>
         </header>
-
         <div tw="grid gap-12 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
-          {data.allMarkdownRemark.nodes.map(node => (
+          {data.allMarkdownRemark.edges.map(({ node }) => (
             <BlogCard
-              key={node.frontmatter.path}
-              path={node.frontmatter.path}
+              key={node.id}
+              slug={node.fields.slug}
               title={node.frontmatter.title}
               summary={node.frontmatter.summary}
               date={node.frontmatter.date}
@@ -53,3 +39,24 @@ const Blog = () => {
 };
 
 export default Blog;
+
+const query = graphql`
+  query BlogPostPreview {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          id
+          timeToRead
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            summary
+            title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;

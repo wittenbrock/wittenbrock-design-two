@@ -12,15 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './header';
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  const data = useStaticQuery(query);
 
   return (
     <>
@@ -48,3 +40,13 @@ Layout.propTypes = {
 };
 
 export default Layout;
+
+const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;

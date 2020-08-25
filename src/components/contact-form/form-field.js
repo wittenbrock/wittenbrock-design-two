@@ -100,9 +100,9 @@ const FormField = ({ label, ...props }) => {
 
       {/* Create an error message */}
       {fieldValidationError ? (
-        <div tw="absolute bottom-6 lg:bottom-10 text-xs lg:text-sm text-red font-body font-normal">
+        <span tw="block absolute bottom-6 lg:bottom-10 text-xs lg:text-sm text-red font-body font-normal">
           {meta.error}
-        </div>
+        </span>
       ) : null}
     </p>
   );
