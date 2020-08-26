@@ -1,7 +1,7 @@
 ---
 title: 'My third post'
-date: '2020-11-15'
-updated: '2020-12-12'
+date: '2019-10-17'
+updated: '2019-10-17'
 summary: 'This is a short summary about how interesting this article is.'
 ---
 

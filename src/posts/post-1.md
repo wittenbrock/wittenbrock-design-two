@@ -1,6 +1,6 @@
 ---
 title: 'My first post'
-date: '2020-10-15'
+date: '2019-10-15'
 summary: 'This is a short summary about how interesting this article is. this is actually a summary that a little bit longer, which is low key chill'
 ---
 

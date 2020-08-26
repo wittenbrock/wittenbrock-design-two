@@ -1,6 +1,6 @@
 ---
 title: 'My second post'
-date: '2020-10-15'
+date: '2019-10-16'
 summary: 'This is a short summary about how interesting this article is. This is a medium summary'
 ---
 
