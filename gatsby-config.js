@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Wittenbrock Design`,
-    description: `Web developer and JavaScript specialist - I am William Wittenbrock and this is my blog. Check out my latest posts.`,
+    description: `Designer, software engineer, and JavaScript specialist - I am William Wittenbrock and this is my blog. Check out my latest posts.`,
     author: `William Wittenbrock`,
     siteUrl: `https://www.wittenbrockdesign.com`,
   },
@@ -81,18 +81,23 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Wittenbrock Design`,
+        short_name: `Wittenbrock Design`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1d1e26`,
+        theme_color: `#1d1e26`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-133453058-1`,
+      },
+    },
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 };
