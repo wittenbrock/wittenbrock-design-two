@@ -43,7 +43,7 @@ const BlogCard = props => {
   const { slug, title, summary, date, timeToRead } = props;
   return (
     <StyledLink to={`blog${slug}`} aria-label={title}>
-      <div tw="flex flex-col overflow-hidden">
+      <div tw="flex flex-col overflow-hidden h-full">
         <div tw="flex-shrink-0 overflow-hidden">
           <StyledImage
             src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
@@ -52,7 +52,6 @@ const BlogCard = props => {
         </div>
         <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
           <div tw="flex-1">
-            <p tw="font-body font-medium text-sm leading-5 text-indigo">Blog</p>
             <h3 tw="text-indigo-darkest font-subheading mt-2 text-xl leading-7 font-semibold">
               <StyledSpan>{title}</StyledSpan>
             </h3>

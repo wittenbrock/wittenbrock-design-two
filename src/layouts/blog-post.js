@@ -24,20 +24,18 @@ export default function BlogPost(props) {
     : null;
 
   return (
-    <div tw="max-w-3xl mx-auto py-16 px-4 sm:px-6 xl:px-0">
+    <div tw="max-w-2xl mx-auto py-16 px-4 sm:px-6 xl:px-0">
       <main>
         <article>
           <header tw="pt-1 pb-10 border-b-4 border-gray-600 border-solid">
             <div tw="space-y-1 text-center">
-              <dl tw="space-y-10 mb-3">
-                <div>
+              <dl tw="mb-3">
                   <dt tw="sr-only">Published on</dt>
                   <dd tw="font-body text-gray-400 font-normal text-sm sm:text-base xl:text-lg">
                     <time dateTime={post.frontmatter.date}>
                       {post.frontmatter.date}
                     </time>
                   </dd>
-                </div>
               </dl>
               <div>
                 <h1 tw="text-white font-heading font-bold text-2xl sm:text-3xl lg:text-4xl pb-4">
@@ -47,6 +45,16 @@ export default function BlogPost(props) {
                   <dt>Author</dt>
                   <dd>William Wittenbrock</dd>
                 </dl>
+                {post.frontmatter.updated && (
+                <dl tw="font-body text-gray-400 font-normal text-xs">
+                  <dt tw="inline">Updated on </dt>
+                  <dd tw="inline">
+                    <time dateTime={post.frontmatter.updated}>
+                      {post.frontmatter.updated}
+                    </time>
+                  </dd>
+              </dl>
+              )}
               </div>
             </div>
           </header>
@@ -69,7 +77,7 @@ export default function BlogPost(props) {
             About the author
           </h2>
           <p tw="text-white text-sm sm:text-base mb-2">
-            William Wittenbrock is web developer and a ramen aficionado.
+            William Wittenbrock is a designer, engineer, and ramen aficionado.
           </p>
           <div tw="flex justify-between w-40">
             <SocialMediaIcon linkedIn size="small" color="#d2d6dc" />
@@ -79,11 +87,11 @@ export default function BlogPost(props) {
         </div>
       </div>
       <footer tw="font-body border-t-4 border-gray-600 border-solid">
-        <nav aria-label="pagination">
+        <nav tw="border-b-4 border-gray-600 border-solid" aria-label="pagination">
           {prevPost && (
             <div css={[nextPost ? tw`mt-10 mb-8` : tw`my-10`]}>
               <h2 tw="text-gray-400 font-normal uppercase text-xs tracking-wide">
-                Previous Article
+                Previous Post
               </h2>
               <Link
                 to={prevPost.url}
@@ -96,7 +104,7 @@ export default function BlogPost(props) {
           {nextPost && (
             <div css={[prevPost ? tw`mb-10` : tw`my-10`]}>
               <h2 tw="text-gray-400 font-normal uppercase text-xs tracking-wide">
-                Next Article
+                Next Post
               </h2>
               <Link
                 to={nextPost.url}
@@ -142,7 +150,8 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM, DD YYYY")
+        date(formatString: "MMMM DD, YYYY")
+        updated(formatString: "MMMM DD, YYYY")
       }
     }
   }

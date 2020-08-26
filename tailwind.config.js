@@ -138,6 +138,9 @@ module.exports = {
             boxShadow: '1px 1px 0 #fff, 2px 2px 0 #fff',
             margin: '0 0.25rem',
           },
+          img: {
+            borderRadius: '0.5rem',
+          },
         },
       },
     },
