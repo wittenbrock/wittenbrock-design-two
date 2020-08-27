@@ -2,7 +2,6 @@ import React from 'react';
 import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import { SocialMediaIcon } from '../components';
 import ContactIcon from '../components/social-media-icon/contact-icon';
@@ -30,12 +29,12 @@ export default function BlogPost(props) {
           <header tw="pt-1 pb-10 border-b-4 border-gray-600 border-solid">
             <div tw="space-y-1 text-center">
               <dl tw="mb-3">
-                  <dt tw="sr-only">Published on</dt>
-                  <dd tw="font-body text-gray-400 font-normal text-sm sm:text-base xl:text-lg">
-                    <time dateTime={post.frontmatter.date}>
-                      {post.frontmatter.date}
-                    </time>
-                  </dd>
+                <dt tw="sr-only">Published on</dt>
+                <dd tw="font-body text-gray-400 font-normal text-sm sm:text-base xl:text-lg">
+                  <time dateTime={post.frontmatter.date}>
+                    {post.frontmatter.date}
+                  </time>
+                </dd>
               </dl>
               <div>
                 <h1 tw="text-white font-heading font-bold text-2xl sm:text-3xl lg:text-4xl pb-4">
@@ -46,15 +45,15 @@ export default function BlogPost(props) {
                   <dd>William Wittenbrock</dd>
                 </dl>
                 {post.frontmatter.updated && (
-                <dl tw="font-body text-gray-400 font-normal text-xs">
-                  <dt tw="inline">Updated on </dt>
-                  <dd tw="inline">
-                    <time dateTime={post.frontmatter.updated}>
-                      {post.frontmatter.updated}
-                    </time>
-                  </dd>
-              </dl>
-              )}
+                  <dl tw="font-body text-gray-400 font-normal text-xs">
+                    <dt tw="inline">Updated on </dt>
+                    <dd tw="inline">
+                      <time dateTime={post.frontmatter.updated}>
+                        {post.frontmatter.updated}
+                      </time>
+                    </dd>
+                  </dl>
+                )}
               </div>
             </div>
           </header>
@@ -66,10 +65,12 @@ export default function BlogPost(props) {
       </main>
       <div tw="flex py-16">
         <figure tw="mr-4">
-          <Img
-            fixed={data.file.childImageSharp.fixed}
+          <img
+            src={data.cloudinaryMedia.secure_url}
             alt="A portrait of William Wittenbrock."
-            tw="h-14 w-14 rounded-md"
+            tw="h-20 w-20 rounded-md"
+            height="80"
+            width="80"
           />
         </figure>
         <div>
@@ -87,7 +88,10 @@ export default function BlogPost(props) {
         </div>
       </div>
       <footer tw="font-body border-t-4 border-gray-600 border-solid">
-        <nav tw="border-b-4 border-gray-600 border-solid" aria-label="pagination">
+        <nav
+          tw="border-b-4 border-gray-600 border-solid"
+          aria-label="pagination"
+        >
           {prevPost && (
             <div css={[nextPost ? tw`mt-10 mb-8` : tw`my-10`]}>
               <h2 tw="text-gray-400 font-normal uppercase text-xs tracking-wide">
@@ -138,13 +142,11 @@ export default function BlogPost(props) {
 }
 
 export const query = graphql`
-  query blogMarkdownAndProfileImage($slug: String!) {
-    file(relativePath: { eq: "william-wittenbrock-portrait.jpg" }) {
-      childImageSharp {
-        fixed(width: 80, height: 80) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+  query blogPost($slug: String!) {
+    cloudinaryMedia(
+      public_id: { eq: "wittenbrock-design/william-wittenbrock-portrait" }
+    ) {
+      secure_url
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html

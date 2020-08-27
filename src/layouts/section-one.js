@@ -13,7 +13,7 @@ const SectionOne = () => (
         to={'introduction'}
         smooth={true}
         hasbouncedown={true}
-        tab={'1'}
+        tab={'0'}
       />
     </div>
   </section>

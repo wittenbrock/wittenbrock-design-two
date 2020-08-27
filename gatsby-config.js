@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Wittenbrock Design`,
@@ -30,9 +32,9 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                });
+              });
             },
             query: `
               {
@@ -52,7 +54,7 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
+            output: '/rss.xml',
             title: "Wittenbrock Design's RSS Feed",
           },
         ],
@@ -72,6 +74,16 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `image`,
+        prefix: `wittenbrock-design/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -96,7 +108,6 @@ module.exports = {
         trackingId: `UA-133453058-1`,
       },
     },
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-offline`,
   ],

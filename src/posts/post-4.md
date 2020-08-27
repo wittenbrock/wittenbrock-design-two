@@ -16,5 +16,3 @@ Robin is a talented developer from Belgium, and has been an active member of the
 Robin is a seriously experienced React developer, and is joining us to help spearhead the open-source renderless UI libraries we are working on that will be the foundation for official React and Vue (to start anyways) support in Tailwind UI.
 
 We're super excited that he is finally starting with us today, and can't wait to watch his contributions enable people to build awesome UIs even faster and with more confidence. Welcome to the team dude!
-
-
