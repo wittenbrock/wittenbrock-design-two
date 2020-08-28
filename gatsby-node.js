@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await queryWrapper(
     graphql(`
       {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
           edges {
             node {
               fields {
@@ -47,7 +47,9 @@ exports.createPages = async ({ graphql, actions }) => {
   posts.forEach(({ node }, index) => {
     const prev = index === 0 ? null : posts[index - 1].node;
     const next = index === posts.length - 1 ? null : posts[index + 1].node;
-
+    // console.log('index', index);
+    // console.log('prev', prev);
+    // console.log('next', next);
     createPage({
       path: `blog${node.fields.slug}`,
       component: path.resolve(`./src/layouts/blog-post.js`),

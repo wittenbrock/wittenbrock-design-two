@@ -26,9 +26,11 @@ const Blog = () => {
             <BlogCard
               key={node.id}
               slug={node.fields.slug}
+              thumbnail={node.frontmatter.thumbnail}
+              alt={node.frontmatter.alt}
               title={node.frontmatter.title}
-              summary={node.frontmatter.summary}
               date={node.frontmatter.date}
+              description={node.frontmatter.description}
               timeToRead={node.timeToRead}
             />
           ))}
@@ -49,7 +51,9 @@ const query = graphql`
           timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
-            summary
+            description
+            thumbnail
+            alt
             title
           }
           fields {

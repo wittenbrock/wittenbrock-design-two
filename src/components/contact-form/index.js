@@ -53,7 +53,7 @@ const ContactForm = () => {
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: netlifyEncode({ 'form-name': 'contact-demo', ...values }),
+          body: netlifyEncode({ 'form-name': 'contact-william', ...values }),
         })
           .then(() => {
             alert(`Your message was sent successfully. Thank you!`);
@@ -70,7 +70,7 @@ const ContactForm = () => {
       {({ isValid, dirty }) => (
         <StyledDiv>
           <Form
-            name="contact-demo"
+            name="contact-william"
             data-netlify={true}
             css={[
               tw`bg-white w-full max-w-sm sm:max-w-md xl:max-w-lg px-10 pt-10 sm:px-12 sm:pt-12 xl:px-16 xl:pt-16 mb-4 text-indigo-darkest text-sm lg:text-base`,

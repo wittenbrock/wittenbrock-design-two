@@ -1,7 +1,9 @@
 ---
 title: 'My second post'
 date: '2019-10-16'
-summary: 'This is a short summary about how interesting this article is. This is a medium summary'
+description: 'This is a short summary about how interesting this article is. this is actually a summary that a little bit longer, which is low key chill'
+thumbnail: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80'
+alt: 'a desk'
 ---
 
 #Yo - second post

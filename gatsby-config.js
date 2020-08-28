@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `Wittenbrock Design`,
-    description: `Designer, software engineer, and JavaScript specialist - I am William Wittenbrock and this is my blog. Check out my latest posts.`,
+    description: `Designer, software engineer, and JavaScript specialist - I am William Wittenbrock and this is my blog. Read my latest posts.`,
     author: `William Wittenbrock`,
     siteUrl: `https://www.wittenbrockdesign.com`,
   },
