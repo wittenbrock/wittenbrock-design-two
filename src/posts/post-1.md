@@ -6,11 +6,15 @@ thumbnail: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=r
 alt: 'a desk'
 ---
 
-##Hello
-###Hello
-####Hello
+```javascript
+import Foo from "foo" // so this is a comment on line 1
 
-Robin is a talented developer from Belgium, and has been an active member of the Tailwind community for a long time. If you're a Tailwind UI customer and have ever asked a question in the #react channel on our Discord server, there's a 90% chance he's the helpful person who answered your question. He even built a bookmarklet to help people convert Tailwind UI components to JSX!
+for (let bar of ni) {
+  console.log(Foo(bar))
+}
+```
+
+Robin is a talented developer from Belgium, and has been an active member of the Tailwind community for a long time. This is some fancy `inline code from javascript` If you're a Tailwind UI customer and have ever asked a question in the #react channel on our Discord server, there's a 90% chance he's the helpful person who answered your question. He even built a bookmarklet to help people convert Tailwind UI components to JSX!
 
 Robin is a seriously experienced React developer, and is joining us to help spearhead the open-source renderless UI libraries we are working on that will be the foundation for official React and Vue (to start anyways) support in Tailwind UI.
 

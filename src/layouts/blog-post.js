@@ -37,7 +37,7 @@ export default function BlogPost(props) {
                 </dd>
               </dl>
               <div>
-                <h1 tw="text-white font-heading font-bold text-2xl sm:text-3xl lg:text-4xl pb-4">
+                <h1 tw="text-white font-heading font-bold text-2xl sm:text-3xl lg:text-4xl">
                   {post.frontmatter.title}
                 </h1>
                 <dl tw="sr-only">
@@ -45,7 +45,7 @@ export default function BlogPost(props) {
                   <dd>William Wittenbrock</dd>
                 </dl>
                 {post.frontmatter.updated && (
-                  <dl tw="font-body text-gray-400 font-normal text-xs">
+                  <dl tw="font-body text-gray-400 font-normal text-xs mt-4">
                     <dt tw="inline">Updated on </dt>
                     <dd tw="inline">
                       <time dateTime={post.frontmatter.updated}>
