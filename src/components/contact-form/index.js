@@ -50,11 +50,14 @@ const ContactForm = () => {
         message: Yup.string().required(`Please enter a message.`),
       })}
       onSubmit={(values, actions) => {
-        fetch('/', JSON.stringify({
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: netlifyEncode({ 'form-name': 'contact-william', ...values }),
-        }))
+        fetch(
+          '/',
+          JSON.stringify({
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: netlifyEncode({ 'form-name': 'contact-william', ...values }),
+          })
+        )
           .then(() => {
             alert(`Your message was sent successfully. Thank you!`);
             actions.resetForm();

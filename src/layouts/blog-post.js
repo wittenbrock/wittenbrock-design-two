@@ -22,17 +22,17 @@ export default function BlogPost(props) {
         title: pageContext.next.frontmatter.title,
       }
     : null;
-  
-      return (
+
+  return (
     <>
       <SEO
         title={`${post.frontmatter.title} | ${website.titleAlt}`}
-        pathname={`/blog${pageContext.slug}`}
         desc={post.frontmatter.description}
+        banner={post.frontmatter.thumbnail}
+        pathname={`/blog${pageContext.slug}`}
+        article
         date={post.frontmatter.date}
         updated={post.frontmatter.updated}
-        thumbnail={post.frontmatter.thumbnail}
-        article
       />
       <div tw="max-w-2xl mx-auto py-16 px-4 sm:px-6 xl:px-0">
         <main>

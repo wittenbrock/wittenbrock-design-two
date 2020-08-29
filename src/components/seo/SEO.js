@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Facebook from './Facebook';
 import Twitter from './Twitter';
 
-const SEO = ({ title, desc, banner, pathname, article, date, updated, thumbnail }) => {
+const SEO = ({ title, desc, banner, pathname, article, date, updated }) => {
   const { site } = useStaticQuery(query);
 
   const {
@@ -25,7 +25,7 @@ const SEO = ({ title, desc, banner, pathname, article, date, updated, thumbnail 
   const seo = {
     title: title || defaultTitle,
     description: desc || defaultDescription,
-    image: thumbnail || defaultBanner,
+    image: banner || defaultBanner,
     url: `${siteUrl}${pathname || ''}`,
   };
 
@@ -62,7 +62,7 @@ const SEO = ({ title, desc, banner, pathname, article, date, updated, thumbnail 
     dateModified: buildTime,
     image: {
       '@type': 'ImageObject',
-      url: `${siteUrl}${defaultBanner}`,
+      url: defaultBanner,
     },
   };
 
@@ -103,7 +103,7 @@ const SEO = ({ title, desc, banner, pathname, article, date, updated, thumbnail 
         name: author,
         logo: {
           '@type': 'ImageObject',
-          url: `${siteUrl}${defaultBanner}`,
+          url: defaultBanner,
         },
       },
       datePublished: date,
