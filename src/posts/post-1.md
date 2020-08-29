@@ -7,10 +7,10 @@ alt: 'a desk'
 ---
 
 ```javascript
-import Foo from "foo" // so this is a comment on line 1
+import Foo from 'foo'; // so this is a comment on line 1
 
 for (let bar of ni) {
-  console.log(Foo(bar))
+  console.log(Foo(bar));
 }
 ```
 

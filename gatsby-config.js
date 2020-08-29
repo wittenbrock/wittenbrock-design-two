@@ -1,11 +1,22 @@
 require('dotenv').config();
 
+const website = require('./website');
+
+const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix;
+
 module.exports = {
+  pathPrefix: website.pathPrefix,
   siteMetadata: {
-    title: `Wittenbrock Design`,
-    description: `Designer, software engineer, and JavaScript specialist - I am William Wittenbrock and this is my blog. Read my latest posts.`,
-    author: `William Wittenbrock`,
-    siteUrl: `https://www.wittenbrockdesign.com`,
+    siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
+    pathPrefix,
+    title: website.title,
+    titleAlt: website.titleAlt,
+    description: website.description,
+    banner: website.logo,
+    headline: website.headline,
+    siteLanguage: website.siteLanguage,
+    ogLanguage: website.ogLanguage,
+    author: website.author,
   },
   plugins: [
     {
@@ -55,7 +66,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: "Wittenbrock Design's RSS Feed",
+            title: `RSS Feed | Wittenbrock Design`,
           },
         ],
       },
@@ -103,24 +114,26 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Wittenbrock Design`,
-        short_name: `Wittenbrock Design`,
-        start_url: `/`,
-        background_color: `#1d1e26`,
-        theme_color: `#1d1e26`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
+        name: website.title,
+        short_name: website.titleAlt,
+        description: website.description,
+        start_url: pathPrefix,
+        background_color: website.backgroundColor,
+        theme_color: website.themeColor,
+        display: 'standalone',
+        icon: website.favicon,
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-133453058-1`,
+        trackingId: website.googleAnalyticsID,
       },
     },
-    `gatsby-plugin-netlify`,
+    // Must be placed at the end
     `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify`,
   ],
 };

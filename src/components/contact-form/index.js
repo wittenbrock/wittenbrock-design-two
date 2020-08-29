@@ -50,11 +50,11 @@ const ContactForm = () => {
         message: Yup.string().required(`Please enter a message.`),
       })}
       onSubmit={(values, actions) => {
-        fetch('/', {
+        fetch('/', JSON.stringify({
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: netlifyEncode({ 'form-name': 'contact-william', ...values }),
-        })
+        }))
           .then(() => {
             alert(`Your message was sent successfully. Thank you!`);
             actions.resetForm();
@@ -81,18 +81,21 @@ const ContactForm = () => {
             <FormField
               type="text"
               name="name"
+              id="name"
               label="Your name:"
               placeholder="Name"
             />
             <FormField
               type="email"
               name="email"
+              id="email"
               label="Your email:"
               placeholder="Email"
             />
             <FormField
               type="textarea"
               name="message"
+              id="message"
               label="Your message:"
               placeholder="Message"
               rows="5"
