@@ -1,8 +1,8 @@
-require('dotenv').config();
+require(`dotenv`).config();
 
-const website = require('./website');
+const website = require(`./website`);
 
-const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix;
+const pathPrefix = website.pathPrefix === `/` ? `` : website.pathPrefix;
 
 module.exports = {
   pathPrefix: website.pathPrefix,
@@ -65,7 +65,7 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml',
+            output: `/rss.xml`,
             title: `RSS Feed | Wittenbrock Design`,
           },
         ],
@@ -114,7 +114,7 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
         name: website.title,
         short_name: website.titleAlt,
@@ -122,7 +122,7 @@ module.exports = {
         start_url: pathPrefix,
         background_color: website.backgroundColor,
         theme_color: website.themeColor,
-        display: 'standalone',
+        display: `standalone`,
         icon: website.favicon,
       },
     },

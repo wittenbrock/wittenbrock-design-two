@@ -30,7 +30,7 @@ const formStyles = css`
 const netlifyEncode = data => {
   return Object.keys(data)
     .map(key => `${encodeURIComponent(key)} = ${encodeURIComponent(data[key])}`)
-    .join('&');
+    .join(`&`);
 };
 
 // Contact form component
@@ -38,9 +38,9 @@ export default function ContactForm() {
   return (
     <Formik
       initialValues={{
-        name: '',
-        email: '',
-        message: '',
+        name: ``,
+        email: ``,
+        message: ``,
       }}
       validationSchema={Yup.object({
         name: Yup.string().required(`Please enter your name.`),
@@ -50,14 +50,11 @@ export default function ContactForm() {
         message: Yup.string().required(`Please enter a message.`),
       })}
       onSubmit={(values, actions) => {
-        fetch(
-          '/',
-          JSON.stringify({
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: netlifyEncode({ 'form-name': 'contact-william', ...values }),
-          })
-        )
+        fetch(`/`, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: netlifyEncode({ "form-name": "contact-william", ...values }),
+        })
           .then(() => {
             alert(`Your message was sent successfully. Thank you!`);
             actions.resetForm();

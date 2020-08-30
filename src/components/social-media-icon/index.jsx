@@ -19,8 +19,7 @@ const gitHubSpecs = {
 };
 
 // A function that returns a social media icon wrapped in HTML
-const createSocialMediaIcon = props => {
-  const { specs, size, color } = props;
+const createSocialMediaIcon = (specs, size, color) => {
   const { url, text, icon } = specs;
 
   return (
@@ -29,7 +28,7 @@ const createSocialMediaIcon = props => {
       css={[
         tw`inline-block hover:cursor-pointer no-underline text-white focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,
         pulsateBack,
-        size === 'small' ? tw`h-5 w-5` : tw`h-6 w-6`,
+        size === `small` ? tw`h-5 w-5` : tw`h-6 w-6`,
         css`
           color: ${color};
         `,

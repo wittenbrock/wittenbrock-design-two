@@ -26,6 +26,6 @@ Twitter.propTypes = {
 };
 
 Twitter.defaultProps = {
-  type: 'summary_large_image',
+  type: `summary_large_image`,
   username: null,
 };

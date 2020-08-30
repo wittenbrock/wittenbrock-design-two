@@ -30,6 +30,6 @@ Facebook.propTypes = {
 };
 
 Facebook.defaultProps = {
-  type: 'website',
+  type: `website`,
   name: null,
 };

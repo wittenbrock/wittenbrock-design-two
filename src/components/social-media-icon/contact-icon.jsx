@@ -15,7 +15,7 @@ export default function ContactIcon(props) {
         css={[
           tw`inline-block hover:cursor-pointer no-underline focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,
           pulsateBack,
-          size === 'small' ? tw`h-5 w-5` : tw`h-6 w-6`,
+          size === `small` ? tw`h-5 w-5` : tw`h-6 w-6`,
           css`
             color: ${color};
           `,
@@ -49,7 +49,7 @@ ContactIcon.propTypes = {
 };
 
 ContactIcon.defaultProps = {
-  height: '24',
-  width: '24',
-  color: '#fff',
+  height: `24`,
+  width: `24`,
+  color: `#fff`,
 };

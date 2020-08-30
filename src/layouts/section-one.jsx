@@ -11,10 +11,10 @@ export default function SectionOne() {
       <div>
         <WittenbrockLogoAnimated />
         <ButtonDown
-          to={'introduction'}
+          to={`introduction`}
           smooth={true}
           hasbouncedown={true}
-          tab={'0'}
+          tab={`0`}
         />
       </div>
     </section>
