@@ -6,13 +6,14 @@ import website from '../../website';
 
 export default function IndexPage() {
   return (
-  <>
-    <SEO title={website.title} />
-    <main>
-      <SectionOne />
-      <SectionTwo />
-      <Blog />
-      <Contact />
-    </main>
-  </>
-)};
+    <>
+      <SEO title={website.title} />
+      <main>
+        <SectionOne />
+        <SectionTwo />
+        <Blog />
+        <Contact />
+      </main>
+    </>
+  );
+}
