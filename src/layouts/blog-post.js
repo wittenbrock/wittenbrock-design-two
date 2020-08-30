@@ -75,7 +75,7 @@ export default function BlogPost(props) {
           </article>
         </main>
         <div tw="flex py-16">
-          <figure tw="mr-4">
+          <figure tw="mr-4 flex-shrink-0">
             <img
               src={data.cloudinaryMedia.secure_url}
               alt="A portrait of William Wittenbrock."

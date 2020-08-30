@@ -3,7 +3,8 @@ import 'twin.macro';
 
 import ButtonDown from '../components/button-down/index';
 
-const SectionTwo = () => (
+export default function SectionTwo() {
+  return (
   <section
     id="introduction"
     tw="w-full min-h-screen px-4 py-24 xl:py-32 flex flex-col justify-center items-center"
@@ -20,6 +21,4 @@ const SectionTwo = () => (
     </header>
     <ButtonDown to={'blog'} smooth={true} tab={'0'} />
   </section>
-);
-
-export default SectionTwo;
+)};

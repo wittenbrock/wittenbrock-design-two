@@ -60,7 +60,7 @@ const invalidStyles = css`
 `;
 
 // Creates an input or textarea field with a label and error message
-const FormField = ({ label, ...props }) => {
+export default function FormField({ label, ...props }) {
   const [field, meta] = useField(props);
   const { type } = props;
   const fieldValidationError = meta.touched && meta.error;
@@ -106,6 +106,4 @@ const FormField = ({ label, ...props }) => {
       ) : null}
     </p>
   );
-};
-
-export default FormField;
+}

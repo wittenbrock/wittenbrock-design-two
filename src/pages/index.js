@@ -4,7 +4,8 @@ import { SEO } from '../components';
 import { SectionOne, SectionTwo, Blog, Contact } from '../layouts';
 import website from '../../website';
 
-const IndexPage = () => (
+export default function IndexPage() {
+  return (
   <>
     <SEO title={website.title} />
     <main>
@@ -14,6 +15,4 @@ const IndexPage = () => (
       <Contact />
     </main>
   </>
-);
-
-export default IndexPage;
+)};

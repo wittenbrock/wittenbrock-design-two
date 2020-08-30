@@ -34,7 +34,7 @@ const netlifyEncode = data => {
 };
 
 // Contact form component
-const ContactForm = () => {
+export default function ContactForm() {
   return (
     <Formik
       initialValues={{
@@ -109,6 +109,4 @@ const ContactForm = () => {
       )}
     </Formik>
   );
-};
-
-export default ContactForm;
+}

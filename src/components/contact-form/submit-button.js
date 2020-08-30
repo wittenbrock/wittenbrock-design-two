@@ -11,21 +11,21 @@ const StyledButton = styled.button(({ disabled }) => [
   pulsateBack,
 ]);
 
-const SubmitButton = props => (
-  <div tw="flex justify-center mt-3 lg:mt-0 xl:mt-6">
-    <StyledButton type="submit" {...props}>
-      <span tw="sr-only">Submit form</span>
-      <img
-        src={sendSvg}
-        alt="Submit icon"
-        aria-hidden="true"
-        focasable="false"
-        height="16"
-        width="16"
-        tw="h-4 w-4 relative z-20 block"
-      />
-    </StyledButton>
-  </div>
-);
-
-export default SubmitButton;
+export default function SubmitButton(props) {
+  return (
+    <div tw="flex justify-center mt-3 lg:mt-0 xl:mt-6">
+      <StyledButton type="submit" {...props}>
+        <span tw="sr-only">Submit form</span>
+        <img
+          src={sendSvg}
+          alt="Submit icon"
+          aria-hidden="true"
+          focasable="false"
+          height="16"
+          width="16"
+          tw="h-4 w-4 relative z-20 block"
+        />
+      </StyledButton>
+    </div>
+  );
+}

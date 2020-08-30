@@ -35,11 +35,10 @@ const StyledImage = styled.img(() => [
     ${StyledLink}:focus & {
       transform: scale(1.05);
     }
-    
   `,
 ]);
 
-const BlogCard = props => {
+export default function BlogCard(props) {
   const { slug, thumbnail, alt, title, description, date, timeToRead } = props;
   return (
     <StyledLink to={`blog${slug}`} aria-label={title}>
@@ -67,6 +66,4 @@ const BlogCard = props => {
       </div>
     </StyledLink>
   );
-};
-
-export default BlogCard;
+}

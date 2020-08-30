@@ -4,7 +4,7 @@ import 'twin.macro';
 import BlogCard from '../components/blog-card';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Blog = () => {
+export default function Blog () {
   const data = useStaticQuery(query);
 
   return (
@@ -39,8 +39,6 @@ const Blog = () => {
     </section>
   );
 };
-
-export default Blog;
 
 const query = graphql`
   query BlogPostPreview {

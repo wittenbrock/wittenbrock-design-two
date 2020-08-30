@@ -5,7 +5,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Facebook from './Facebook';
 import Twitter from './Twitter';
 
-const SEO = ({ title, desc, banner, pathname, article, date, updated }) => {
+export default function SEO(props) {
+  const { title, desc, banner, pathname, article, date, updated } = props;
   const { site } = useStaticQuery(query);
 
   const {
@@ -169,9 +170,7 @@ const SEO = ({ title, desc, banner, pathname, article, date, updated }) => {
       <Twitter title={seo.title} image={seo.image} desc={seo.description} />
     </>
   );
-};
-
-export default SEO;
+}
 
 SEO.propTypes = {
   title: PropTypes.string,

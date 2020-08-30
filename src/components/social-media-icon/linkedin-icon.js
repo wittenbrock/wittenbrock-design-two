@@ -1,7 +1,8 @@
 import React from 'react';
 import 'twin.macro';
 
-export default () => (
+export default function LinkedinIcon() {
+  return (
   <svg
     tw="fill-current"
     viewBox="0 0 24 24"
@@ -15,4 +16,4 @@ export default () => (
 		c0.5-0.9,1.5-1.4,2.6-1.4c1.9,0,3.3,1.2,3.3,3.8L18.6,18.3z"
     />
   </svg>
-);
+)};

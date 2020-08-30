@@ -1,6 +1,6 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links.
-  title: 'Designer & JavaScript Developer | Wittenbrock Design', // Site Title
+  title: 'Designer & JavaScript Specialist | Wittenbrock Design', // Site Title
   titleAlt: 'Wittenbrock Design', // Title for JSONLD
   description:
     'Designer, Web Developer, and JavaScript specialist - I am William Wittenbrock and this is my blog. Check out my latest posts.',

@@ -19,8 +19,10 @@ const gitHubSpecs = {
 };
 
 // A function that returns a social media icon wrapped in HTML
-const createSocialMediaIcon = (specs, size, color) => {
+const createSocialMediaIcon = props => {
+  const { specs, size, color } = props;
   const { url, text, icon } = specs;
+
   return (
     <a
       href={url}
@@ -40,16 +42,16 @@ const createSocialMediaIcon = (specs, size, color) => {
 };
 
 // React component - render the social media icon and its HTML
-const SocialMediaIcon = ({ linkedIn, gitHub, size, color }) => {
+export default function SocialMediaIcon(props) {
+  const { linkedIn, gitHub, size, color } = props;
+
   if (linkedIn) {
     return <div>{createSocialMediaIcon(linkedInSpecs, size, color)}</div>;
   }
   if (gitHub) {
     return <div>{createSocialMediaIcon(gitHubSpecs, size, color)}</div>;
   }
-};
-
-export default SocialMediaIcon;
+}
 
 SocialMediaIcon.propTypes = {
   linkedIn: PropTypes.bool,

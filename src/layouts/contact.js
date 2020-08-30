@@ -21,7 +21,8 @@ const StyledHeader = styled.header(() => [
   `,
 ]);
 
-const Contact = () => (
+export default function Contact () {
+  return (
   <section id="contact" tw="w-full px-4 pt-24 xl:pt-32 sm:pb-24 xl:pb-32">
     <StyledDiv>
       <StyledHeader>
@@ -39,6 +40,4 @@ const Contact = () => (
       <ContactForm />
     </StyledDiv>
   </section>
-);
-
-export default Contact;
+)};
