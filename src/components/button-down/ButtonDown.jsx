@@ -35,6 +35,12 @@ export default function ButtonDown(props) {
 }
 
 ButtonDown.propTypes = {
-  scrollTo: PropTypes.string,
+  to: PropTypes.string.isRequired,
+  smooth: PropTypes.bool,
   hasbouncedown: PropTypes.bool,
+  tab: PropTypes.string,
+};
+
+ButtonDown.defaultProps = {
+  tab: `0`,
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import tw from 'twin.macro';
 import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
@@ -89,7 +90,7 @@ export default function BlogPost(props) {
               About the author
             </h2>
             <p tw="text-white text-sm sm:text-base mb-2">
-              William is a designer, web developer, and ramen aficionado.
+              William is a software engineer, designer, and ramen aficionado.
             </p>
             <div tw="flex justify-between w-40">
               <SocialMediaIcon linkedIn size="small" color="#d2d6dc" />
@@ -177,3 +178,8 @@ export const query = graphql`
     }
   }
 `;
+
+BlogPost.propTypes = {
+  data: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired,
+};

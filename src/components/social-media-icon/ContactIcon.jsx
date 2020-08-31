@@ -42,9 +42,9 @@ export default function ContactIcon(props) {
 }
 
 ContactIcon.propTypes = {
-  tailwind: PropTypes.string,
-  height: PropTypes.string,
   size: PropTypes.string,
+  height: PropTypes.string,
+  width: PropTypes.string,
   color: PropTypes.string,
 };
 

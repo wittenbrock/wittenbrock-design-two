@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import tw, { css, styled } from 'twin.macro';
 
@@ -40,6 +41,7 @@ const StyledImage = styled.img(() => [
 
 export default function BlogCard(props) {
   const { slug, thumbnail, alt, title, description, date, timeToRead } = props;
+
   return (
     <StyledLink to={`blog${slug}`} aria-label={title}>
       <div tw="flex flex-col overflow-hidden h-full">
@@ -67,3 +69,13 @@ export default function BlogCard(props) {
     </StyledLink>
   );
 }
+
+BlogCard.propTypes = {
+  slug: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  timeToRead: PropTypes.string.isRequired,
+};

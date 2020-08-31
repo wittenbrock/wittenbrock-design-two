@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import tw, { css } from 'twin.macro';
 import { useField } from 'formik';
 import { keyframes } from '@emotion/core';
@@ -107,3 +108,10 @@ export default function FormField({ label, ...props }) {
     </p>
   );
 }
+
+FormField.propTypes = {
+  type: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  label: PropTypes.string.isRequired,
+};

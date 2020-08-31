@@ -56,4 +56,9 @@ SocialMediaIcon.propTypes = {
   linkedIn: PropTypes.bool,
   gitHub: PropTypes.bool,
   size: PropTypes.string,
+  color: PropTypes.string,
+};
+
+SocialMediaIcon.defaultProps = {
+  color: `#fff`,
 };
