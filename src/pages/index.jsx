@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SEO } from '../components';
-import { SectionOne, SectionTwo, Blog, Contact } from '../layouts';
+import { SectionOne, SectionTwo, Blog, Contact } from '../layouts/index';
 import website from '../../website';
 
 export default function IndexPage() {
