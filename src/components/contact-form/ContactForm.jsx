@@ -27,11 +27,11 @@ const formStyles = css`
 `;
 
 // A helper function to encode the form's submission the way Netlify expects it
-const netlifyEncode = data => {
+const encode = (data) => {
   return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)} = ${encodeURIComponent(data[key])}`)
+    .map(key => encodeURIComponent(key) + `=` + encodeURIComponent(data[key]))
     .join(`&`);
-};
+}
 
 // Contact form component
 export default function ContactForm() {
