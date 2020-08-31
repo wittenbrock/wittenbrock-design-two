@@ -3,8 +3,8 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import tw, { styled, css } from 'twin.macro';
 
-import FormField from './form-field';
-import SubmitButton from './submit-button';
+import FormField from './FormField';
+import SubmitButton from './SubmitButton';
 
 // TO-DO: Make sure that the onSubmit section is using "" not '
 
@@ -51,9 +51,9 @@ export default function ContactForm() {
       })}
       onSubmit={(values, actions) => {
         fetch(`/`, {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: netlifyEncode({ "form-name": "contact-william", ...values }),
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: netlifyEncode({ 'form-name': 'contact-william', ...values }),
         })
           .then(() => {
             alert(`Your message was sent successfully. Thank you!`);

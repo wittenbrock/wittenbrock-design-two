@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import tw, { css } from 'twin.macro';
 
-import LinkedinIcon from './linkedin-icon';
-import GitHubIcon from './github-icon';
-import { pulsateBack } from '../button-down/styles';
+import LinkedinIcon from './LinkedinIcon';
+import GitHubIcon from './GithubIcon';
+import { pulsateBack } from '../button-down';
 
 const linkedInSpecs = {
   url: `https://www.linkedin.com/in/william-wittenbrock/`,

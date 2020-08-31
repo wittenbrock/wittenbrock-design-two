@@ -1,6 +1,15 @@
-export { default as BlogCard } from './blog-card';
-export { default as ButtonDown } from './button-down';
-export { default as ContactForm } from './contact-form';
-export { default as SocialMediaIcon } from './social-media-icon';
-export { default as WittenbrockDesignLogo } from './wittenbrock-design-logo';
-export { default as SEO } from './seo';
+import BlogCard from './blog-card';
+import ButtonDown from './button-down';
+import ContactForm from './contact-form';
+import SocialMediaIcon from './social-media-icon';
+import WittenbrockDesignLogo from './wittenbrock-design-logo';
+import SEO from './seo';
+
+export {
+  BlogCard,
+  ButtonDown,
+  ContactForm,
+  SEO,
+  SocialMediaIcon,
+  WittenbrockDesignLogo,
+};

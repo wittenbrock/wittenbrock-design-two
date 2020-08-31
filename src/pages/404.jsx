@@ -4,7 +4,7 @@ import tw from 'twin.macro';
 
 import SEO from '../components/seo';
 import homeSvg from '../images/home.svg';
-import { buttonStyles, pulsateBack } from '../components/button-down/styles';
+import { buttonStyles, pulsateBack } from '../components/button-down';
 
 export default function NotFoundPage() {
   return (

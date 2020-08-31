@@ -1,7 +1,7 @@
 import React from 'react';
 import 'twin.macro';
 
-import ButtonDown from '../components/button-down/index';
+import ButtonDown from '../components/button-down';
 
 export default function SectionTwo() {
   return (

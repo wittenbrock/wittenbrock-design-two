@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
 
 import { SocialMediaIcon, SEO } from '../components';
-import ContactIcon from '../components/social-media-icon/contact-icon';
+import { ContactIcon } from '../components/social-media-icon';
 import website from '../../website';
 
 export default function BlogPost(props) {

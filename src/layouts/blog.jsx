@@ -1,8 +1,8 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import 'twin.macro';
 
-import BlogCard from '../components/blog-card';
-import { useStaticQuery, graphql } from 'gatsby';
+import { BlogCard } from '../components';
 
 export default function Blog() {
   const data = useStaticQuery(query);

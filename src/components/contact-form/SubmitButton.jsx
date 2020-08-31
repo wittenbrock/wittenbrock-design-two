@@ -2,7 +2,7 @@ import React from 'react';
 import tw, { styled } from 'twin.macro';
 
 import sendSvg from '../../images/send.svg';
-import { buttonStyles, pulsateBack } from '../button-down/styles';
+import { buttonStyles, pulsateBack } from '../button-down';
 
 const StyledButton = styled.button(({ disabled }) => [
   tw`bg-orange rounded-full py-2 px-16 xl:px-20 relative`,

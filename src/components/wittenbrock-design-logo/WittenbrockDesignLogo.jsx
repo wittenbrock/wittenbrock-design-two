@@ -8,7 +8,7 @@ import {
   draw,
   slideInFwdCenter,
   bounceInTop,
-} from './style';
+} from './styles';
 
 export default function WittenbrockDesignLogo() {
   return (

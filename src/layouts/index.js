@@ -1,4 +1,7 @@
-export { default as Blog } from './blog';
-export { default as Contact } from './contact';
-export { default as SectionOne } from './section-one';
-export { default as SectionTwo } from './section-two';
+import Blog from './Blog';
+import BlogPost from './BlogPost';
+import Contact from './Contact';
+import SectionOne from './SectionOne';
+import SectionTwo from './SectionTwo';
+
+export { Blog, BlogPost, Contact, SectionOne, SectionTwo };

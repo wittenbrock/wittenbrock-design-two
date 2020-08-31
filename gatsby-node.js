@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: `blog${node.fields.slug}`,
-      component: path.resolve(`./src/layouts/blog-post.jsx`),
+      component: path.resolve(`./src/layouts/BlogPost.jsx`),
       context: {
         slug: node.fields.slug,
         prev,
