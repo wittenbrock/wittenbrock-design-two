@@ -27,7 +27,7 @@ const formStyles = css`
 `;
 
 // A helper function to encode the form's submission the way Netlify expects it
-const encode = (data) => {
+const netlifyEncode = (data) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + `=` + encodeURIComponent(data[key]))
     .join(`&`);
