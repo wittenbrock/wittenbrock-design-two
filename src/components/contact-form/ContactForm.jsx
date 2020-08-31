@@ -50,7 +50,7 @@ export default function ContactForm() {
         message: Yup.string().required(`Please enter a message.`),
       })}
       onSubmit={(values, actions) => {
-        fetch(`/`, {
+        fetch(`/?no-cache=1`, {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: netlifyEncode({ "form-name": "contact-william", ...values }),
