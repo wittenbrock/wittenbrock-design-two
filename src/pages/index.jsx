@@ -11,6 +11,8 @@ export default function IndexPage() {
       <main>
         <SectionOne />
         <SectionTwo />
+        <Blog />
+        <Contact />
       </main>
     </>
   );
