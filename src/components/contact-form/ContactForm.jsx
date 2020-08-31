@@ -27,10 +27,10 @@ const formStyles = css`
 `;
 
 // A helper function to encode the form's submission the way Netlify expects it
-const netlifyEncode = (data) => {
+const encode = data => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + `=` + encodeURIComponent(data[key]))
-    .join(`&`);
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
 }
 
 // Contact form component
@@ -38,6 +38,8 @@ export default function ContactForm() {
   return (
     <Formik
       initialValues={{
+        'form-name': `contact-william`,
+        'voight-kampff-test': ``,
         name: ``,
         email: ``,
         message: ``,
@@ -50,10 +52,10 @@ export default function ContactForm() {
         message: Yup.string().required(`Please enter a message.`),
       })}
       onSubmit={(values, actions) => {
-        fetch(`/?no-cache=1`, {
+        fetch("/?no-cache=1", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: netlifyEncode({ "form-name": "contact-william", ...values }),
+          body: encode({ "form-name": "contact-william", ...values }),
         })
           .then(() => {
             alert(`Your message was sent successfully. Thank you!`);
@@ -81,7 +83,7 @@ export default function ContactForm() {
             ]}
           >
             <h3 tw="sr-only">Contact William Wittenbrock.</h3>
-            <Field type="hidden" name="contact-william" />
+            <Field type="hidden" name="form-name" value="contact-william" />
             <Field type="hidden" name="voight-kampff-test" />
             <FormField
               type="text"
