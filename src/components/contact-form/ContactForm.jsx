@@ -6,8 +6,6 @@ import tw, { styled, css } from 'twin.macro';
 import FormField from './FormField';
 import SubmitButton from './SubmitButton';
 
-// TO-DO: Make sure that the onSubmit section is using "" not '
-
 const StyledDiv = styled.div`
   flex-basis: 50%;
   display: flex;
