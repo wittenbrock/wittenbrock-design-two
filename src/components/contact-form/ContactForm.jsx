@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import tw, { styled, css } from 'twin.macro';
 
@@ -51,17 +51,19 @@ export default function ContactForm() {
       })}
       onSubmit={(values, actions) => {
         fetch(`/`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: netlifyEncode({ 'form-name': 'contact-william', ...values }),
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: netlifyEncode({ "form-name": "contact-william", ...values }),
         })
           .then(() => {
             alert(`Your message was sent successfully. Thank you!`);
             actions.resetForm();
           })
-          .catch(() => {
+          .catch(error => {
             alert(
-              `Oops! An error occurred while submitting the form. Please refresh the page and try again.`
+              `Oops! An error occurred while submitting the form. Please refresh the page and try again.
+              
+              ${error}`
             );
           })
           .finally(() => actions.setSubmitting(false));
@@ -71,13 +73,16 @@ export default function ContactForm() {
         <StyledDiv>
           <Form
             name="contact-william"
-            data-netlify={true}
+            data-netlify="true"
+            date-netlify-honeypot="voight-kampff-test"
             css={[
               tw`bg-white w-full max-w-sm sm:max-w-md xl:max-w-lg px-10 pt-10 sm:px-12 sm:pt-12 xl:px-16 xl:pt-16 mb-4 text-indigo-darkest text-sm lg:text-base`,
               formStyles,
             ]}
           >
             <h3 tw="sr-only">Contact William Wittenbrock.</h3>
+            <Field type="hidden" name="contact-william" />
+            <Field type="hidden" name="voight-kampff-test" />
             <FormField
               type="text"
               name="name"

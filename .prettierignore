@@ -2,4 +2,4 @@
 package.json
 package-lock.json
 public
-src/components/contact-form/index.jsx
+src/components/contact-form/ContactForm.jsx
