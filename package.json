@@ -1,7 +1,7 @@
 {
   "name": "wittenbrock-design",
   "private": true,
-  "description": "William Wittenbrock's blog site.",
+  "description": "William Wittenbrock's blog.",
   "version": "0.1.0",
   "author": "William Wittenbrock",
   "dependencies": {
@@ -21,7 +21,6 @@
     "gatsby-remark-prismjs": "^3.5.11",
     "gatsby-source-cloudinary": "^0.1.14",
     "gatsby-source-filesystem": "^2.3.27",
-    "gatsby-transformer-cloudinary": "^1.0.1",
     "gatsby-transformer-remark": "^2.8.31",
     "gatsby-transformer-sharp": "^2.5.13",
     "prism-material-themes": "^1.0.4",
