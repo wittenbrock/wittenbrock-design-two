@@ -78,7 +78,7 @@ export default function BlogPost(props) {
         <div tw="flex py-16">
           <figure tw="mr-4 flex-shrink-0">
             <img
-              src={data.cloudinaryMedia.secure_url}
+              src="https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,f_auto,q_100,w_160/v1598566602/wittenbrock-design/william-wittenbrock-portrait.jpg"
               alt="A portrait of William Wittenbrock."
               tw="h-20 w-20 rounded-md"
               height="80"
@@ -161,11 +161,6 @@ export default function BlogPost(props) {
 
 export const query = graphql`
   query BlogPostContent($slug: String!) {
-    cloudinaryMedia(
-      public_id: { eq: "wittenbrock-design/william-wittenbrock-portrait" }
-    ) {
-      secure_url
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

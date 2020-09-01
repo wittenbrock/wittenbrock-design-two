@@ -15,7 +15,8 @@
 </p>
 
 <p align="center">
-  A website that features my essays, opinions, and advice on computer programming. Built with the static site generator <a href="https://www.gatsbyjs.org">Gatsby.js</a>.
+  A website that features my essays, opinions, and advice on computer programming.<br>
+  Built with the static site generator <a href="https://www.gatsbyjs.org">Gatsby.js</a>.
 </p>
 
 ---
@@ -24,7 +25,7 @@
 
 - Images managed and optimized by [Cloudinary](https://cloudinary.com/)
 - Suggestions for further reading at the end of each blog post
-- Is a progressive web application, enabling the site to work offline
+- Progressive web application (PWA)
 - A contact form with client side validation (Formik & Yup)
 - SEO (sitemap, schema.org data, OpenGraph & Twitter tags)
 - A RSS subscription feed
@@ -40,7 +41,7 @@ This project:
 
 ## Installation
 
-This application was build using Node version 13.11.0 and NPM version 6.14.5. For best results, install this project with these versions or greater.
+This application was built using Node version 13.11.0 and NPM version 6.14.5. For best results, install this project with these versions or greater.
 
 ***1. Getting started.***
 
