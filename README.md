@@ -31,6 +31,7 @@
 - A RSS subscription feed
 
 ## Technologies
+
 This project:
 
 - was built with Gatsby.js
@@ -43,7 +44,7 @@ This project:
 
 This application was built using Node version 13.11.0 and NPM version 6.14.5. For best results, install this project with these versions or greater.
 
-***1. Getting started.***
+**_1. Getting started._**
 
 Clone the git repository to your computer.
 
@@ -51,7 +52,7 @@ Clone the git repository to your computer.
 git clone https://github.com/wittenbrock/wittenbrock-design-two.git
 ```
 
-***2. Installing the dependencies.***
+**_2. Installing the dependencies._**
 
 Navigate to the wittenbrock-design-two directory and install its JavaScript dependencies.
 
@@ -60,7 +61,7 @@ cd wittenbrock-design-two
 npm install
 ```
 
-***3. Start developing.***
+**_3. Start developing._**
 
 Open the project on a development server.
 
