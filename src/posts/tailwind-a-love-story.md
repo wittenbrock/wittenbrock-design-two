@@ -45,8 +45,8 @@ Remember how I keep complaining about fighting and overwriting CSS classes from 
 
 ```html
 <!-- Tailwind -->
-<div class="shadow-md ...">
-  <button type="button" class="bg-blue-600 text-md ...">Button text</button>
+<div class="shadow-md...">
+  <button type="button" class="bg-blue-600 text-md...">Button text</button>
 </div>
 ```
 
