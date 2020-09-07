@@ -9,44 +9,19 @@ module.exports = {
       default: {
         css: {
           a: {
-            position: `relative`,
             color: `#fff`,
             textDecoration: `none`,
             fontFamily: `Sailec Bold`,
             fontWeight: `800`,
             outline: `0`,
             appearance: `none`,
-
-            '&::before': {
-              content: `""`,
-              position: `absolute`,
-              top: `0.9em`,
-              right: `0`,
-              height: `0.15em`,
-              zIndex: `10`,
-              backgroundColor: `#e06c52`,
-              width: `100%`,
-              left: `0`,
+            transition: `all 150ms ease-in-out`,
+            backgroundImage: `linear-gradient(180deg,transparent 70%, #e06c52 0)`,
+            '&:hover': {
+              backgroundImage: `linear-gradient(180deg,transparent 70%, #6574cd 0)`,
             },
-            '&::after': {
-              content: `""`,
-              position: `absolute`,
-              top: `0.9em`,
-              right: `0`,
-              height: `0.15em`,
-              zIndex: `20`,
-              backgroundColor: `#6574cd`,
-              transition: `all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1)`,
-              width: `0`,
-            },
-            '&:hover::after': {
-              width: `100%`,
-              left: `0`,
-            },
-            '&:focus::after': {
-              width: `100%`,
-              left: `0`,
-              backgroundColor: `#37a5eb`,
+            '&:focus': {
+              backgroundImage: `linear-gradient(180deg,transparent 70%, #37a5eb 0)`,
             },
           },
           p: {
