@@ -1,7 +1,7 @@
 ---
 title: "Drupal's frontend tools suck"
 date: '2020-08-22'
-description: "Considering spinning up a Drupal site and using it as a frontend too? I've got four reasons why you shouldn't do that."
+description: "Considering spinning up a Drupal site and using its as a frontend? I've got four reasons why you shouldn't do that."
 thumbnail: 'https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,f_auto,q_auto:best,w_1024/v1599370266/wittenbrock-design/dont-use-drupal-as-a-frontend_zuszyl.jpg'
 alt: 'Playing cards stacked together to make a house of cards.'
 ---
