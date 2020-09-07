@@ -1,10 +1,8 @@
 <p align="center">
-  <a href="https://www.lekoarts.de">
+  <a href="https://www.wittenbrockdesign.com">
     <img
-      src="https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,q_auto:best,w_1344/v1598926438/wittenbrock-design/wittenbrock-design-intro_mgvfjp.webp"
-      height="423"
-      width="830"
-      alt="I design and code beautiful websites."
+      src="https://res.cloudinary.com/wittenbrock-design/image/upload/f_auto,q_auto:best/v1599512014/wittenbrock-design/what-im-thinking-about.png"
+      alt="A preview of three blog posts with the caption What I'm Thinking About."
       title="Wittenbrock Design"
     />
   </a>

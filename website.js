@@ -6,7 +6,7 @@ module.exports = {
   headline: `Essays, opinions, and advice on computer programming.`, // Headline for schema.org JSONLD
   url: `https://www.wittenbrockdesign.com`, // Domain of your site. No trailing slash!
   siteLanguage: `en`, // Language Tag on <html> element
-  banner: `https://res.cloudinary.com/wittenbrock-design/image/upload/v1598739949/wittenbrock-design/wittenbrock-logo-4096x4096_kr6yci.png`, // Used for SEO
+  banner: `https://res.cloudinary.com/wittenbrock-design/image/upload/f_auto,q_auto:best/v1599512014/wittenbrock-design/what-im-thinking-about.png`, // Used for SEO
   ogLanguage: `en_US`, // Facebook Language
 
   // JSONLD / Manifest
