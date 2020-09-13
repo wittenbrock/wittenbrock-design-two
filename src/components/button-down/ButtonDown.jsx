@@ -36,4 +36,3 @@ ButtonDown.propTypes = {
   smooth: PropTypes.bool,
   hasbouncedown: PropTypes.bool,
 };
-

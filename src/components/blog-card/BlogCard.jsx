@@ -53,9 +53,7 @@ export default function BlogCard(props) {
             <h3 tw="text-indigo-darkest font-subheading mt-2 text-xl leading-7 font-semibold">
               <StyledSpan>{title}</StyledSpan>
             </h3>
-            <p tw="font-body font-light text-gray-500 mt-3 text-base leading-6">
-              {description}
-            </p>
+            <p tw="sr-only">{description}</p>
           </div>
           <div tw="mt-6 flex items-center">
             <p tw="font-body font-normal flex text-sm leading-5 text-gray-500">
