@@ -15,6 +15,4 @@ module.exports = {
   author: `William Wittenbrock`, // Author for schemaORGJSONLD
   themeColor: `#1d1e26`,
   backgroundColor: `#1d1e26`,
-
-  googleAnalyticsID: `UA-133453058-1`,
 };
