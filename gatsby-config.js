@@ -19,8 +19,9 @@ module.exports = {
     author: website.author,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: `UA-133453058-1`,
         head: true,
@@ -93,7 +94,6 @@ module.exports = {
         icon: website.favicon,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
