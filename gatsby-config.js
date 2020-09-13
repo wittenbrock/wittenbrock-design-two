@@ -20,6 +20,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: website.googleAnalyticsID,
+        head: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
@@ -71,6 +78,20 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: website.title,
+        short_name: website.titleAlt,
+        description: website.description,
+        start_url: pathPrefix,
+        background_color: website.backgroundColor,
+        theme_color: website.themeColor,
+        display: `standalone`,
+        icon: website.favicon,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
     {
@@ -110,26 +131,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: website.title,
-        short_name: website.titleAlt,
-        description: website.description,
-        start_url: pathPrefix,
-        background_color: website.backgroundColor,
-        theme_color: website.themeColor,
-        display: `standalone`,
-        icon: website.favicon,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: website.googleAnalyticsID,
       },
     },
     // Must be placed at the end
