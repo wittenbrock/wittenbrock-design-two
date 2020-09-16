@@ -3,9 +3,24 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import tw, { css, styled } from 'twin.macro';
 
-const StyledLink = tw(
-  Link
-)`block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer`;
+const defaultLinkStyles = `block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer max-w-md mx-auto lg:mx-0`;
+
+const isOdd = integer => Boolean(integer % 2);
+
+// To create the blog card "ladder" layout different blog cards need different styles based on their index. The func generateLinkStyles assigns different styles.
+const generateLinkStyles = number => {
+  if (number === 0) {
+    return tw`${defaultLinkStyles}`;
+  } else if (isOdd(number)) {
+    return tw`${defaultLinkStyles} lg:ml-auto lg:-mt-48`;
+  } else {
+    return tw`${defaultLinkStyles} lg:-mt-12`;
+  }
+};
+
+const StyledLink = styled(Link)`
+  ${props => generateLinkStyles(props.index)}
+`;
 
 const StyledSpan = styled.span`
   position: relative;
@@ -40,10 +55,19 @@ const StyledImage = styled.img(() => [
 ]);
 
 export default function BlogCard(props) {
-  const { slug, thumbnail, alt, title, description, date, timeToRead } = props;
+  const {
+    slug,
+    thumbnail,
+    alt,
+    title,
+    description,
+    date,
+    timeToRead,
+    index,
+  } = props;
 
   return (
-    <StyledLink to={`blog${slug}`} aria-label={title}>
+    <StyledLink to={`blog${slug}`} aria-label={title} index={index}>
       <div tw="flex flex-col overflow-hidden h-full">
         <div tw="flex-shrink-0 overflow-hidden">
           <StyledImage src={thumbnail} alt={alt} />

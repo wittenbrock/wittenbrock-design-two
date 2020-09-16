@@ -129,6 +129,7 @@ module.exports = {
       minHeight: {
         112: `28rem`,
       },
+      margin: {},
     },
     colors: {
       inherit: `inherit`,
