@@ -62,3 +62,20 @@ figcaption::before {
   position: relative;
   top: 0.2em;
 }
+
+::-webkit-scrollbar-track {
+  background: #2d3748;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+::-webkit-scrollbar {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background: #2d3748;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 9999px;
+}

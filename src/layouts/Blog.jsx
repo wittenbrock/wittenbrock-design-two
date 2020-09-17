@@ -1,13 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import tw, { css, styled } from 'twin.macro';
+import tw, { css } from 'twin.macro';
 
 import { BlogCard } from '../components';
 
 const grayDividerStyles = css`
   @media screen and (min-width: 1024px) {
     &::after {
-      content: "";
+      content: '';
       display: block;
       width: 1px;
       height: 100%;
