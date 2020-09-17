@@ -79,3 +79,8 @@ figcaption::before {
   background: #4b5563;
   border-radius: 9999px;
 }
+
+/* Make sure Prism's comment color meets accessibility standards */
+span.token.comment {
+  color: #9fa6b2;
+}
