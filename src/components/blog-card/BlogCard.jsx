@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import tw, { css, styled } from 'twin.macro';
 
-const defaultLinkStyles = `block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer max-w-md mx-auto lg:mx-0 min-w-112`;
+const defaultLinkStyles = `block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer max-w-md mx-auto lg:mx-0 min-w-full sm:min-w-112`;
 
 const isOdd = integer => Boolean(integer % 2);
 
