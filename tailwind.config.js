@@ -15,7 +15,6 @@ module.exports = {
             fontWeight: `800`,
             outline: `0`,
             appearance: `none`,
-            transition: `all 150ms ease-in-out`,
             backgroundImage: `linear-gradient(180deg,transparent 70%, #e06c52 0)`,
             '&:hover': {
               backgroundImage: `linear-gradient(180deg,transparent 70%, #6574cd 0)`,

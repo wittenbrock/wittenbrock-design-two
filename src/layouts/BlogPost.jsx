@@ -136,7 +136,7 @@ export default function BlogPost(props) {
               </div>
             )}
           </nav>
-          <div tw="text-base leading-5 mt-10 mb-12 sm:mb-16">
+          <div tw="text-base leading-5 mt-16 mb-12 sm:mb-16">
             <Link
               to="/#blog"
               tw="text-sm text-white bg-transparent hover:text-indigo md:hover:text-white md:hover:bg-indigo focus:text-blue-lighter md:focus:text-white md:focus:bg-blue-lighter rounded-full sm:py-2 sm:px-5 outline-none transition ease-in-out duration-150 sm:-ml-6"
