@@ -63,6 +63,12 @@ figcaption::before {
   top: 0.2em;
 }
 
+/* Firefox scrollbar styles */
+html {
+  scrollbar-color: #4b5563 #2d3748;
+}
+
+/* Google Chrome scrollbar styles */
 ::-webkit-scrollbar-track {
   background: #2d3748;
   border-bottom-left-radius: 0.5rem;
