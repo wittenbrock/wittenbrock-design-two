@@ -129,6 +129,9 @@ module.exports = {
       minHeight: {
         112: `28rem`,
       },
+      minWidth: {
+        112: `28rem`,
+      },
       margin: {},
     },
     colors: {
