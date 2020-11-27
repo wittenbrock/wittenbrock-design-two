@@ -1,6 +1,11 @@
+// gatsby-node.js API documentation:
+// https://www.gatsbyjs.com/docs/node-apis/
+
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
+// Create the property "node.fields.slug" for all MarkdownRemark nodes
+// Store the file's name as a slug
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark') {
@@ -13,6 +18,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
+// Log errors to the console if a GraphQL
+// query fails during a build
 const queryWrapper = promise =>
   promise.then(result => {
     if (result.errors) {
@@ -21,6 +28,9 @@ const queryWrapper = promise =>
     return result;
   });
 
+// Query all MarkdownRemark files and assign them to the variable "results".
+// Then, loop over the results array and create a page for each markdown file.
+// Render each of these pages using the BlogPost.jsx component.
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await queryWrapper(
@@ -31,9 +41,6 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               fields {
                 slug
-              }
-              frontmatter {
-                title
               }
             }
           }
