@@ -53,7 +53,7 @@ export default function ContactForm() {
         fetch("/?no-cache=1", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact-william", ...values }),
+          body: encode({ "form-name": "contact-william", ...values })
         })
           .then(() => {
             alert(`Your message was sent successfully. Thank you!`);
