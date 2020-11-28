@@ -61,6 +61,16 @@ const invalidStyles = css`
 `;
 
 // Creates an input or textarea field with a label and error message
+export default function FormField({ label, ...props }) {
+  const [field, meta] = useField(props);
+  const { type } = props;
+  const fieldValidationError = meta.touched && meta.error;
+
+  return (
+    <p tw="pb-6 sm:pb-8 relative">
+      <label tw="sr-only" htmlFor={props.id || props.name}>
+        {label}
+      </label>
 
       {/* Create an input if type="text" or type="email" */}
       {(type === 'text' || type === 'email') && (
