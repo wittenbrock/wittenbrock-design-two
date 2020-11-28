@@ -22,7 +22,12 @@ const grayDividerStyles = css`
 `;
 
 export default function Blog() {
-  
+  const data = useStaticQuery(query);
+
+  return (
+    <section
+      id="blog"
+      t
       <div tw="max-w-6xl mx-auto">
         <header tw="text-center text-white mb-24 max-w-lg xl:max-w-2xl mx-auto">
           <h2 tw="font-heading font-bold text-3xl sm:text-4xl xl:text-5xl mb-2 sm:mb-3 xl:mb-4">
