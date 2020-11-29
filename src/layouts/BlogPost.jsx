@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import tw from 'twin.macro';
-import { Link } from 'gatsby';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import { SocialMediaIcon, SEO } from '../components';
 import { ContactIcon } from '../components/social-media-icon';

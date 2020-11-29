@@ -10,12 +10,7 @@ export default function SectionOne() {
       <h1 tw="sr-only">Wittenbrock Design</h1>
       <div>
         <WittenbrockDesignLogo />
-        <ButtonDown
-          to={`introduction`}
-          smooth={true}
-          hasbouncedown={true}
-          tab={`0`}
-        />
+        <ButtonDown to={`introduction`} smooth hasbouncedown tab={`0`} />
       </div>
     </section>
   );

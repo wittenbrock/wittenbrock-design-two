@@ -19,7 +19,7 @@ export default function SectionTwo() {
         </p>
         <p tw="font-body text-lg lg:text-xl">I love what I do.</p>
       </header>
-      <ButtonDown to={`blog`} smooth={true} tab={`0`} />
+      <ButtonDown to={`blog`} smooth tab={`0`} />
     </section>
   );
 }
