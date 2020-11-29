@@ -31,6 +31,7 @@ const queryWrapper = promise =>
 // Query all MarkdownRemark files and assign them to the variable "results".
 // Then, loop over the results array and create a page for each markdown file.
 // Render each of these pages using the BlogPost.jsx component.
+// Pass the previous and next blog post title through props.pageContext
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await queryWrapper(

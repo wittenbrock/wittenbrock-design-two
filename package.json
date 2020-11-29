@@ -8,15 +8,6 @@
     "node": "15.0.1",
     "npm": "7.0.15"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": ["eslint --ignore-path .gitignore --fix"],
-    "*.+(json|yml|yaml|css|less|scss|md|graphql|mdx)": ["prettier --write"]
-  },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "^0.7.0",
@@ -76,7 +67,7 @@
     "lint:fix": "eslint . --ext .js,.jsx --fix --ignore-path .gitignore",
     "postinstall": "husky install",
     "lint-staged": "lint-staged",
-    "pretty-quick": "pretty-quick"
+    "pretty-quick": "pretty-quick --staged"
   },
   "repository": {
     "type": "git",
