@@ -63,6 +63,9 @@ export default function Blog() {
   );
 }
 
+// Query all of the markdown files in src/posts
+// Sort the markdown files by date, with the most recently written at the 0 index
+// This query gets the fields needed to create a blog post preview card on the homepage
 const query = graphql`
   query BlogPostPreview {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

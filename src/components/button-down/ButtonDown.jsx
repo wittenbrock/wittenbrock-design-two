@@ -6,6 +6,8 @@ import { Link as ScrollLink } from 'react-scroll';
 import { buttonStyles, bounceDown, pulsateBack } from './styles';
 import chevronDownSvg from '../../images/cheveron-down.svg';
 
+// This button's smooth scroll effect is created by react-scroll:
+// https://github.com/fisshy/react-scroll
 export default function ButtonDown(props) {
   const { to, smooth, hasbouncedown, tab } = props;
   return (

@@ -158,6 +158,8 @@ export default function BlogPost(props) {
   );
 }
 
+// Query a specific markdown file in src/posts, using the post's slug field to find the file
+// This query gets the fields needed to create a  blog post page
 export const query = graphql`
   query BlogPostContent($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {

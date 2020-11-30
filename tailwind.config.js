@@ -1,3 +1,7 @@
+// Tailwind is managed by the package Twin Macro in this project
+// https://github.com/ben-rogerson/twin.macro
+// Twin Macro combines the utlity of Emotion's CSS-in-JS with Tailwind
+
 module.exports = {
   theme: {
     fontFamily: {
