@@ -1,11 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import tw from 'twin.macro';
+import tw, { css } from 'twin.macro';
 import { Link, graphql } from 'gatsby';
 
 import { SocialMediaIcon, SEO } from '../components';
 import { ContactIcon } from '../components/social-media-icon';
 import website from '../../website';
+
+const dropCapFirstLetter = css`
+  p:first-of-type::first-letter {
+    font-weight: 700;
+    color: #fff;
+    float: left;
+    line-height: 0.65;
+    margin-right: 0.1em;
+    padding-top: 0.4em;
+    font-size: 3em;
+    font-family: 'League Spartan', sans-serif;
+  }
+`;
 
 export default function BlogPost(props) {
   const { data, pageContext } = props;
@@ -69,7 +82,8 @@ export default function BlogPost(props) {
               </div>
             </header>
             <div
-              tw="prose prose-sm sm:prose py-10"
+              id="post-content"
+              css={[tw`prose prose-sm sm:prose py-10`, dropCapFirstLetter]}
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </article>
