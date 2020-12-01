@@ -6,7 +6,7 @@ thumbnail: 'https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,f
 alt: 'A sailboat with a red hull and white sail floating on a river.'
 ---
 
-I will be straight with you from the start: this is a biased review. I'm a fanboy of Tailwind's creators, [Steve Schoger](https://www.steveschoger.com/) and [Adam Wathan](https://adamwathan.me/). I first became familiar with them when they released their book [Refactoring UI](https://refactoringui.com/book/), which ended up heavily influencing my UX/UI design methodologies. I recommend reading it, particularly if you self-identify as a developer "who hates making UI."
+I'll be straight with you from the start: this is a biased review. I'm a fanboy of Tailwind's creators, [Steve Schoger](https://www.steveschoger.com/) and [Adam Wathan](https://adamwathan.me/). I first became familiar with them when they released their book [Refactoring UI](https://refactoringui.com/book/), which ended up heavily influencing my UX/UI design methodologies. I recommend reading it, particularly if you self-identify as a developer "who hates making UI."
 
 In general, CSS frameworks are primarily trying to solve two problems: offer a standardized way to write CSS and decrease the amount of time spent writing it. Having a team of ten developers who are all composing their own styles is a recipe for disaster. Individually written CSS doesn't scale – specificity conflicts become a nightmare. A developer's inline comments are never as good as a framework's documentation. Teams need a system in place like object-oriented CSS, linting, or a framework that can help guide and manage their CSS.
 

@@ -8,17 +8,57 @@ import { ContactIcon } from '../components/social-media-icon';
 import website from '../../website';
 
 const dropCapFirstLetter = css`
-  p:first-of-type::first-letter {
-    font-weight: 700;
+  .dropcap {
+    font-family: 'League Spartan', sans-serif;
     color: #fff;
     float: left;
-    line-height: 0.65;
-    margin-right: 0.1em;
-    padding-top: 0.4em;
     font-size: 3em;
-    font-family: 'League Spartan', sans-serif;
+    line-height: 1;
+    margin-right: 0.2em;
+    padding-top: 0.4em;
+  }
+
+  .dropcap:before,
+  .dropcap:after {
+    content: '';
+    display: block;
+  }
+
+  .dropcap:before {
+    margin-top: -0.2em;
+  }
+
+  .dropcap:after {
+    margin-bottom: -0.15em;
+  }
+
+  .screen-reader {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 `;
+
+// Create a drop cap letter that is accessible and
+// looks the same on Chrome and FireFox (::first-letter doesn't look the same)
+const createDropCap = string => {
+  // Search the blog post's HTML string for the first word after a <p> tag
+  const firstWordAndPTag = string.match(/<p>\w*/);
+  // Remove the <p> tag
+  const firstWord = firstWordAndPTag[0].replace('<p>', '');
+  const firstLetter = firstWord.slice(0, 1);
+  const firstWordFragment = firstWord.slice(1);
+  const dropCapMarkup = `<span aria-hidden="true"><span class="dropcap">${firstLetter}</span>${firstWordFragment}</span>
+                         <span class="screen-reader">${firstWord}</span>`;
+  // Add the drop cap markup to the blog post's html, replacing the first word
+  return string.replace(firstWord, dropCapMarkup);
+};
 
 export default function BlogPost(props) {
   const { data, pageContext } = props;
@@ -35,6 +75,8 @@ export default function BlogPost(props) {
         title: pageContext.next.frontmatter.title,
       }
     : null;
+
+  const postHTML = createDropCap(post.html);
 
   return (
     <>
@@ -84,7 +126,7 @@ export default function BlogPost(props) {
             <div
               id="post-content"
               css={[tw`prose prose-sm sm:prose py-10`, dropCapFirstLetter]}
-              dangerouslySetInnerHTML={{ __html: post.html }}
+              dangerouslySetInnerHTML={{ __html: postHTML }}
             />
           </article>
         </main>
