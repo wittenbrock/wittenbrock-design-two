@@ -1,10 +1,10 @@
 [[headers]]
   for = "/*"
   [headers.value]
-    X-Frame-Options: DENY
-    X-XSS-Protection: 1; mode=block
-    Referrer-Policy: strict-origin-when-cross-origin
-    X-Content-Type-Options: nosniff
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
     Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
     Content-Security-Policy = '''
       script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
@@ -19,6 +19,6 @@
       form-action 'self';
       frame-ancestors 'none';'''
   
-  [build.environment]
-    NODE_VERSION = "15.0.1"
-    NPM_VERSION = "7.0.15"
+[build.environment]
+  NODE_VERSION = "15.0.1"
+  NPM_VERSION = "7.0.15"
