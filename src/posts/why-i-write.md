@@ -3,7 +3,7 @@ title: Why I write
 date: 2020-08-02T12:00:00.000Z
 updated: 2020-08-14T12:00:00.000Z
 description: The answer is simple - to share the knowledge that I've gained.
-thumbnail: src/images/why-i-write/why-i-write-thumbnail.jpg
+thumbnail: ../images/why-i-write/why-i-write-thumbnail.jpg
 alt: A person's hands typing on a MacBook laptop.
 ---
 

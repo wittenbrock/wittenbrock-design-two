@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import tw, { css, styled } from 'twin.macro';
+import Image from 'gatsby-image';
 
 const defaultLinkStyles = `block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer max-w-md mx-auto lg:mx-0 min-w-full sm:min-w-112`;
 
@@ -44,7 +45,7 @@ const StyledSpan = styled.span`
   }
 `;
 
-const StyledImage = styled.img(() => [
+const imageStyles = [
   tw`h-48 w-full object-cover transition duration-700 ease-in-out`,
   css`
     ${StyledLink}:hover &,
@@ -52,7 +53,7 @@ const StyledImage = styled.img(() => [
       transform: scale(1.05);
     }
   `,
-]);
+];
 
 export default function BlogCard(props) {
   const {
@@ -70,7 +71,11 @@ export default function BlogCard(props) {
     <StyledLink to={`blog${slug}`} aria-label={title} index={index}>
       <div tw="flex flex-col overflow-hidden h-full">
         <div tw="flex-shrink-0 overflow-hidden">
-          <StyledImage src={thumbnail} alt={alt} />
+          <Image
+            css={imageStyles}
+            fluid={thumbnail.childCloudinaryAsset.fluid}
+            alt={alt}
+          />
         </div>
         <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
           <div tw="flex-1">

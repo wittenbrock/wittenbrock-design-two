@@ -223,9 +223,8 @@ export const query = graphql`
       frontmatter {
         title
         description
-        thumbnail
-        date(formatString: "MMMM DD, YYYY")
-        updated(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM Do, YYYY")
+        updated(formatString: "MMMM Do, YYYY")
       }
     }
   }

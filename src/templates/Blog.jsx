@@ -1,5 +1,4 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import tw, { css } from 'twin.macro';
 
 import { BlogCard } from '../components';
@@ -21,8 +20,8 @@ const grayDividerStyles = css`
   }
 `;
 
-export default function Blog() {
-  const data = useStaticQuery(query);
+export default function Blog(props) {
+  const { posts } = props;
 
   return (
     <section
@@ -44,7 +43,7 @@ export default function Blog() {
             grayDividerStyles,
           ]}
         >
-          {data.allMarkdownRemark.edges.map(({ node }, index) => (
+          {posts.map(({ node }, index) => (
             <BlogCard
               index={index}
               key={node.id}
@@ -62,29 +61,3 @@ export default function Blog() {
     </section>
   );
 }
-
-// Query all of the markdown files in src/posts
-// Sort the markdown files by date, with the most recently written at the 0 index
-// This query gets the fields needed to create a blog post preview card on the homepage
-const query = graphql`
-  query BlogPostPreview {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          id
-          timeToRead
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            description
-            thumbnail
-            alt
-            title
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`;
