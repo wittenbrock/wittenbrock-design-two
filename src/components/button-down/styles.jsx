@@ -1,6 +1,8 @@
 import { keyframes } from '@emotion/core';
 import tw, { css } from 'twin.macro';
 
+import tailwindColors from '../../../tailwind-colors';
+
 /*
  * Bounce-down was made by Brandon Gregory with some modifications by me
  * https://css-tricks.com/making-css-animations-feel-natural/
@@ -92,7 +94,7 @@ export const buttonStyles = [
       border-radius: 9999px;
       opacity: 0;
       transform: scale(0.2);
-      background-color: #d94726;
+      background-color: ${tailwindColors.orange.darker};
       height: 100%;
       width: 100%;
       transition: all 0.25s ease-out;
@@ -104,7 +106,7 @@ export const buttonStyles = [
     }
 
     &:active::after {
-      background-color: #00c1e6;
+      background-color: ${tailwindColors.blue.lighter};
     }
   `,
 ];

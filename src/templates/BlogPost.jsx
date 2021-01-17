@@ -6,11 +6,12 @@ import { Link, graphql } from 'gatsby';
 import { SocialMediaIcon, SEO } from '../components';
 import { ContactIcon } from '../components/social-media-icon';
 import website from '../../website';
+import tailwindColors from '../../tailwind-colors';
 
 const dropCapFirstLetter = css`
   .dropcap {
     font-family: 'League Spartan', sans-serif;
-    color: #fff;
+    color: ${tailwindColors.white};
     float: left;
     font-size: 3em;
     line-height: 1;
@@ -148,13 +149,21 @@ export default function BlogPost(props) {
               William is a software engineer, designer, and ramen aficionado.
             </p>
             <div tw="flex justify-between w-40">
-              <SocialMediaIcon linkedIn size="small" color="#d2d6dc" />
-              <SocialMediaIcon gitHub size="small" color="#d2d6dc" />
+              <SocialMediaIcon
+                linkedIn
+                size="small"
+                color={tailwindColors.gray[300]}
+              />
+              <SocialMediaIcon
+                gitHub
+                size="small"
+                color={tailwindColors.gray[300]}
+              />
               <ContactIcon
                 size="small"
                 height="20"
                 width="20"
-                color="#d2d6dc"
+                color={tailwindColors.gray[300]}
               />
             </div>
           </div>
@@ -225,6 +234,13 @@ export const query = graphql`
         description
         date(formatString: "MMMM Do, YYYY")
         updated(formatString: "MMMM Do, YYYY")
+        thumbnail {
+          childCloudinaryAsset {
+            fixed(transformations: "c_scale,dpr_auto,w_1000") {
+              src
+            }
+          }
+        }
       }
     }
   }

@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import tw, { css } from 'twin.macro';
 
 import { pulsateBack } from '../button-down/styles';
+import tailwindColors from '../../../tailwind-colors';
 
 export default function ContactIcon(props) {
   const { size, height, width, color } = props;
@@ -51,5 +52,5 @@ ContactIcon.propTypes = {
 ContactIcon.defaultProps = {
   height: `24`,
   width: `24`,
-  color: `#fff`,
+  color: tailwindColors.white,
 };

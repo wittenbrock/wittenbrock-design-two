@@ -4,6 +4,8 @@ import tw, { css } from 'twin.macro';
 import { useField } from 'formik';
 import { keyframes } from '@emotion/core';
 
+import tailwindColors from '../../../tailwind-colors';
+
 const pulsateBackGentleKeyframe = keyframes`
   0% {
     transform: scale(1);
@@ -28,11 +30,11 @@ const fieldStyles = [
 
   css`
     ::placeholder {
-      color: #4b5563;
+      color: ${tailwindColors.gray[600]};
     }
 
     &:hover {
-      color: #6574cd;
+      color: ${tailwindColors.indigo.default};
       ::placeholder {
         color: inherit;
       }
@@ -40,23 +42,23 @@ const fieldStyles = [
 
     &:focus,
     &:active {
-      color: #fff;
-      background-color: #00c1e6;
+      color: ${tailwindColors.white};
+      background-color: ${tailwindColors.blue.lighter};
       ::placeholder {
-        color: #fff;
+        color: ${tailwindColors.white};
       }
     }
   `,
 ];
 
 const invalidStyles = css`
-  background-color: #fed7d7;
+  background-color: ${tailwindColors.red.lightest};
   ::placeholder {
-    color: #c53030;
+    color: ${tailwindColors.red.darker};
   }
 
   &:hover {
-    color: #c53030;
+    color: ${tailwindColors.red.darker};
   }
 `;
 

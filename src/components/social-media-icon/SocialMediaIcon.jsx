@@ -5,6 +5,7 @@ import tw, { css } from 'twin.macro';
 import LinkedinIcon from './LinkedinIcon';
 import GitHubIcon from './GithubIcon';
 import { pulsateBack } from '../button-down';
+import tailwindColors from '../../../tailwind-colors';
 
 const linkedInSpecs = {
   url: `https://www.linkedin.com/in/william-wittenbrock/`,
@@ -60,5 +61,5 @@ SocialMediaIcon.propTypes = {
 };
 
 SocialMediaIcon.defaultProps = {
-  color: `#fff`,
+  color: tailwindColors.white,
 };

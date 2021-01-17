@@ -2,6 +2,7 @@ import React from 'react';
 import tw, { css } from 'twin.macro';
 
 import { BlogCard } from '../components';
+import tailwindColors from '../../tailwind-colors';
 
 const grayDividerStyles = css`
   @media screen and (min-width: 1024px) {
@@ -10,7 +11,7 @@ const grayDividerStyles = css`
       display: block;
       width: 1px;
       height: 100%;
-      background: #4b5563;
+      background: ${tailwindColors.gray[600]};
       position: absolute;
       top: 0;
       left: 50%;
