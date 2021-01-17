@@ -1,9 +1,9 @@
 ---
-title: "Drupal's frontend tools suck"
-date: '2020-08-22'
-description: "Considering spinning up a Drupal site and using its as a frontend? I've got four reasons why you shouldn't do that."
-thumbnail: 'https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,f_auto,q_auto:best,w_1024/v1599370266/wittenbrock-design/dont-use-drupal-as-a-frontend_zuszyl.jpg'
-alt: 'Playing cards stacked together to make a house of cards.'
+title: Drupal's frontend tools suck
+date: 2020-08-22T12:00:00.000Z
+description: Considering spinning up a Drupal site and using its as a frontend? I've got four reasons why you shouldn't do that.
+thumbnail: src/images/drupals-frontend-tools-suck/drupals-frontend-tools-suck-thumbnail.jpg
+alt: Playing cards stacked together to make a house of cards.
 ---
 
 For the past year, one of the sites I've been working on runs Drupal 8. For context, the website gets about 8,000 to 10,000 visitors a month and has just under 200 unique pages; it's a small marketing site.

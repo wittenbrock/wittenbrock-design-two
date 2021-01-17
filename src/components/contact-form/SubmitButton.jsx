@@ -1,7 +1,7 @@
 import React from 'react';
 import tw, { styled } from 'twin.macro';
 
-import sendSvg from '../../images/send.svg';
+import sendSvg from '../../icons/send.svg';
 import { buttonStyles, pulsateBack } from '../button-down';
 
 const StyledButton = styled.button(({ disabled }) => [

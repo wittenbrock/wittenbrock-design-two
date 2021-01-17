@@ -1,3 +1,5 @@
+const tailwindColors = require('./tailwind-colors');
+
 module.exports = {
   pathPrefix: `/`, // Prefix for all links.
   title: `Software Engineer & Designer | Wittenbrock Design`, // Site Title
@@ -10,9 +12,9 @@ module.exports = {
   ogLanguage: `en_US`, // Facebook Language
 
   // JSONLD / Manifest
-  favicon: `src/images/favicon.png`, // Used for manifest favicon generation
+  favicon: `src/icons/favicon.png`, // Used for manifest favicon generation
   shortName: `W-Design`, // shortname for manifest. MUST be shorter than 12 characters
   author: `William Wittenbrock`, // Author for schemaORGJSONLD
-  themeColor: `#1d1e26`,
-  backgroundColor: `#1d1e26`,
+  themeColor: tailwindColors.indigo.darkest,
+  backgroundColor: tailwindColors.indigo.darkest,
 };

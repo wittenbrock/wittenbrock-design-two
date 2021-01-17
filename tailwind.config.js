@@ -2,7 +2,7 @@
 // https://github.com/ben-rogerson/twin.macro
 // Twin Macro combines the utlity of Emotion's CSS-in-JS with Tailwind
 
-import tailwindColors from './tailwind-colors';
+const tailwindColors = require('./tailwind-colors');
 
 module.exports = {
   theme: {

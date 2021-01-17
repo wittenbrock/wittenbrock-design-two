@@ -4,7 +4,7 @@ import tw from 'twin.macro';
 import { Link as ScrollLink } from 'react-scroll';
 
 import { buttonStyles, bounceDown, pulsateBack } from './styles';
-import chevronDownSvg from '../../images/cheveron-down.svg';
+import chevronDownSvg from '../../icons/cheveron-down.svg';
 
 // This button's smooth scroll effect is created by react-scroll:
 // https://github.com/fisshy/react-scroll

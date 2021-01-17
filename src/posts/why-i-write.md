@@ -1,10 +1,10 @@
 ---
-title: 'Why I write'
-date: '2020-08-02'
-updated: '2020-08-14'
-description: "The answer is simple - to share the knowledge that I've gained."
-thumbnail: 'https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,f_auto,q_auto:best,w_1024/v1599369859/wittenbrock-design/why-i-write_t9xnfp.jpg'
-alt: "A person's hands typing on a MacBook laptop."
+title: Why I write
+date: 2020-08-02T12:00:00.000Z
+updated: 2020-08-14T12:00:00.000Z
+description: The answer is simple - to share the knowledge that I've gained.
+thumbnail: src/images/why-i-write/why-i-write-thumbnail.jpg
+alt: A person's hands typing on a MacBook laptop.
 ---
 
 Have you ever read a book or watched a movie, and six months later, when you recall it, you can't remember much about it? Try doing it right now – take a second – think about a book you read a few months ago. How much do you remember about it? Now think about a book you read one or two years ago; if it was fiction, can you recall all its significant characters? If it was non-fiction, can you remember all of the significant arguments? Suppose a friend was reading the book right now, and you were sitting with them over coffee. Could you summarize the book without missing anything important?

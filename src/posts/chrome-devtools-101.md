@@ -1,9 +1,9 @@
 ---
-title: 'Chrome DevTools 101'
-date: '2020-10-25'
-description: "New to web development? Take a minute and learn of the Chrome DevTools. I promise it'll be worth it - you'll be using the DevTools every day."
-thumbnail: 'https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,q_auto:best,w_1516/v1603606647/wittenbrock-design/chrome-devtools-101.jpg'
-alt: 'A vintage blue car with its engine hood open and a set of wrenches next to the engine.'
+title: Chrome DevTools 101
+date: 2020-10-25T12:00:00.000Z
+description: New to web development? Take a minute and learn of the Chrome DevTools. I promise it'll be worth it - you'll be using the DevTools every day.
+thumbnail: src/images/chrome-devtools-101/chrome-devtools-101-thumbail.jpg
+alt: A vintage blue car with its engine hood open and a set of wrenches next to the engine.
 ---
 
 The Chrome DevTools is a web developer's Leatherman. When I first opened the DevTools, I didn't know what I was looking at, and I didn't realize how vital they were. This post is a letter to my younger self. Here's what I wished I had known when I first inspected an element.

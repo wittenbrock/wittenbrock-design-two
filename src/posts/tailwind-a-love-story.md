@@ -1,9 +1,9 @@
 ---
 title: 'Tailwind: a love story'
-date: '2020-09-06'
-description: "I've used Tailwind in production for the last three months. It's easy to use, simple to understand and has reduced the amount of time I've spent writing CSS."
-thumbnail: 'https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,f_auto,q_auto:best,w_1024/v1599370304/wittenbrock-design/tailwind_ztkhvm.jpg'
-alt: 'A sailboat with a red hull and white sail floating on a river.'
+date: 2020-09-06T12:00:00.000Z
+description: I've used Tailwind in production for the last three months. It's easy to use, simple to understand and has reduced the amount of time I've spent writing CSS.
+thumbnail: src/images/tailwind-a-love-story/tailwind-a-love-story-thumbnail.jpg
+alt: A sailboat with a red hull and white sail floating on a river.
 ---
 
 I'll be straight with you from the start: this is a biased review. I'm a fanboy of Tailwind's creators, [Steve Schoger](https://www.steveschoger.com/) and [Adam Wathan](https://adamwathan.me/). I first became familiar with them when they released their book [Refactoring UI](https://refactoringui.com/book/), which ended up heavily influencing my UX/UI design methodologies. I recommend reading it, particularly if you self-identify as a developer "who hates making UI."

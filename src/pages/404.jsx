@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import tw from 'twin.macro';
 
 import SEO from '../components/seo';
-import homeSvg from '../images/home.svg';
+import homeSvg from '../icons/home.svg';
 import { buttonStyles, pulsateBack } from '../components/button-down';
 
 export default function NotFoundPage() {
