@@ -2,6 +2,8 @@
 // https://github.com/ben-rogerson/twin.macro
 // Twin Macro combines the utlity of Emotion's CSS-in-JS with Tailwind
 
+import tailwindColors from './tailwind-colors';
+
 module.exports = {
   theme: {
     fontFamily: {
@@ -13,53 +15,53 @@ module.exports = {
       default: {
         css: {
           a: {
-            color: `#fff`,
+            color: tailwindColors.white,
             textDecoration: `none`,
             fontFamily: `Sailec Bold`,
             fontWeight: `800`,
             outline: `0`,
             appearance: `none`,
-            backgroundImage: `linear-gradient(180deg,transparent 70%, #e06c52 0)`,
+            backgroundImage: `linear-gradient(180deg,transparent 70%, ${tailwindColors.orange.default}0)`,
             '&:hover': {
-              backgroundImage: `linear-gradient(180deg,transparent 70%, #6574cd 0)`,
+              backgroundImage: `linear-gradient(180deg,transparent 70%, ${tailwindColors.indigo.default} 0)`,
             },
             '&:focus': {
-              backgroundImage: `linear-gradient(180deg,transparent 70%, #37a5eb 0)`,
+              backgroundImage: `linear-gradient(180deg,transparent 70%, ${tailwindColors.blue.default} 0)`,
             },
           },
           p: {
-            color: `#d2d6dc`,
+            color: tailwindColors.gray[300],
             fontFamily: `Sailec Regular`,
             fontWeight: `400`,
           },
           h1: {
-            color: `#fff`,
+            color: tailwindColors.white,
             fontFamily: `League Spartan`,
             fontWeight: `700`,
           },
           h2: {
-            color: `#fff`,
+            color: tailwindColors.white,
             fontFamily: `League Spartan`,
             fontWeight: `700`,
           },
           h3: {
-            color: `#fff`,
+            color: tailwindColors.white,
             fontFamily: `League Spartan`,
             fontWeight: `700`,
           },
           h4: {
-            color: `#fff`,
+            color: tailwindColors.white,
             fontFamily: `League Spartan`,
             fontWeight: `700`,
           },
           pre: {
-            color: `#d2d6dc`,
+            color: tailwindColors.gray[300],
           },
           'pre code': {
             fontFamily: `Source Code Pro`,
           },
           code: {
-            color: `#d2d6dc`,
+            color: tailwindColors.gray[300],
             fontFamily: `Source Code Pro`,
             fontWeight: 400,
             backgroundColor: `#2d3748`,
@@ -74,19 +76,19 @@ module.exports = {
             content: `""`,
           },
           strong: {
-            color: `#fff`,
+            color: tailwindColors.white,
             fontFamily: `Sailec Bold`,
             fontWeight: `800`,
           },
           blockquote: {
-            color: `#fff`,
-            borderLeftColor: `#6b7280`,
+            color: tailwindColors.white,
+            borderLeftColor: tailwindColors.gray[500],
           },
           'blockquote p': {
-            color: `#fff`,
+            color: tailwindColors.white,
           },
           figcaption: {
-            color: `#fff`,
+            color: tailwindColors.white,
             fontStyle: `italic`,
             display: `table`,
             padding: `0.75em 2em 0.75em 0`,
@@ -94,26 +96,26 @@ module.exports = {
             wordBreak: `break-word`,
           },
           'ol li': {
-            color: `#d2d6dc`,
+            color: tailwindColors.gray[300],
           },
           'ol > li::before': {
-            color: `#6b7280`,
+            color: tailwindColors.gray[500],
           },
           'ul li': {
-            color: `#d2d6dc`,
+            color: tailwindColors.gray[300],
           },
           'ul > li::before': {
-            backgroundColor: `#6b7280`,
+            backgroundColor: tailwindColors.gray[500],
           },
           kbd: {
-            color: `#fff`,
+            color: tailwindColors.white,
             fontFamily: `Source Code Pro`,
             fontWeight: 400,
             fontSize: `0.8em`,
             padding: `0.3em 0.6em`,
-            border: `1px solid #fff`,
+            border: `1px solid ${tailwindColors.white}`,
             borderRadius: `0.125rem`,
-            boxShadow: `1px 1px 0 #fff, 2px 2px 0 #fff`,
+            boxShadow: `1px 1px 0 ${tailwindColors.white}, 2px 2px 0 ${tailwindColors.white}`,
             margin: `0 0.25rem`,
           },
           img: {
@@ -137,41 +139,7 @@ module.exports = {
       },
       margin: {},
     },
-    colors: {
-      inherit: `inherit`,
-      transparent: `transparent`,
-      white: `#fff`,
-      black: `#000`,
-      gray: {
-        50: `#f9fafb`,
-        100: `#f4f5f7`,
-        200: `#e5e7eb`,
-        300: `#d2d6dc`,
-        400: `#9fa6b2`,
-        500: `#6b7280`,
-        600: `#4b5563`,
-        700: `#374151`,
-        800: `#252f3f`,
-        900: `#161e2e`,
-      },
-      orange: {
-        default: `#e06c52`,
-        darker: `#d94726`,
-      },
-      blue: {
-        lighter: `#00c1e6`,
-        default: `#37a5eb`,
-      },
-      indigo: {
-        default: `#6574cd`,
-        darkest: `#1d1e26`,
-      },
-      red: {
-        lightest: `#fed7d7`,
-        default: `#e53e3e`,
-        darker: `#c53030`,
-      },
-    },
+    colors: tailwindColors,
   },
   plugins: [require(`@tailwindcss/ui`), require(`@tailwindcss/typography`)],
 };
