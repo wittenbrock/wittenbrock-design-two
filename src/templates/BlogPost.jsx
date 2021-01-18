@@ -4,7 +4,7 @@ import tw, { css } from 'twin.macro';
 import { Link, graphql } from 'gatsby';
 
 import { SocialMediaIcon, SEO } from '../components';
-import { ContactIcon } from '../components/social-media-icon';
+import ContactIcon from '../components/social-media-icon/ContactIcon';
 import website from '../../website';
 import tailwindColors from '../../tailwind-colors';
 
@@ -84,7 +84,7 @@ export default function BlogPost(props) {
       <SEO
         title={`${post.frontmatter.title} | ${website.titleAlt}`}
         desc={post.frontmatter.description}
-        banner={post.frontmatter.thumbnail}
+        banner={post.frontmatter.thumbnail.childCloudinaryAsset.fixed.src}
         pathname={`/blog${pageContext.slug}`}
         article
         date={post.frontmatter.date}
@@ -223,7 +223,7 @@ export default function BlogPost(props) {
   );
 }
 
-// Query a specific markdown file in src/posts, using the post's slug field to find the file
+// Query a specific markdown file in src/pages/posts, using the post's slug field to find the file
 // This query gets the fields needed to create a  blog post page
 export const query = graphql`
   query BlogPostContent($slug: String!) {

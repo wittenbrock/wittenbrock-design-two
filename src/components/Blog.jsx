@@ -1,7 +1,7 @@
 import React from 'react';
 import tw, { css } from 'twin.macro';
 
-import { BlogCard } from '../components';
+import { BlogCard } from '.';
 import tailwindColors from '../../tailwind-colors';
 
 const grayDividerStyles = css`

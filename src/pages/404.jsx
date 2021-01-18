@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 import tw from 'twin.macro';
 
-import SEO from '../components/seo';
+import { SEO } from '../components';
 import homeSvg from '../icons/home.svg';
-import { buttonStyles, pulsateBack } from '../components/button-down';
+import { buttonStyles, pulsateBack } from '../components/button-down/styles';
 
-export default function NotFoundPage() {
+export default function PageNotFound() {
   return (
     <section tw="text-white text-center w-full min-h-screen px-4 py-24 xl:py-32 flex flex-col justify-center items-center">
       <SEO title="404: Page not found" />

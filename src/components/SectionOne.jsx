@@ -1,8 +1,8 @@
 import React from 'react';
 import 'twin.macro';
 
-import WittenbrockDesignLogo from '../components/wittenbrock-design-logo';
-import ButtonDown from '../components/button-down';
+import WittenbrockDesignLogo from './wittenbrock-design-logo/WittenbrockDesignLogo';
+import { ButtonDown } from '../components';
 
 export default function SectionOne() {
   return (

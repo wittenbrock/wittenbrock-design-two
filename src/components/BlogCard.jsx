@@ -99,7 +99,7 @@ export default function BlogCard(props) {
 
 BlogCard.propTypes = {
   slug: PropTypes.string.isRequired,
-  thumbnail: PropTypes.string.isRequired,
+
   alt: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

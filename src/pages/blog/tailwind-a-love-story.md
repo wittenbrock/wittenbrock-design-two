@@ -2,7 +2,7 @@
 title: 'Tailwind: a love story'
 date: 2020-09-06T12:00:00.000Z
 description: I've used Tailwind in production for the last three months. It's easy to use, simple to understand and has reduced the amount of time I've spent writing CSS.
-thumbnail: ../images/tailwind-a-love-story/tailwind-a-love-story-thumbnail.jpg
+thumbnail: ../../images/tailwind-a-love-story/tailwind-a-love-story-thumbnail.jpg
 alt: A sailboat with a red hull and white sail floating on a river.
 ---
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import tw, { styled, css } from 'twin.macro';
 
-import { SocialMediaIcon, ContactForm } from '../components';
+import { SocialMediaIcon, ContactForm } from '.';
 
 const StyledDiv = styled.div(() => [
   tw`lg:flex flex-wrap`,

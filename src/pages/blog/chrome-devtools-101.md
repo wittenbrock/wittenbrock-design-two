@@ -2,7 +2,7 @@
 title: Chrome DevTools 101
 date: 2020-10-25T12:00:00.000Z
 description: New to web development? Take a minute and learn of the Chrome DevTools. I promise it'll be worth it - you'll be using the DevTools every day.
-thumbnail: ../images/chrome-devtools-101/chrome-devtools-101-thumbnail.jpg
+thumbnail: ../../images/chrome-devtools-101/chrome-devtools-101-thumbnail.jpg
 alt: A vintage blue car with its engine hood open and a set of wrenches next to the engine.
 ---
 
