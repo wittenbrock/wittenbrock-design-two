@@ -56,26 +56,17 @@ const imageStyles = [
 ];
 
 export default function BlogCard(props) {
-  const {
-    slug,
-    thumbnail,
-    alt,
-    title,
-    description,
-    date,
-    timeToRead,
-    index,
-  } = props;
+  const { post, index } = props;
+  const slug = post.fields.slug;
+  const timeToRead = post.timeToRead;
+  const thumbnail = post.frontmatter.thumbnail.childCloudinaryAsset.fluid;
+  const { alt, title, date, description } = post.frontmatter;
 
   return (
     <StyledLink to={`blog${slug}`} aria-label={title} index={index}>
       <div tw="flex flex-col overflow-hidden h-full">
         <div tw="flex-shrink-0 overflow-hidden">
-          <Image
-            css={imageStyles}
-            fluid={thumbnail.childCloudinaryAsset.fluid}
-            alt={alt}
-          />
+          <Image css={imageStyles} fluid={thumbnail} alt={alt} />
         </div>
         <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
           <div tw="flex-1">
@@ -96,13 +87,3 @@ export default function BlogCard(props) {
     </StyledLink>
   );
 }
-
-BlogCard.propTypes = {
-  slug: PropTypes.string.isRequired,
-
-  alt: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.number.isRequired,
-};

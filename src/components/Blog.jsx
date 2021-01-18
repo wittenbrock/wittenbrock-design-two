@@ -45,17 +45,7 @@ export default function Blog(props) {
           ]}
         >
           {posts.map(({ node }, index) => (
-            <BlogCard
-              index={index}
-              key={node.id}
-              slug={node.fields.slug}
-              thumbnail={node.frontmatter.thumbnail}
-              alt={node.frontmatter.alt}
-              title={node.frontmatter.title}
-              date={node.frontmatter.date}
-              description={node.frontmatter.description}
-              timeToRead={node.timeToRead}
-            />
+            <BlogCard key={node.id} index={index} post={node} />
           ))}
         </div>
       </div>
