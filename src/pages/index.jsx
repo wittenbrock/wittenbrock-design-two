@@ -1,14 +1,21 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { SEO, SectionOne, SectionTwo, Blog, Contact } from '../components';
+import {
+  PageWrapper,
+  SEO,
+  SectionOne,
+  SectionTwo,
+  Blog,
+  Contact,
+} from '../components';
 import website from '../../website';
 
 export default function IndexPage(props) {
   const { blogPosts } = props.data;
 
   return (
-    <>
+    <PageWrapper>
       <SEO title={website.title} />
       <main>
         <SectionOne />
@@ -16,7 +23,7 @@ export default function IndexPage(props) {
         <Blog posts={blogPosts.edges} />
         <Contact />
       </main>
-    </>
+    </PageWrapper>
   );
 }
 

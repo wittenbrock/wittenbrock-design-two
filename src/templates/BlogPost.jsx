@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import tw, { css } from 'twin.macro';
 import { Link, graphql } from 'gatsby';
 
-import { SocialMediaIcon, SEO } from '../components';
+import { PageWrapper, SocialMediaIcon, SEO } from '../components';
 import ContactIcon from '../components/social-media-icon/ContactIcon';
 import website from '../../website';
 import tailwindColors from '../../tailwind-colors';
@@ -80,7 +80,7 @@ export default function BlogPost(props) {
   const postHTML = createDropCap(post.html);
 
   return (
-    <>
+    <PageWrapper>
       <SEO
         title={`${post.frontmatter.title} | ${website.titleAlt}`}
         desc={post.frontmatter.description}
@@ -219,7 +219,7 @@ export default function BlogPost(props) {
           </div>
         </footer>
       </div>
-    </>
+    </PageWrapper>
   );
 }
 

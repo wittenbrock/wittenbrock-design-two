@@ -79,7 +79,7 @@ export default function BlogCard(props) {
             <p tw="font-body font-normal flex text-sm leading-5 text-gray-500">
               <time dateTime={date}>{date}</time>
               <span tw="mx-1">&middot;</span>
-              <span>{timeToRead} min</span>
+              <span>{timeToRead} min read</span>
             </p>
           </div>
         </div>
