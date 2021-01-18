@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import tw, { css } from 'twin.macro';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 
 import { PageWrapper, SocialMediaIcon, SEO } from '../components';
 import ContactIcon from '../components/social-media-icon/ContactIcon';
@@ -62,8 +63,9 @@ const createDropCap = string => {
 };
 
 export default function BlogPost(props) {
-  const { data, pageContext } = props;
-  const post = data.markdownRemark;
+  const { pageContext } = props;
+  const { post, portrait } = props.data;
+
   const prevPost = pageContext.prev
     ? {
         url: `/blog${pageContext.prev.fields.slug}`,
@@ -133,12 +135,10 @@ export default function BlogPost(props) {
         </main>
         <div tw="flex py-16">
           <figure tw="mr-4 flex-shrink-0">
-            <img
-              src="https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,f_auto,q_100,w_160/v1598566602/wittenbrock-design/william-wittenbrock-portrait.jpg"
+            <Image
+              fixed={portrait.childCloudinaryAsset.fixed}
               alt="A portrait of William Wittenbrock."
               tw="h-20 w-20 rounded-md"
-              height="80"
-              width="80"
             />
           </figure>
           <div>
@@ -227,7 +227,7 @@ export default function BlogPost(props) {
 // This query gets the fields needed to create a  blog post page
 export const query = graphql`
   query BlogPostContent($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
@@ -240,6 +240,13 @@ export const query = graphql`
               src
             }
           }
+        }
+      }
+    }
+    portrait: file(name: { eq: "william-wittenbrock-portrait" }) {
+      childCloudinaryAsset {
+        fixed(height: 80, width: 80, transformations: "dpr_auto") {
+          ...CloudinaryAssetFixed
         }
       }
     }

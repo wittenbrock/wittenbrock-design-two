@@ -21,7 +21,7 @@ module.exports = {
             fontWeight: `800`,
             outline: `0`,
             appearance: `none`,
-            backgroundImage: `linear-gradient(180deg,transparent 70%, ${tailwindColors.orange.default}0)`,
+            backgroundImage: `linear-gradient(180deg,transparent 70%, ${tailwindColors.orange.default} 0)`,
             '&:hover': {
               backgroundImage: `linear-gradient(180deg,transparent 70%, ${tailwindColors.indigo.default} 0)`,
             },

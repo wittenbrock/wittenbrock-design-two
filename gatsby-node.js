@@ -37,7 +37,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await queryWrapper(
     graphql(`
       {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+        blogPosts: allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: ASC }
+        ) {
           edges {
             node {
               fields {
@@ -53,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
     `)
   );
 
-  const posts = result.data.allMarkdownRemark.edges;
+  const posts = result.data.blogPosts.edges;
 
   posts.forEach(({ node }, index) => {
     const prev = index === 0 ? null : posts[index - 1].node;
