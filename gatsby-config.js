@@ -1,7 +1,7 @@
 require(`dotenv`).config();
 
 const website = require(`./website`);
-
+const tailwindColors = require(`./tailwind-colors.js`);
 const pathPrefix = website.pathPrefix === `/` ? `` : website.pathPrefix;
 
 module.exports = {
@@ -122,12 +122,13 @@ module.exports = {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
-        uploadFolder: 'gatsby-cloudinary',
+        uploadFolder: 'wittenbrock-design-assets',
       },
     },
+    `gatsby-plugin-eslint`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-eslint`,
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -136,6 +137,15 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               noInlineHighlight: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 670,
+              backgroundColor: tailwindColors.indigo.darkest,
+              withWebp: true,
+              showCaptions: true,
             },
           },
         ],

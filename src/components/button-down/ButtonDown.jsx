@@ -21,6 +21,7 @@ export default function ButtonDown(props) {
           hasbouncedown ? bounceDown : pulsateBack,
         ]}
         tabIndex={tab}
+        title="Scroll down the page."
       >
         <span tw="sr-only">Scroll down to the next section.</span>
         <img

@@ -38,7 +38,7 @@ export default function Blog(props) {
             Essays, opinions, and advice on computer programming.
           </p>
         </header>
-        <div
+        <ul
           css={[
             tw`relative grid gap-12 max-w-lg mx-auto lg:grid-cols-1 lg:max-w-none`,
             grayDividerStyles,
@@ -47,7 +47,7 @@ export default function Blog(props) {
           {posts.map(({ node }, index) => (
             <BlogCard key={node.id} index={index} post={node} />
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

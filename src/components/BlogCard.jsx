@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import tw, { css, styled } from 'twin.macro';
 import Image from 'gatsby-image';
 
-const defaultLinkStyles = `block border-b-8 border-solid border-transparent focus:border-blue-lighter focus:outline-none no-underline hover:cursor-pointer max-w-md mx-auto lg:mx-0 min-w-full sm:min-w-112`;
+const defaultLinkStyles = `block border-b-8 border-solid border-transparent focus:border-blue-lighter active:border-transparent focus:outline-none no-underline hover:cursor-pointer max-w-md mx-auto lg:mx-0 min-w-full sm:min-w-112`;
 
 const isOdd = integer => Boolean(integer % 2);
 
@@ -63,27 +63,29 @@ export default function BlogCard(props) {
   const { alt, title, date, description } = post.frontmatter;
 
   return (
-    <StyledLink to={`blog${slug}`} aria-label={title} index={index}>
-      <div tw="flex flex-col overflow-hidden h-full">
-        <div tw="flex-shrink-0 overflow-hidden">
-          <Image css={imageStyles} fluid={thumbnail} alt={alt} />
-        </div>
-        <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
-          <div tw="flex-1">
-            <h3 tw="text-indigo-darkest font-subheading mt-2 text-xl leading-7 font-semibold">
-              <StyledSpan>{title}</StyledSpan>
-            </h3>
-            <p tw="sr-only">{description}</p>
+    <li>
+      <StyledLink to={`blog${slug}`} aria-label={title} index={index}>
+        <div tw="flex flex-col overflow-hidden h-full">
+          <div tw="flex-shrink-0 overflow-hidden">
+            <Image css={imageStyles} fluid={thumbnail} alt={alt} />
           </div>
-          <div tw="mt-6 flex items-center">
-            <p tw="font-body font-normal flex text-sm leading-5 text-gray-500">
-              <time dateTime={date}>{date}</time>
-              <span tw="mx-1">&middot;</span>
-              <span>{timeToRead} min read</span>
-            </p>
+          <div tw="flex-1 bg-white p-6 flex flex-col justify-between">
+            <div tw="flex-1">
+              <h3 tw="text-indigo-darkest font-subheading mt-2 text-xl leading-7 font-semibold">
+                <StyledSpan>{title}</StyledSpan>
+              </h3>
+              <p tw="sr-only">{description}</p>
+            </div>
+            <div tw="mt-6 flex items-center">
+              <p tw="font-body font-normal flex text-sm leading-5 text-gray-500">
+                <time dateTime={date}>{date}</time>
+                <span tw="mx-1">&middot;</span>
+                <span>{timeToRead} minute read</span>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </StyledLink>
+      </StyledLink>
+    </li>
   );
 }

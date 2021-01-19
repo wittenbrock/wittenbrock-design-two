@@ -26,6 +26,7 @@ const createSocialMediaIcon = (specs, size, color) => {
   return (
     <a
       href={url}
+      title={text}
       css={[
         tw`inline-block hover:cursor-pointer no-underline text-white focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,
         pulsateBack,

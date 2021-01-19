@@ -46,7 +46,7 @@ export const data = graphql`
             title
             thumbnail {
               childCloudinaryAsset {
-                fluid(transformations: "dpr-auto") {
+                fluid(transformations: "dpr_auto") {
                   ...CloudinaryAssetFluid
                 }
               }

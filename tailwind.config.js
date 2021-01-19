@@ -29,6 +29,15 @@ module.exports = {
               backgroundImage: `linear-gradient(180deg,transparent 70%, ${tailwindColors.blue.default} 0)`,
             },
           },
+          'figure a': {
+            backgroundImage: `none`,
+            '&:hover': {
+              backgroundImage: `none`,
+            },
+            '&:focus': {
+              backgroundImage: `none`,
+            },
+          },
           p: {
             color: tailwindColors.gray[300],
             fontFamily: `Sailec Regular`,
@@ -137,7 +146,6 @@ module.exports = {
       minWidth: {
         112: `28rem`,
       },
-      margin: {},
     },
     colors: tailwindColors,
   },

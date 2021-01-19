@@ -1,8 +1,8 @@
 <p align="center">
   <a href="https://www.wittenbrockdesign.com">
     <img
-      src="https://res.cloudinary.com/wittenbrock-design/image/upload/f_auto,q_auto:best/v1599512014/wittenbrock-design/what-im-thinking-about.png"
-      alt="A preview of three blog posts with the caption What I'm Thinking About."
+      src="https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_1100/v1610866967/gatsby-cloudinary/what-im-thinking-about.png"
+      alt="A preview of three blog posts with the caption: 'What I'm Thinking About'."
       title="Wittenbrock Design"
     />
   </a>

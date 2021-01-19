@@ -16,10 +16,7 @@ Boom. We're hacking the mainframe now.
 
 [The Console panel](https://developers.google.com/web/tools/chrome-devtools/console) does two things: display error messages and run JavaScript.
 
-<figure>
-  <img src="https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,q_auto:best,w_1553/v1603661353/wittenbrock-design/console-errorlocation_edwbam.png" alt="The Chrome DevTools displaying an error message in the Console." />
-  <figcaption>An error message in the Console.</figcaption>
-</figure>
+![An error message in the Console.](../../images/chrome-devtools-101/console-errorlocation.png)
 
 When you get a bug, the first thing you should do is check the Console. To learn more about an error, click the white link to the right of the message. Usually, the Console will point to the line where the interpreter has failed, making it easy to fix bugs. The Console panel also displays `console.log()` statements during run time, appearing in the order declared.
 
@@ -50,10 +47,7 @@ In addition to the Console, the second place to check when debugging is [the Net
 
 When you first open the Network panel, it might be empty. Refresh the page with the Network panel open, and the panel will populate with requests.
 
-<figure>
-  <img src="https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,q_auto:best,w_1578/v1603661358/wittenbrock-design/console-status-codes_pcr50e.png" alt="The Chrome DevTools with the Network panel open and highting the HTTP status code column." />
-  <figcaption>The HTTP status code column.</figcaption>
-</figure>
+![The Network panel open with the HTTP status column highlighted.](../../images/chrome-devtools-101/console-status-codes.png)
 
 Each resource request has a corresponding [HTTP response status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). Inside the Status column are a series of numbers ranging from 100 to 599. Each status code has a specific meaning. Here's a breakdown of the five types of status codes.
 
@@ -71,10 +65,7 @@ Each resource request has a corresponding [HTTP response status code](https://de
 
 Last, but certainly not least, is [the Element's panel](https://developers.google.com/web/tools/chrome-devtools/css). This panel displays the Document Object Model and each HTML element's corresponding CSS. If you need to debug or test CSS, this where the magic happens.
 
-<figure>
-  <img src="https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,w_1565/v1603661369/wittenbrock-design/console-inspector-pointer_yrsxrm.png" alt="The Chrome DevTools's Inspect Arrow." />
-  <figcaption>Inspecting the CSS properties of a paragraph element.</figcaption>
-</figure>
+![Inspecting the CSS properties of a paragraph element.](../../images/chrome-devtools-101/console-inspector-pointer.png)
 
 Open up the DevTools, navigate to the Elements panel, and try inspecting this exact paragraph. In the top left of the developer tools is a small arrow icon. Click it. Now hover over any UI on the page. If you click an HTML element with the inspector arrow, the Element's panel will highlight it in the DOM, and list all of its CSS styles on the right sidebar.
 
@@ -84,10 +75,7 @@ The CSS styles shown in the right sidebar are organized by their [Specificity Hi
 
 It's 2020 - every user interface you engineer needs to be responsive; you've got to make them look good on the smallest iPhone and the largest 8K television. Luckily, it's easy to see what a website looks like with the DevTool's Device Mode.
 
-<figure>
-  <img src="https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,q_auto:best,w_1507/v1604292270/wittenbrock-design/devtools-media-queries_tqlpbe.png" alt="Viewing this blog post in the DevTool's Device Mode." />
-  <figcaption>Viewing this blog post on an iPhone 8.</figcaption>
-</figure>
+![Viewing this blog post in Device Mode as if it were on an iPhone 8.](../../images/chrome-devtools-101/devtools-media-queries.png)
 
 Switch to Device Mode by clicking the icon to the right of the inspector arrow; you're now in Device Mode. Device Mode defaults to Responsive. This means that you can resize the web page to any dimension you desire. If you want to view the site from a specific device, click the drop-down in the browser's top center. Then, select a device that you want to virtualize.
 
@@ -101,10 +89,7 @@ If you ever want to search the page's DOM, open up the Elements tab and hold dow
 
 Have you ever been on a site and thought, _Damn, that's a good looking button_. Or, _That's a super smooth fade-in animation_. You could inspect the element's CSS in the styles sidebar and deconstruct it property by property, but that would be a waste of time.
 
-<figure>
-  <img src="https://res.cloudinary.com/wittenbrock-design/image/upload/c_scale,q_auto:best,w_1547/v1603661366/wittenbrock-design/console-styles-menu_mi4qiz.png" alt="The Chrome DevTools with the Elements tab opened showing how to copy a HTML element's styles." />
-  <figcaption>Copying an HTML element's CSS styles.</figcaption>
-</figure>
+![Copying an HTML element's CSS styles.](../../images/chrome-devtools-101/console-styles-menu.png)
 
 Just right-click the element and select "Copy styles." You have now copied all of the element's styles at this specific screen width. If the element is responsive, you'll need to copy its styles at each breakpoint to replicate its responsiveness.
 
@@ -116,10 +101,7 @@ Inspecting and deconstructing beautiful CSS that you come across is a great way 
 
 You can use the eyedropper tool to get the value of any color on a website. First, inspect an HTML element with a color property. If you inspect this exact paragraph, you'll notice that its `color` property is `rgb(210, 214, 220)`.
 
-<figure>
-  <img src="https://res.cloudinary.com/wittenbrock-design/image/upload/q_auto:best/v1603661361/wittenbrock-design/console-color-inspector_wwyoqu.png" alt="The Chrome DevTools's eyedropper tool." />
-  <figcaption>The eyedropper tool.</figcaption>
-</figure>
+![The eyedropper tool.](../../images/chrome-devtools-101/console-color-inspector.png)
 
 Here's the trick - click the color swatch adjacent to the RGB value; a color picker menu pops up. With the eyedropper tool active, you can select any element on the page to find its color value.
 
@@ -129,10 +111,7 @@ I've worked on projects without [hot module replacement](https://webpack.js.org/
 
 To get around this, I made my edits in the DevTools before adding them to my project's files. You can edit the HTML of any website by right-clicking an element and selecting "Edit as HTML." Give it a try - change this section's title **Pseudo hot module replacement** from an `h2` tag to an `h3` tag.
 
-<figure>
-  <img src="https://res.cloudinary.com/wittenbrock-design/image/upload/q_auto:best/v1603661350/wittenbrock-design/console-css-classes_okhrwo.png" alt="The Chrome DevTools's styles sidebar.">
-  <figcaption>An HTML element's CSS classes.</figcaption>
-</figure>
+![An HTML element's CSS classes.](../../images/chrome-devtools-101/console-css-classes.png)
 
 You can also add CSS classes to any element on the page. With an element selected, click the `.cls` button in the styles sidebar; it now displays all of the element's classes with corresponding checkboxes. In the "Add new class" input, type a CSS class to add to the element. Testing CSS classes like this pairs perfectly with Tailwind's utility system because it instantly shows how the CSS styles an HTML element.
 
@@ -144,10 +123,7 @@ One thing to note - the CSS you enter in the `element.style {}` brackets is inli
 
 You can download any website's font files with the DevTools. Now, I should say that you shouldn't use unlicensed fonts on published sites - that's stealing. However, it's a big bummer to buy a font for $60 only to realize it didn't look as great as you had hoped. I think it's valid to try out unlicensed fonts this way before purchasing them.
 
-<figure>
-  <img src="https://res.cloudinary.com/wittenbrock-design/image/upload/q_auto:best/v1604292185/wittenbrock-design/devtools-fonts_qgfx4l.png" alt="The Chrome Devtools's font folder." />
-  <figcaption>The Fonts folder.</figcaption>
-</figure>
+![The fonts folder.](../../images/chrome-devtools-101/devtools-fonts.png)
 
 Open up the DevTools and click the Application panel. Scroll to the sidebar's bottom and expand the "top" menu located beneath the Frames heading. You'll see a list of folders, one of which is titled "Fonts." Expand the "Fonts" folder, and you'll be able to download any of the fonts by double-clicking it.
 
