@@ -33,6 +33,7 @@ module.exports = {
             backgroundImage: `none`,
             '&:hover': {
               backgroundImage: `none`,
+              cursor: `zoom-in`,
             },
             '&:focus': {
               backgroundImage: `none`,

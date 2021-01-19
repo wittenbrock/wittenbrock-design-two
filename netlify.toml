@@ -20,5 +20,5 @@
       frame-ancestors 'none';'''
   
 [build.environment]
-  NODE_VERSION = "15.0.1"
-  NPM_VERSION = "7.0.15"
+  NODE_VERSION = "15.6.0"
+  NPM_VERSION = "7.4.0"

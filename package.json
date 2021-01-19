@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "author": "William Wittenbrock",
   "engines": {
-    "node": "15.0.1",
-    "npm": "7.0.15"
+    "node": "15.6.0",
+    "npm": "7.4.0"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
