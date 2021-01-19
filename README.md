@@ -40,8 +40,6 @@ This project:
 
 ## Installation
 
-This application was built using Node version 13.11.0 and NPM version 6.14.5. For best results, install this project with these versions or greater.
-
 **_1. Getting started._**
 
 Clone the git repository to your computer.
