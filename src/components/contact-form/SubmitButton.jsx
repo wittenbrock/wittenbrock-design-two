@@ -1,5 +1,6 @@
 import React from 'react';
 import tw, { styled } from 'twin.macro';
+import PropTypes from 'prop-types';
 
 import sendSvg from '../../icons/send.svg';
 import { buttonStyles, pulsateBack } from '../button-down/styles';
@@ -29,3 +30,7 @@ export default function SubmitButton(props) {
     </div>
   );
 }
+
+SubmitButton.propTypes = {
+  disabled: PropTypes.bool,
+};

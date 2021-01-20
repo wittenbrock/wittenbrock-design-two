@@ -1,3 +1,6 @@
+// This button's smooth scroll effect is created by react-scroll:
+// https://github.com/fisshy/react-scroll
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import tw from 'twin.macro';
@@ -6,10 +9,9 @@ import { Link as ScrollLink } from 'react-scroll';
 import { buttonStyles, bounceDown, pulsateBack } from './styles';
 import chevronDownSvg from '../../icons/cheveron-down.svg';
 
-// This button's smooth scroll effect is created by react-scroll:
-// https://github.com/fisshy/react-scroll
 export default function ButtonDown(props) {
   const { to, smooth, hasbouncedown, tab } = props;
+
   return (
     <div tw="flex justify-center">
       <ScrollLink

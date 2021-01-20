@@ -32,8 +32,8 @@ const encode = data => {
 }
 
 // Contact form component
-// Uses Formik components: https://formik.org/docs/overview
-// Uses Yup for client side validation: https://github.com/jquense/yup
+// Formik components: https://formik.org/docs/overview
+// Yup for client side validation: https://github.com/jquense/yup
 export default function ContactForm() {
   return (
     <Formik

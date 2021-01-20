@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 export default function Facebook(props) {
-  const { url, name, type, title, desc, image, locale } = props;
+  const { url, locale, type, title, desc, image, name } = props;
 
   return (
     <Helmet>
