@@ -9,6 +9,7 @@ import Contact from './Contact';
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
 import PageWrapper from './PageWrapper';
+
 export {
   BlogCard,
   ButtonDown,

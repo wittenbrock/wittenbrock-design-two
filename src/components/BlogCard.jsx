@@ -8,7 +8,8 @@ const defaultLinkStyles = `block border-b-8 border-solid border-transparent focu
 
 const isOdd = integer => Boolean(integer % 2);
 
-// To create the blog card "ladder" layout different blog cards need different styles based on their index. The func generateLinkStyles assigns different styles.
+// This function assigns different styles based on the blog card's index value
+// to create the "ladder" effect
 const generateLinkStyles = number => {
   if (number === 0) {
     return tw`${defaultLinkStyles}`;
@@ -89,3 +90,20 @@ export default function BlogCard(props) {
     </li>
   );
 }
+
+BlogCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  post: PropTypes.shape({
+    timeToRead: PropTypes.number.isRequired,
+    fields: PropTypes.shape({
+      slug: PropTypes.string.isRequired,
+    }),
+    frontmatter: PropTypes.shape({
+      alt: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      thumbnail: PropTypes.object.isRequired,
+    }),
+  }).isRequired,
+};

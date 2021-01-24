@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import tw, { css } from 'twin.macro';
 
 import { BlogCard } from '.';
 import tailwindColors from '../../tailwind-colors';
 
+// These styles create the thin vertical gray line that divides the blog posts
 const grayDividerStyles = css`
   @media screen and (min-width: 1024px) {
     &::after {
@@ -52,3 +54,7 @@ export default function Blog(props) {
     </section>
   );
 }
+
+Blog.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

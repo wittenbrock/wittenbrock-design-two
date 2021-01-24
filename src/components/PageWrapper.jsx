@@ -8,6 +8,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { GlobalStyles, css } from 'twin.macro'; // Tailwind's global styles
 import { Global } from '@emotion/core';
 
@@ -122,7 +123,9 @@ const globalCSS = css`
   }
 `;
 
-export default function PageWrapper({ children, ...rest }) {
+export default function PageWrapper(props) {
+  const { children, ...rest } = props;
+
   return (
     <div {...rest}>
       <GlobalStyles />
@@ -131,3 +134,7 @@ export default function PageWrapper({ children, ...rest }) {
     </div>
   );
 }
+
+PageWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+};

@@ -112,7 +112,7 @@ export default function FormField({ label, ...props }) {
 }
 
 FormField.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['text', 'hidden', 'email', 'textarea']).isRequired,
   id: PropTypes.string,
   name: PropTypes.string,
   label: PropTypes.string.isRequired,
