@@ -10,7 +10,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GlobalStyles, css } from 'twin.macro'; // Tailwind's global styles
-import { Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 
 import tailwindColors from '../../tailwind-colors';
 

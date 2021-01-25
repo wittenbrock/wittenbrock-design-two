@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import tw, { css } from 'twin.macro';
 import { useField } from 'formik';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 
 import tailwindColors from '../../../tailwind-colors';
 
@@ -34,7 +34,7 @@ const fieldStyles = [
     }
 
     &:hover {
-      color: ${tailwindColors.indigo.default};
+      color: ${tailwindColors.indigo.DEFAULT};
       ::placeholder {
         color: inherit;
       }

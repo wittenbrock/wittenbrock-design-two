@@ -1,4 +1,4 @@
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 import tw, { css } from 'twin.macro';
 
 import tailwindColors from '../../../tailwind-colors';
