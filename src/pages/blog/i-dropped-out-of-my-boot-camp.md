@@ -44,7 +44,7 @@ Boot camps can have great teachers. They can also have teachers without professi
 
 ![A boot camp's job placement statistics of its graduates.](../../images/i-dropped-out-of-my-coding-boot-camp/job-placement-outcomes.png)
 
-While these upsides are great for the boot camp, they aren't you; a teacher with six months of experience isn't worth the thousands of dollars you're paying. My advice: look up the boot camp's instructors on LinkedIn. Make sure they have several years of professional development under their belt before you enroll.
+While these upsides are great for the boot camp, they aren't great for you; a teacher with six months of experience isn't worth the thousands of dollars you're paying. My advice: look up the boot camp's instructors on LinkedIn. Make sure they have several years of professional development under their belt before you enroll.
 
 ## You might get left behind
 
