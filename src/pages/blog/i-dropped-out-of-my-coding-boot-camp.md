@@ -1,5 +1,5 @@
 ---
-title: I dopped out of my boot camp
+title: I dopped out of my coding boot camp
 date: 2021-01-31T12:00:00.000Z
 description: Five weeks after enrolling, I dropped out of my web development boot camp. Here are my takeaways.
 thumbnail: ../../images/i-dropped-out-of-my-coding-boot-camp/i-dropped-out-of-my-boot-camp-thumbnail.jpg
@@ -62,4 +62,4 @@ If you're the type of person who often compares themselves to others, this hiera
 
 ## Choosing the right shoe
 
-I'm a boot camp drop out. I blame the expensive tuition and fast pasted curriculum. Ultimately, I didn't like 'finishing' a section that I hadn't really mastered. Despite these criticisms, I am glad I tried it. I think boot camps, university, or self-teaching are all viable options. It's important to remember that none of them are perfect. What matters is which one is the best fit.
+I'm a boot camp drop out. I blame the expensive tuition and fast paced curriculum. Ultimately, I didn't like 'finishing' a section that I hadn't really mastered. Despite these criticisms, I am glad I tried it. I think boot camps, university, or self-teaching are all viable options. It's important to remember that none of them are perfect. What matters is which one is the best fit.
