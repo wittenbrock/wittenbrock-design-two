@@ -1,5 +1,5 @@
 ---
-title: I dopped out of my coding boot camp
+title: I dropped out of my coding boot camp
 date: 2021-01-31T12:00:00.000Z
 description: Five weeks after enrolling, I dropped out of my web development boot camp. Here are my takeaways.
 thumbnail: ../../images/i-dropped-out-of-my-coding-boot-camp/i-dropped-out-of-my-boot-camp-thumbnail.jpg
