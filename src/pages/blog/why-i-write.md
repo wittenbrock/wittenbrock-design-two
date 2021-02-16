@@ -7,14 +7,12 @@ thumbnail: ../../images/why-i-write/why-i-write-thumbnail.jpg
 alt: A person's hands typing on a MacBook laptop.
 ---
 
-Have you ever read a book or watched a movie, and six months later, when you recall it, you can't remember much about it? Try doing it right now – take a second – think about a book you read a few months ago. How much do you remember about it? Now think about a book you read one or two years ago; if it was fiction, can you recall all its significant characters? If it was non-fiction, can you remember all of the significant arguments? Suppose a friend was reading the book right now, and you were sitting with them over coffee. Could you summarize the book without missing anything important?
+Have you ever read a book, and six months later, when you recall it, you can't remember much about it? Try doing it right now. Seriously&mdash;take a second and think about the last book you read. How much do you remember from it? Now think about a book you read one or two years ago. If it was fiction, can you recall its major characters? If it was non-fiction, can you remember all of the significant arguments?
 
-Remembering things in detail is challenging.
+Remembering in detail is challenging.
 
-I write to increase the depth of my understanding and to help me remember. I've always learned best by doing. History has shown that if I just read a book, I'm probably going to forget most of it. But my comprehension increases if I write about it, takes notes on it, and have conversations about it.
+I've found that writing about the things I've learned helps solidify my memory. I've always learned best by doing. Passively watching programming tutorials and mimicking the instructor doesn't do it for me. A deeper understanding happens when I take off the training wheels and start programming on my own. I have to play with a technology to master it.
 
-Learning isn't a passive activity. I've never been the type of student who can understand something fully by watching the teacher do the problem on the chalkboard. As programmers, we've all watched tutorials and mindlessly mimicked what the instructor was doing. To me, that's just the beginning of understanding something. The real learning starts when the video ends. Last week I went through a [GraphQL series](https://www.leveluptutorials.com/tutorials/how-to-make-a-graphql-api) to learn how to build and configure an API. I didn't really understand how it was working until I referenced the docs, had to troubleshoot on Stack Overflow, and began playing with the technology.
+I like to think of the web as a massive mosaic of knowledge. To me, that's its most significant innovation: the open sourcing of information. This is what enabled me to become a programmer. All the information I needed to learn programming was freely available on the web. Think about how incredible that is. Anyone in the world with a computer, an internet connection, and enough time can do the same.
 
-My first reason for writing is self-serving, so you might be wondering why I'm writing this blog. Couldn't I just keep my notes and essays to myself? Good question. One of the web's most incredible innovations is the open sourcing of information. You can learn anything at any time since with the advent of the web. Since becoming a developer, over 90% of the tutorials, courses, and books I've studied have all been free. All the information I needed to become a developer was readily available on the web.
-
-So, why do I write? Because I want to contribute to this worldwide web of knowledge.
+So why do I write? Because I want to deepen my understanding and contribute to this worldwide web of knowledge.
