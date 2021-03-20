@@ -15,6 +15,10 @@ export const logoSquareBorder = css`
   stroke-dashoffset: 1458.87;
 `;
 
+export const dashoffsetZero = css`
+  stroke-dashoffset: 0;
+`;
+
 // Animations
 const drawKeyframe = keyframes`
   to {
