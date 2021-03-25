@@ -1,6 +1,13 @@
-// Tailwind is managed by the package Twin Macro in this project
-// https://github.com/ben-rogerson/twin.macro
-// Twin Macro combines the utlity of Emotion's CSS-in-JS with Tailwind
+/* Tailwind is managed by the package Twin Macro in this project.
+ * Twin Macro combines the utlity of Emotion's CSS-in-JS with Tailwind
+ *
+ * Twin Macro API - https://github.com/ben-rogerson/twin.macro
+ *
+ * Twin Macro Configuration Example - https://github.com/ben-rogerson/twin.examples/tree/master/gatsby-emotion
+ */
+
+const typography = require('@tailwindcss/typography');
+const aspectRatio = require('@tailwindcss/aspect-ratio');
 
 const tailwindColors = require('./tailwind-colors');
 
@@ -151,10 +158,18 @@ module.exports = {
       minWidth: {
         112: `28rem`,
       },
+      backgroundSize: {
+        '0/2': '0% 2px',
+        '0/7': '0% 7px',
+        '100/2': '100% 2px',
+        '100/7': '100% 7px',
+        'auto/7': 'auto 7px',
+      },
+      transitionProperty: {
+        'background-size': 'background-size',
+      },
     },
     colors: tailwindColors,
   },
-  plugins: [
-    require(`@tailwindcss/typography`, require(`@tailwindcss/aspect-ratio`)),
-  ],
+  plugins: [typography, aspectRatio],
 };

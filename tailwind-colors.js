@@ -26,6 +26,7 @@ module.exports = {
   indigo: {
     DEFAULT: `#6574cd`,
     darkest: `#1d1e26`,
+    transparent: `rgba(101, 116, 205, 0.4)`,
   },
   red: {
     lightest: `#fed7d7`,

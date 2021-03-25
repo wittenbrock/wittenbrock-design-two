@@ -24,27 +24,15 @@ const StyledLink = styled(Link)`
   ${props => generateLinkStyles(props.index)}
 `;
 
-const StyledSpan = styled.span`
-  position: relative;
-  z-index: 20;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0.9em;
-    right: 0;
-    height: 0.4em;
-    z-index: -10;
-    background-color: rgba(101, 116, 205, 0.4);
-    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
-    width: 0;
-  }
-
-  ${StyledLink}:hover &::before {
-    width: 100%;
-    left: 0;
-  }
-`;
+const StyledSpan = styled.span(() => [
+  tw`text-xl font-semibold bg-gradient-to-r from-indigo-transparent to-indigo-transparent duration-150 ease-linear transition-background-size bg-left-bottom bg-no-repeat bg-0/7`,
+  css`
+    ${StyledLink}:hover &,
+    ${StyledLink}:focus & {
+      background-size: 100% 7px;
+    }
+  `,
+]);
 
 const imageStyles = [
   tw`h-48 w-full object-cover transition duration-700 ease-in-out`,
