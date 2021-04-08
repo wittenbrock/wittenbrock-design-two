@@ -168,6 +168,10 @@ module.exports = {
       transitionProperty: {
         'background-size': 'background-size',
       },
+      zIndex: {
+        '-20': '-20',
+        '-10': '-10',
+      },
     },
     colors: tailwindColors,
   },

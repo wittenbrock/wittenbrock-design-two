@@ -5,17 +5,13 @@ import {
   fillNone,
   logoStrokeSize,
   logoSquareBorder,
-  draw,
-  slideInFwdCenter,
-  bounceInTop,
   dashoffsetZero,
 } from './styles';
 
 // Animated logo seen on wittenbrockdesign.com's homepage
-export default function WittenbrockDesignLogo(props) {
-  const { isFirstVisit } = props;
+export default function WittenbrockDesignLogo() {
   return (
-    <figure tw="h-32 md:h-40 xl:h-48 w-32 md:w-40 xl:w-48 mb-32 md:mb-40 xl:mb-48">
+    <figure tw="h-32 md:h-40 xl:h-48 w-32 md:w-40 xl:w-48">
       <svg
         tw="h-full w-full"
         aria-hidden="true"
@@ -27,9 +23,7 @@ export default function WittenbrockDesignLogo(props) {
         <title>Wittenbrock Design</title>
         <g
           css={[
-            tw`opacity-0 text-indigo-darkest fill-current stroke-current`,
-            isFirstVisit && slideInFwdCenter,
-            isFirstVisit ? tw`opacity-0` : tw`opacity-100`,
+            tw`opacity-100 text-indigo-darkest fill-current stroke-current`,
           ]}
         >
           <path d="M151.437,145.677h-18.5v-98h18.5Z" />
@@ -53,7 +47,6 @@ export default function WittenbrockDesignLogo(props) {
             tw`text-indigo-darkest stroke-current`,
             logoStrokeSize,
             fillNone,
-            isFirstVisit && bounceInTop,
           ]}
           cx="200"
           cy="200"
@@ -65,7 +58,7 @@ export default function WittenbrockDesignLogo(props) {
             logoSquareBorder,
             logoStrokeSize,
             fillNone,
-            isFirstVisit ? draw : dashoffsetZero,
+            dashoffsetZero,
           ]}
           points="8.138 20.204 382.613 20.204 382.613 379.796 17.387 379.796 17.387 20.212"
         />
