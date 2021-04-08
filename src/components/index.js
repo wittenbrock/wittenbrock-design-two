@@ -1,5 +1,4 @@
 import BlogCard from './BlogCard';
-import ButtonDown from './button-down/ButtonDown';
 import ContactForm from './contact-form/ContactForm';
 import SocialMediaIcon from './social-media-icon/SocialMediaIcon';
 import WittenbrockDesignLogo from './wittenbrock-design-logo/WittenbrockDesignLogoAnimated';
@@ -11,7 +10,6 @@ import PageWrapper from './PageWrapper';
 
 export {
   BlogCard,
-  ButtonDown,
   ContactForm,
   SEO,
   SocialMediaIcon,

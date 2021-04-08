@@ -4,7 +4,7 @@ import tw, { css } from 'twin.macro';
 
 import LinkedinIcon from './LinkedinIcon';
 import GitHubIcon from './GithubIcon';
-import { pulsateBack } from '../button-down/styles';
+import { pulsateBack } from '../contact-form/SubmitButton';
 import tailwindColors from '../../../tailwind-colors';
 
 const linkedInSpecs = {

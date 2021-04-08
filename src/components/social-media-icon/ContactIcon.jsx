@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import tw, { css } from 'twin.macro';
 
-import { pulsateBack } from '../button-down/styles';
+import { pulsateBack } from '../contact-form/SubmitButton';
 import tailwindColors from '../../../tailwind-colors';
 
 export default function ContactIcon(props) {
