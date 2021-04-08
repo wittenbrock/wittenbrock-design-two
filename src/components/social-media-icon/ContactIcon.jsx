@@ -12,7 +12,7 @@ export default function ContactIcon(props) {
   return (
     <div>
       <Link
-        to="/#contact"
+        to="/contact"
         title="Send William a message."
         css={[
           tw`inline-block hover:cursor-pointer no-underline focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,

@@ -109,7 +109,7 @@ export default function Homepage(props) {
   };
 
   return (
-    <section>
+    <section tw="pb-24 xl:pb-32">
       <div tw="bg-white w-full min-h-screen px-4 py-24 xl:py-32 flex flex-col justify-center items-center">
         <h1 tw="sr-only">Wittenbrock Design</h1>
         {renderLogoAndSubtitleAndDivider()}
