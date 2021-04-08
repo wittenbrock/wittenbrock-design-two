@@ -7,7 +7,6 @@ import SEO from './seo/SEO';
 import Blog from './Blog';
 import Contact from './Contact';
 import Homepage from './Homepage';
-import SectionTwo from './SectionTwo';
 import PageWrapper from './PageWrapper';
 
 export {
@@ -20,6 +19,5 @@ export {
   Blog,
   Contact,
   Homepage,
-  SectionTwo,
   PageWrapper,
 };
