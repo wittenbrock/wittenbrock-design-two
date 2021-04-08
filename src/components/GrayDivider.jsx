@@ -27,14 +27,14 @@ export default function GrayDivider(props) {
         xmlns="http://www.w3.org/2000/svg"
         stroke={tailwindColors.gray[600]}
         height={dividerHeight}
-        width="4"
+        width="6"
       >
         <line
           x1="0"
           y1={dividerHeight}
           x2="0"
           y2="0"
-          strokeWidth={4}
+          strokeWidth={6}
           stroke-dasharray={dividerHeight}
           stroke-dashoffset={-dividerHeight}
           css={draw}
@@ -50,9 +50,9 @@ export default function GrayDivider(props) {
       xmlns="http://www.w3.org/2000/svg"
       stroke={tailwindColors.gray[600]}
       height={dividerHeight}
-      width="4"
+      width="6"
     >
-      <line x1="0" y1={dividerHeight} x2="0" y2="0" strokeWidth={4} />
+      <line x1="0" y1={dividerHeight} x2="0" y2="0" strokeWidth={6} />
     </svg>
   );
 }
