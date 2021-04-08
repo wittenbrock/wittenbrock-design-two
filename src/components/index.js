@@ -6,7 +6,7 @@ import WittenbrockDesignLogo from './wittenbrock-design-logo/WittenbrockDesignLo
 import SEO from './seo/SEO';
 import Blog from './Blog';
 import Contact from './Contact';
-import SectionOne from './SectionOne';
+import Homepage from './Homepage';
 import SectionTwo from './SectionTwo';
 import PageWrapper from './PageWrapper';
 
@@ -19,7 +19,7 @@ export {
   WittenbrockDesignLogo,
   Blog,
   Contact,
-  SectionOne,
+  Homepage,
   SectionTwo,
   PageWrapper,
 };

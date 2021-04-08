@@ -6,9 +6,9 @@ import { useDebounce } from 'use-debounce';
 
 import WittenbrockDesignLogo from './wittenbrock-design-logo/WittenbrockDesignLogo';
 import WittenbrockDesignLogoAnimated from './wittenbrock-design-logo/WittenbrockDesignLogoAnimated';
-import Blog from '../components/Blog';
+import Blog from './Blog';
 import useWindowSize from '../hooks/useWindowSize';
-import GrayDivider from '../components/GrayDivider';
+import GrayDivider from './GrayDivider';
 
 const TextFocusInKeyframe = keyframes`
   0% {
@@ -42,7 +42,7 @@ function getDistanceBetweenElements(a, b) {
   return Math.hypot(aPosition.x - bPosition.x, aPosition.y - bPosition.y);
 }
 
-export default function SectionOne(props) {
+export default function Homepage(props) {
   const [numberOfVisits] = useLocalStorage('numberOfVisits');
   const { posts } = props;
   const [dividerHeight, setDividerHeight] = useState(0);
