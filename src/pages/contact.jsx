@@ -6,7 +6,7 @@ import website from '../../website';
 export default function ContactPage() {
   return (
     <PageWrapper>
-      <SEO title="Contact" />
+      <SEO title={`Contact | ${website.titleAlt}`} pathname="Contact" />
       <main>
         <Contact />
       </main>

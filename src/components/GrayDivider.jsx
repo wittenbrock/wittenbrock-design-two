@@ -4,6 +4,7 @@ import { css } from 'twin.macro';
 
 import tailwindColors from '../../tailwind-colors';
 
+// Create the animation that "draws" the gray dividing line
 const drawKeyframe = keyframes`
   to {
     stroke-dashoffset: 0;
@@ -14,9 +15,11 @@ const draw = css`
   animation: ${drawKeyframe} 3s 4s ease-in forwards;
 `;
 
+// Create the gray dividing line that runs down the center of the homepage
 export default function GrayDivider(props) {
   const { dividerHeight, isFirstVisit } = props;
 
+  // "Draw" the line if it's the user's first visit to the site
   if (isFirstVisit) {
     return (
       <svg
@@ -40,6 +43,7 @@ export default function GrayDivider(props) {
     );
   }
 
+  // If it's a subsequent visit, do not animate the line
   return (
     <svg
       style={{ position: 'absolute' }}

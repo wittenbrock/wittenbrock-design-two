@@ -8,12 +8,13 @@ import {
   buttonStyles,
   pulsateBack,
 } from '../components/contact-form/SubmitButton';
+import website from '../../website';
 
 export default function PageNotFound() {
   return (
     <PageWrapper>
       <section tw="text-white text-center w-full min-h-screen px-4 py-24 xl:py-32 flex flex-col justify-center items-center">
-        <SEO title="404: Page not found" />
+        <SEO title={`404:Page Not Found | ${website.titleAlt}`} />
         <h1 tw="font-heading font-bold text-3xl sm:text-4xl xl:text-5xl mb-2 sm:mb-3 xl:mb-4">
           Page Not Found
         </h1>

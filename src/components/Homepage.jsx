@@ -10,6 +10,7 @@ import Blog from './Blog';
 import useWindowSize from '../hooks/useWindowSize';
 import GrayDivider from './GrayDivider';
 
+// Animate the homepage's subtitle
 const TextFocusInKeyframe = keyframes`
   0% {
     filter: blur(12px);
@@ -27,6 +28,9 @@ const textFocusIn = css`
     cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 `;
 
+// Use the Pythagorean Theorem to calculate the distance between two points.
+// This will determine the gray divider's height.
+// https://stackoverflow.com/questions/17628456/measure-distance-between-two-html-elements-centers/17628488#17628488
 function getPositionAtCenter(element) {
   const { top, left, width, height } = element.getBoundingClientRect();
   return {
@@ -63,6 +67,8 @@ export default function Homepage(props) {
     }
   }, []);
 
+  // When a user resizes their window, recalcuate the gray divider's height.
+  // Debounce this function at 300ms to prevent too many calls and browser lag.
   useEffect(() => {
     const distance = getDistanceBetweenElements(
       dividerStart.current,

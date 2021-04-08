@@ -1,7 +1,6 @@
 import BlogCard from './BlogCard';
 import ContactForm from './contact-form/ContactForm';
 import SocialMediaIcon from './social-media-icon/SocialMediaIcon';
-import WittenbrockDesignLogo from './wittenbrock-design-logo/WittenbrockDesignLogoAnimated';
 import SEO from './seo/SEO';
 import Blog from './Blog';
 import Contact from './Contact';
@@ -13,7 +12,6 @@ export {
   ContactForm,
   SEO,
   SocialMediaIcon,
-  WittenbrockDesignLogo,
   Blog,
   Contact,
   Homepage,
