@@ -1,7 +1,8 @@
 import React from 'react';
 import tw, { styled, css } from 'twin.macro';
 
-import { SocialMediaIcon, ContactForm } from '.';
+import { ContactForm } from '.';
+import { LinkedinIcon, GithubIcon, RssIcon } from '../icons';
 
 const StyledDiv = styled.div(() => [
   tw`lg:flex flex-wrap`,
@@ -33,8 +34,9 @@ export default function Contact() {
             I'm always happy to help.
           </p>
           <div tw="flex justify-between w-40">
-            <SocialMediaIcon linkedIn />
-            <SocialMediaIcon gitHub />
+            <LinkedinIcon />
+            <GithubIcon />
+            <RssIcon />
           </div>
         </StyledHeader>
         <ContactForm />

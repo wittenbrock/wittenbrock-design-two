@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import tw from 'twin.macro';
 
 import { PageWrapper, SEO } from '../components';
-import homeSvg from '../icons/home.svg';
+import { HomeIcon } from '../icons';
 import {
   buttonStyles,
   pulsateBack,
@@ -30,15 +30,7 @@ export default function PageNotFound() {
             pulsateBack,
           ]}
         >
-          <img
-            src={homeSvg}
-            alt="Home icon"
-            aria-hidden="true"
-            focasable="false"
-            height="16"
-            width="16"
-            tw="h-4 w-4 relative z-20 inline-block -ml-1 mr-2 mb-1"
-          />
+          <HomeIcon />
           <span tw="relative z-20">Return home</span>
         </Link>
       </section>

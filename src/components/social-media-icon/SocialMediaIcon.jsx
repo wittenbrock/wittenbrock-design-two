@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import tw, { css } from 'twin.macro';
 
-import LinkedinIcon from './LinkedinIcon';
-import GitHubIcon from './GithubIcon';
+import LinkedinIcon from '../../icons/LinkedinIcon';
+import GitHubIcon from '../../icons/GithubIcon';
 import { pulsateBack } from '../contact-form/SubmitButton';
 import tailwindColors from '../../../tailwind-colors';
 

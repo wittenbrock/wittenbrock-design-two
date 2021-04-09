@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import tw, { css } from 'twin.macro';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
-import { PageWrapper, SocialMediaIcon, SEO } from '../components';
-import ContactIcon from '../components/social-media-icon/ContactIcon';
+import { PageWrapper, SEO } from '../components';
 import website from '../../website';
 import tailwindColors from '../../tailwind-colors';
+import { LinkedinIcon, GithubIcon, ContactIcon, RssIcon } from '../icons';
 
 const dropCapFirstLetter = css`
   .dropcap {
@@ -106,7 +106,7 @@ export default function BlogPost(props) {
                   </dd>
                 </dl>
                 <div>
-                  <h1 tw="text-white font-heading font-bold text-2xl sm:text-3xl lg:text-4xl">
+                  <h1 tw="text-white capitalize font-heading font-bold text-2xl sm:text-3xl lg:text-4xl">
                     {post.frontmatter.title}
                   </h1>
                   <dl tw="sr-only">
@@ -149,22 +149,10 @@ export default function BlogPost(props) {
               William is a software engineer, designer, and ramen aficionado.
             </p>
             <div tw="flex justify-between w-40">
-              <SocialMediaIcon
-                linkedIn
-                size="small"
-                color={tailwindColors.gray[300]}
-              />
-              <SocialMediaIcon
-                gitHub
-                size="small"
-                color={tailwindColors.gray[300]}
-              />
-              <ContactIcon
-                size="small"
-                height="20"
-                width="20"
-                color={tailwindColors.gray[300]}
-              />
+              <LinkedinIcon size="small" color="gray" />
+              <GithubIcon size="small" color="gray" />
+              <ContactIcon size="small" color="gray" />
+              <RssIcon size="small" color="gray" />
             </div>
           </div>
         </div>

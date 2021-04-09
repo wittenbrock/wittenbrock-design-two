@@ -25,7 +25,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledSpan = styled.span(() => [
-  tw`text-xl font-semibold bg-gradient-to-r from-indigo-transparent to-indigo-transparent duration-150 ease-linear transition-background-size bg-left-bottom bg-no-repeat bg-0/7`,
+  tw`text-xl capitalize font-semibold bg-gradient-to-r from-indigo-transparent to-indigo-transparent duration-150 ease-linear transition-background-size bg-left-bottom bg-no-repeat bg-0/7`,
   css`
     ${StyledLink}:hover &,
     ${StyledLink}:focus & {

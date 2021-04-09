@@ -3,7 +3,7 @@ import tw, { css, styled } from 'twin.macro';
 import { keyframes } from '@emotion/react';
 import PropTypes from 'prop-types';
 
-import sendSvg from '../../icons/send.svg';
+import { SendIcon } from '../../icons';
 import tailwindColors from '../../../tailwind-colors';
 
 const pulsateBackKeyframe = keyframes`
@@ -70,15 +70,7 @@ export default function SubmitButton(props) {
     <div tw="flex justify-center mt-3 lg:mt-0 xl:mt-6">
       <StyledButton type="submit" {...props}>
         <span tw="sr-only">Submit form</span>
-        <img
-          src={sendSvg}
-          alt="Submit icon"
-          aria-hidden="true"
-          focasable="false"
-          height="16"
-          width="16"
-          tw="h-4 w-4 relative z-20 block"
-        />
+        <SendIcon />
       </StyledButton>
     </div>
   );
