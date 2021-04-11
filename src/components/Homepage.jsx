@@ -91,7 +91,7 @@ export default function Homepage(props) {
           >
             Essays, opinions, and advice on computer programming.
           </p>
-          <div tw="relative mt-32">
+          <div tw="flex justify-center relative mt-32">
             <GrayDivider dividerHeight={dividerHeight} isFirstVisit />
             <div ref={dividerStart} aria-hidden="true"></div>
           </div>
@@ -106,7 +106,7 @@ export default function Homepage(props) {
         <p tw="text-indigo-darkest font-body font-normal text-center text-base md:text-xl mt-24">
           Essays, opinions, and advice on computer programming.
         </p>
-        <div tw="relative mt-32">
+        <div tw="flex justify-center relative mt-32">
           <GrayDivider dividerHeight={dividerHeight} />
           <div ref={dividerStart} aria-hidden="true"></div>
         </div>
