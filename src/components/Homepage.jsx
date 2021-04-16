@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { keyframes } from '@emotion/react';
 import tw, { css } from 'twin.macro';
-import { writeStorage, useLocalStorage } from '@rehooks/local-storage';
 import { useDebounce } from 'use-debounce';
 
 import WittenbrockDesignLogo from './wittenbrock-design-logo/WittenbrockDesignLogo';
@@ -47,7 +46,7 @@ function getDistanceBetweenElements(a, b) {
 }
 
 export default function Homepage(props) {
-  const [numberOfVisits] = useLocalStorage('numberOfVisits');
+  const [isFirstVisit, setIsFirstVisit] = useState(true);
   const { posts } = props;
   const [dividerHeight, setDividerHeight] = useState(0);
   const dividerStart = useRef(null);
@@ -55,15 +54,27 @@ export default function Homepage(props) {
   const windowSize = useWindowSize();
   const [debouncedWindowSize] = useDebounce(windowSize, 300);
 
-  // When a user first visits the site, run the animation. But on subsquent visits, do not animate. Save their first visit in LocalStorage.
+  // When a user first visits the site, run the animation. But on subsquent visits, do not animate. Store the first visit in LocalStorage.
   useEffect(() => {
-    if (numberOfVisits === undefined) {
-      writeStorage('numberOfVisits', 1);
+    // Check if user's first visit visit was stored in localStorage
+    const localStorageFirstVisit = localStorage.getItem('isFirstVisit');
+
+    // If local storage is null, then this is the user's first visit. Set state to false.
+    if (localStorageFirstVisit === null) {
+      setIsFirstVisit(true);
     }
 
-    if (numberOfVisits >= 1) {
-      const addOneVisit = numberOfVisits + 1;
-      writeStorage('numberOfVisits', addOneVisit);
+    // If localStorage has the string 'false', then the user has visited the site before.
+    // Set the state to false
+    if (localStorageFirstVisit === 'false') {
+      setIsFirstVisit(false);
+    }
+  }, []);
+
+  // If this is the user's first visit, set ocal storage to the string 'false' for future reference
+  useEffect(() => {
+    if (isFirstVisit) {
+      localStorage.setItem('isFirstVisit', 'false');
     }
   }, []);
 
@@ -79,7 +90,7 @@ export default function Homepage(props) {
 
   const renderLogoAndSubtitleAndDivider = () => {
     // If its the user's first visit, animate the logo and subtitle
-    if (numberOfVisits === 1) {
+    if (isFirstVisit) {
       return (
         <>
           <WittenbrockDesignLogoAnimated isFirstVisit />
