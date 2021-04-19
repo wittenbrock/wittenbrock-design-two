@@ -4,10 +4,7 @@ import tw from 'twin.macro';
 
 import { PageWrapper, SEO } from '../components';
 import { HomeIcon } from '../icons';
-import {
-  buttonStyles,
-  pulsateBack,
-} from '../components/contact-form/SubmitButton';
+import { buttonStyles, pulsateBack } from '../components/forms/SubmitButton';
 import website from '../../website';
 
 export default function PageNotFound() {

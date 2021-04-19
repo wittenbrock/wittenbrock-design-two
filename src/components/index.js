@@ -1,5 +1,5 @@
 import BlogCard from './BlogCard';
-import ContactForm from './contact-form/ContactForm';
+import ContactForm from './forms/ContactForm';
 import SEO from './seo/SEO';
 import Blog from './Blog';
 import Contact from './Contact';

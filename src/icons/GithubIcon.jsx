@@ -1,7 +1,7 @@
 import React from 'react';
 import tw from 'twin.macro';
 
-import { pulsateBack } from '../components/contact-form/SubmitButton';
+import { pulsateBack } from '../components/forms/SubmitButton';
 
 export default function GithubIcon(props) {
   const { size, color } = props;
