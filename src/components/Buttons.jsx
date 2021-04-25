@@ -2,9 +2,10 @@ import React from 'react';
 import tw, { css, styled } from 'twin.macro';
 import { keyframes } from '@emotion/react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import { SendIcon } from '../../icons';
-import tailwindColors from '../../../tailwind-colors';
+import { MailIcon, SendIcon, HomeIcon } from '../icons';
+import tailwindColors from '../../tailwind-colors';
 
 const pulsateBackKeyframe = keyframes`
   0% {
@@ -27,9 +28,11 @@ export const pulsateBack = css`
   }
 `;
 
-export const buttonStyles = [
-  tw`relative bg-orange no-underline appearance-none focus:outline-none hover:cursor-pointer focus:bg-blue-lighter`,
+const buttonBaseStyles = [
+  tw`inline-block text-white relative bg-orange rounded-full no-underline appearance-none outline-none py-2 px-16 xl:px-20 focus:outline-none hover:cursor-pointer focus:bg-blue-lighter`,
+  pulsateBack,
 
+  // Create the dark orange background that appears on hover
   css`
     &::after {
       content: '';
@@ -58,21 +61,40 @@ export const buttonStyles = [
   `,
 ];
 
-const StyledButton = styled.button(({ disabled }) => [
-  tw`bg-orange rounded-full py-2 px-16 xl:px-20 relative`,
-
-  disabled ? tw`hover:cursor-not-allowed opacity-75` : buttonStyles,
-  pulsateBack,
-]);
-
-export default function SubmitButton(props) {
+export function SubmitButton(props) {
+  const { disabled } = props;
   return (
     <div tw="flex justify-center mt-3 lg:mt-0 xl:mt-6">
-      <StyledButton type="submit" {...props}>
+      <button
+        type="submit"
+        disabled={disabled}
+        css={[
+          buttonBaseStyles,
+          disabled && tw`hover:cursor-not-allowed opacity-75`,
+        ]}
+      >
         <span tw="sr-only">Submit form</span>
         <SendIcon />
-      </StyledButton>
+      </button>
     </div>
+  );
+}
+
+export function SubscribeButton() {
+  return (
+    <Link to="/subscribe" css={buttonBaseStyles}>
+      <MailIcon />
+      <span tw="relative z-20">Subscribe</span>
+    </Link>
+  );
+}
+
+export function HomeButton() {
+  return (
+    <Link to="/" css={buttonBaseStyles}>
+      <HomeIcon />
+      <span tw="sr-only">Return to the home page.</span>
+    </Link>
   );
 }
 

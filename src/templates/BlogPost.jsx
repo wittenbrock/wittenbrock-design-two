@@ -8,7 +8,9 @@ import { PageWrapper, SEO } from '../components';
 import website from '../../website';
 import tailwindColors from '../../tailwind-colors';
 import { LinkedinIcon, GithubIcon, ContactIcon, RssIcon } from '../icons';
+import { SubscribeButton } from '../components/Buttons';
 
+// Styles that capitalize the first letter on each blog post
 const dropCapFirstLetter = css`
   .dropcap {
     font-family: 'League Spartan', sans-serif;
@@ -133,6 +135,9 @@ export default function BlogPost(props) {
             />
           </article>
         </main>
+        <div tw="flex justify-center my-6">
+          <SubscribeButton />
+        </div>
         <div tw="flex py-16">
           <figure tw="mr-4 flex-shrink-0">
             <Image
@@ -168,7 +173,7 @@ export default function BlogPost(props) {
                 </h2>
                 <Link
                   to={prevPost.url}
-                  tw="text-white hover:text-indigo focus:text-blue outline-none transition ease-in-out duration-150 text-sm"
+                  tw="text-white capitalize hover:text-indigo focus:text-blue outline-none transition ease-in-out duration-150 text-sm"
                 >
                   {prevPost.title}
                 </Link>
@@ -181,7 +186,7 @@ export default function BlogPost(props) {
                 </h2>
                 <Link
                   to={nextPost.url}
-                  tw="text-white hover:text-indigo focus:text-blue outline-none transition ease-in-out duration-150 text-sm"
+                  tw="text-white capitalize hover:text-indigo focus:text-blue outline-none transition ease-in-out duration-150 text-sm"
                 >
                   {nextPost.title}
                 </Link>
@@ -224,7 +229,7 @@ export const query = graphql`
         updated(formatString: "MMMM Do, YYYY")
         thumbnail {
           childCloudinaryAsset {
-            fixed(transformations: "c_scale,dpr_auto,w_1000") {
+            fixed(transformations: "c_scale, dpr_auto, w_1000") {
               src
             }
           }

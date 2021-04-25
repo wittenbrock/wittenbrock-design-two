@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import tw from 'twin.macro';
 
-import { pulsateBack } from '../components/forms/SubmitButton';
+import { pulsateBack } from '../components/Buttons';
 
 export default function RssIcon(props) {
   const { size, color } = props;

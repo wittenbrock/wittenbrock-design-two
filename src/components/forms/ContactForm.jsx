@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import tw, { styled, css } from 'twin.macro';
 
 import FormField from './FormField';
-import SubmitButton from './SubmitButton';
+import { SubmitButton } from '../Buttons';
 
 const StyledDiv = styled.div`
   flex-basis: 50%;

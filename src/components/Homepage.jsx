@@ -2,12 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import { keyframes } from '@emotion/react';
 import tw, { css } from 'twin.macro';
 import { useDebounce } from 'use-debounce';
+import { Link } from 'gatsby';
 
 import WittenbrockDesignLogo from './wittenbrock-design-logo/WittenbrockDesignLogo';
 import WittenbrockDesignLogoAnimated from './wittenbrock-design-logo/WittenbrockDesignLogoAnimated';
 import Blog from './Blog';
 import useWindowSize from '../hooks/useWindowSize';
 import GrayDivider from './GrayDivider';
+import { MailIcon } from '../icons';
+import { SubscribeButton } from '../components/Buttons';
 
 // Animate the homepage's subtitle
 const TextFocusInKeyframe = keyframes`
@@ -126,13 +129,28 @@ export default function Homepage(props) {
   };
 
   return (
-    <section tw="pb-24 xl:pb-32">
-      <div tw="bg-white w-full min-h-screen px-4 py-24 xl:py-32 flex flex-col justify-center items-center">
-        <h1 tw="sr-only">Wittenbrock Design</h1>
-        {renderLogoAndSubtitleAndDivider()}
-      </div>
-      <Blog posts={posts} />
-      <div ref={dividerEnd} aria-hidden="true"></div>
-    </section>
+    <>
+      <section tw="pb-20">
+        <div tw="bg-white w-full min-h-screen px-4 py-24 xl:py-32 flex flex-col justify-center items-center">
+          <h1 tw="sr-only">Wittenbrock Design</h1>
+          {renderLogoAndSubtitleAndDivider()}
+        </div>
+        <Blog posts={posts} />
+        <div ref={dividerEnd} aria-hidden="true"></div>
+      </section>
+      <footer tw="pb-24 xl:pb-32">
+        <header tw="text-center text-white mb-24 max-w-lg xl:max-w-2xl mx-auto">
+          <h2 tw="font-heading font-bold text-3xl sm:text-4xl xl:text-5xl mb-2 sm:mb-3 xl:mb-4">
+            Stay in the loop.
+          </h2>
+          <p tw="font-body font-normal text-lg sm:text-xl xl:text-2xl">
+            Essays, opinions, and advice on computer programming.
+          </p>
+          <div tw="mt-20">
+            <SubscribeButton />
+          </div>
+        </header>
+      </footer>
+    </>
   );
 }

@@ -3,9 +3,8 @@ import { Link } from 'gatsby';
 import tw from 'twin.macro';
 
 import { PageWrapper, SEO } from '../components';
-import { HomeIcon } from '../icons';
-import { buttonStyles, pulsateBack } from '../components/forms/SubmitButton';
 import website from '../../website';
+import { HomeButton } from '../components/Buttons';
 
 export default function PageNotFound() {
   return (
@@ -19,17 +18,7 @@ export default function PageNotFound() {
           It looks like you've clicked a broken link or entered a URL that
           doesn't exist on this site.
         </p>
-        <Link
-          to="/"
-          css={[
-            tw`bg-orange rounded-full py-2 px-8 relative`,
-            buttonStyles,
-            pulsateBack,
-          ]}
-        >
-          <HomeIcon />
-          <span tw="relative z-20">Return home</span>
-        </Link>
+        <HomeButton />
       </section>
     </PageWrapper>
   );
