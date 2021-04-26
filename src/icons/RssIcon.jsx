@@ -14,7 +14,7 @@ export default function RssIcon(props) {
         to="/rss.xml"
         title="Wittenbrock Design RSS feed."
         css={[
-          tw`inline-block hover:cursor-pointer no-underline focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,
+          tw`inline-block hover:cursor-pointer no-underline transition focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,
           pulsateBack,
           size === `small` ? tw`h-5 w-5` : tw`h-6 w-6`,
           color === `gray` ? tw`text-gray-300` : tw`text-white`,

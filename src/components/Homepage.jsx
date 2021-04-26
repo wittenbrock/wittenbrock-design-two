@@ -141,10 +141,10 @@ export default function Homepage(props) {
       <footer tw="pb-24 xl:pb-32">
         <header tw="text-center text-white mb-24 max-w-lg xl:max-w-2xl mx-auto">
           <h2 tw="font-heading font-bold text-3xl sm:text-4xl xl:text-5xl mb-2 sm:mb-3 xl:mb-4">
-            Stay in the loop.
+            Read what's next.
           </h2>
           <p tw="font-body font-normal text-lg sm:text-xl xl:text-2xl">
-            Essays, opinions, and advice on computer programming.
+            Get my latest blog posts sent straight to your inbox.
           </p>
           <div tw="mt-20">
             <SubscribeButton />

@@ -13,18 +13,6 @@ const StyledDiv = styled.div`
   justify-content: center;
 `;
 
-const formStyles = css`
-  height: 24rem;
-
-  @media screen and (min-width: 640px) {
-    height: 28rem;
-  }
-
-  @media screen and (min-width: 1280px) {
-    height: 32rem;
-  }
-`;
-
 export default function SubscribeForm() {
   return (
     <Formik
@@ -59,13 +47,12 @@ export default function SubscribeForm() {
           <Form
             name="newsletter-signup"
             css={[
-              tw`bg-white w-full max-w-sm sm:max-w-md xl:max-w-lg px-10 pt-10 sm:px-12 sm:pt-12 xl:px-16 xl:pt-16 mb-4 text-indigo-darkest text-sm lg:text-base`,
-              formStyles,
+              tw`bg-white w-full max-w-sm sm:max-w-md xl:max-w-lg px-10 py-14 sm:py-12 sm:py-16 xl:px-16 xl:py-20 mb-4 text-indigo-darkest text-sm lg:text-base`,
             ]}
           >
-            <h3 tw="sr-only">
+            <h2 tw="sr-only">
               Subscribe to the Wittenbrock Design newsletter.
-            </h3>
+            </h2>
             <Field type="hidden" name="form-name" value="newsletter-signup" />
             <FormField
               type="text"

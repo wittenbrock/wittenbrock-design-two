@@ -93,7 +93,7 @@ export function HomeButton() {
   return (
     <Link to="/" css={buttonBaseStyles}>
       <HomeIcon />
-      <span tw="sr-only">Return to the home page.</span>
+      <span tw="relative z-20">Return home</span>
     </Link>
   );
 }

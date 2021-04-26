@@ -10,7 +10,7 @@ export default function LinkedinIcon(props) {
       href="https://www.linkedin.com/in/william-wittenbrock/"
       title="Visit William's LinkedIn profile."
       css={[
-        tw`inline-block hover:cursor-pointer no-underline focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,
+        tw`inline-block hover:cursor-pointer no-underline transition focus:text-blue-lighter focus:outline-none appearance-none hover:text-indigo`,
         pulsateBack,
         size === `small` ? tw`h-5 w-5` : tw`h-6 w-6`,
         color === `gray` ? tw`text-gray-300` : tw`text-white`,

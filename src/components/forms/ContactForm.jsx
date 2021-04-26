@@ -10,6 +10,7 @@ const StyledDiv = styled.div`
   flex-basis: 50%;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 `;
 
 const formStyles = css`
@@ -82,7 +83,7 @@ export default function ContactForm() {
               formStyles,
             ]}
           >
-            <h3 tw="sr-only">Contact William Wittenbrock.</h3>
+            <h2 tw="sr-only">Contact William Wittenbrock.</h2>
             <Field type="hidden" name="form-name" value="contact-william" />
             <Field type="hidden" name="voight-kampff-test" />
             <FormField
