@@ -33,11 +33,23 @@ export default function SubscribeForm() {
           FNAME: formValues.firstName,
           LNAME: formValues.lastName,
         }).then(data => {
-          if (data.result === 'error') {
-            alert('error: likely a duplicate email');
-          } else {
-            alert('success');
+          if (data.result === 'success') {
+            alert('Thank you for subscribing!');
             actions.resetForm();
+            return;
+          }
+
+          if (data.msg.includes('is already subscribed')) {
+            alert("It looks like you're already subscribed.");
+            actions.resetForm();
+            return;
+          }
+
+          if (data.result === 'error') {
+            alert(
+              'An error occured during the sign up process. Please refresh the page and try again. If this error persists, please send me a message: wittenbrockdesign.com/contact.'
+            );
+            return;
           }
         });
       }}
@@ -53,7 +65,6 @@ export default function SubscribeForm() {
             <h2 tw="sr-only">
               Subscribe to the Wittenbrock Design newsletter.
             </h2>
-            <Field type="hidden" name="form-name" value="newsletter-signup" />
             <FormField
               type="text"
               name="firstName"
