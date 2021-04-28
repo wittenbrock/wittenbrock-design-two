@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import tw, { css, styled } from 'twin.macro';
 import Image from 'gatsby-image';
 
-const defaultLinkStyles = `block border-b-8 border-solid border-transparent focus:border-blue-lighter active:border-transparent focus:outline-none no-underline hover:cursor-pointer max-w-md mx-auto lg:mx-0 min-w-full sm:min-w-112`;
+const defaultLinkStyles = `block bg-white border-b-8 border-solid border-transparent focus:border-blue-lighter active:border-transparent focus:outline-none no-underline hover:cursor-pointer max-w-md mx-auto lg:mx-0 min-w-full sm:min-w-112`;
 
 const isOdd = integer => Boolean(integer % 2);
 

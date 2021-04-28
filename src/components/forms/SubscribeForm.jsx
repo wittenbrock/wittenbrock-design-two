@@ -32,26 +32,34 @@ export default function SubscribeForm() {
         addToMailchimp(formValues.email, {
           FNAME: formValues.firstName,
           LNAME: formValues.lastName,
-        }).then(data => {
-          if (data.result === 'success') {
-            alert('Thank you for subscribing!');
-            actions.resetForm();
-            return;
-          }
-
-          if (data.msg.includes('is already subscribed')) {
-            alert("It looks like you're already subscribed.");
-            actions.resetForm();
-            return;
-          }
-
-          if (data.result === 'error') {
+        })
+          .then(data => {
+            // If Mail Chimp responds with success, notify the user
+            if (data.result === 'success') {
+              alert('Thank you for subscribing!');
+              return;
+            }
+            // If Mail Chimp responds that the user has already subscribed, notify them
+            if (data.msg.includes('is already subscribed')) {
+              alert("It looks like you're already subscribed.");
+              return;
+            }
+            // If Mail Chimp resonds with an error, notify the user
+            if (data.result === 'error') {
+              alert(
+                'An error occured during the sign up process. Please refresh the page and try again. If this error persists, please send me a message: wittenbrockdesign.com/contact.'
+              );
+              return;
+            }
+          })
+          // Handle the edge case where browser extensions prevent posting to Mail Chimp
+          .catch(() => {
             alert(
-              'An error occured during the sign up process. Please refresh the page and try again. If this error persists, please send me a message: wittenbrockdesign.com/contact.'
+              'An error occured during the sign up process. The form did not submit successfully. This could be caused by privacy related browser extensions. Please disable these extensions or try again in a different browser.'
             );
-            return;
-          }
-        });
+          })
+          // Clear the form's inputs
+          .finally(() => actions.resetForm());
       }}
     >
       {({ isValid, dirty }) => (
