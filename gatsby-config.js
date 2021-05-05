@@ -20,6 +20,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-eslint',
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
@@ -47,13 +48,14 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
+                return {
+                  ...edge.node.frontmatter,
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: `${site.siteMetadata.siteUrl}/blog${edge.node.fields.slug}`,
                   guid: `${site.siteMetadata.siteUrl}/blog${edge.node.fields.slug}`,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
-                });
+                };
               });
             },
             query: `
