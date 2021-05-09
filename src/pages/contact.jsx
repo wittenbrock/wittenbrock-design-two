@@ -36,7 +36,7 @@ export default function ContactPage() {
                 Drop me a line.
               </h1>
               <p tw="font-body font-normal text-lg sm:text-xl xl:text-2xl mb-8 sm:mb-10 xl:mb-12">
-                I'm always happy to help.
+                I&apos;m always happy to help.
               </p>
               <div tw="flex justify-between w-40">
                 <LinkedinIcon />

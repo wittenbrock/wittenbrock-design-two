@@ -6,7 +6,7 @@ import tw from 'twin.macro';
 import { pulsateBack } from '../components/Buttons';
 
 export default function ContactIcon(props) {
-  const { size, height, width, color } = props;
+  const { size, color } = props;
 
   return (
     <div>
@@ -38,15 +38,12 @@ export default function ContactIcon(props) {
   );
 }
 
-ContactIcon.propTypes = {
-  size: PropTypes.string,
-  height: PropTypes.string,
-  width: PropTypes.string,
-  color: PropTypes.string,
+ContactIcon.defaultProps = {
+  size: 'large',
+  color: 'white',
 };
 
-ContactIcon.defaultProps = {
-  height: `24`,
-  width: `24`,
-  color: `white`,
+ContactIcon.propTypes = {
+  size: PropTypes.oneOf(['small', 'large']),
+  color: PropTypes.oneOf(['white', 'gray']),
 };

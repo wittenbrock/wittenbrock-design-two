@@ -1,10 +1,12 @@
 import React from 'react';
-import tw, { css, styled } from 'twin.macro';
+import tw, { css } from 'twin.macro';
 import { keyframes } from '@emotion/react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-import { MailIcon, SendIcon, HomeIcon } from '../icons';
+import MailIcon from '../icons/MailIcon';
+import SendIcon from '../icons/SendIcon';
+import HomeIcon from '../icons/HomeIcon';
 import tailwindColors from '../../tailwind-colors';
 
 const pulsateBackKeyframe = keyframes`
@@ -63,6 +65,7 @@ const buttonBaseStyles = [
 
 export function SubmitButton(props) {
   const { disabled } = props;
+
   return (
     <div tw="flex justify-center mt-3 lg:mt-0 xl:mt-6">
       <button
@@ -97,6 +100,10 @@ export function HomeButton() {
     </Link>
   );
 }
+
+SubmitButton.defaultProps = {
+  disabled: false,
+};
 
 SubmitButton.propTypes = {
   disabled: PropTypes.bool,

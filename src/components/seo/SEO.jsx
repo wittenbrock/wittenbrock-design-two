@@ -8,7 +8,23 @@ import Twitter from './Twitter';
 
 export default function SEO(props) {
   const { title, desc, banner, pathname, article, date, updated } = props;
-  const { site } = useStaticQuery(query);
+  const { site } = useStaticQuery(graphql`
+    {
+      site {
+        buildTime(formatString: "YYYY-MM-DD")
+        siteMetadata {
+          siteUrl
+          defaultTitle: title
+          defaultDescription: description
+          defaultBanner: banner
+          headline
+          siteLanguage
+          ogLanguage
+          author
+        }
+      }
+    }
+  `);
 
   const {
     buildTime,
@@ -191,21 +207,3 @@ SEO.defaultProps = {
   date: null,
   updated: null,
 };
-
-const query = graphql`
-  query SEO {
-    site {
-      buildTime(formatString: "YYYY-MM-DD")
-      siteMetadata {
-        siteUrl
-        defaultTitle: title
-        defaultDescription: description
-        defaultBanner: banner
-        headline
-        siteLanguage
-        ogLanguage
-        author
-      }
-    }
-  }
-`;

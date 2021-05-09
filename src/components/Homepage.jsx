@@ -1,16 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 import { keyframes } from '@emotion/react';
 import tw, { css } from 'twin.macro';
 import { useDebounce } from 'use-debounce';
-import { Link } from 'gatsby';
 
 import WittenbrockDesignLogo from './wittenbrock-design-logo/WittenbrockDesignLogo';
 import WittenbrockDesignLogoAnimated from './wittenbrock-design-logo/WittenbrockDesignLogoAnimated';
 import Blog from './Blog';
 import useWindowSize from '../hooks/useWindowSize';
 import GrayDivider from './GrayDivider';
-import { MailIcon } from '../icons';
-import { SubscribeButton } from '../components/Buttons';
+import { SubscribeButton } from './Buttons';
 
 // Animate the homepage's subtitle
 const TextFocusInKeyframe = keyframes`
@@ -79,7 +78,7 @@ export default function Homepage(props) {
     if (isFirstVisit) {
       localStorage.setItem('isFirstVisit', 'false');
     }
-  }, []);
+  }, [isFirstVisit]);
 
   // When a user resizes their window, recalcuate the gray divider's height.
   // Debounce this function at 300ms to prevent too many calls and browser lag.
@@ -107,7 +106,7 @@ export default function Homepage(props) {
           </p>
           <div tw="flex justify-center relative mt-32">
             <GrayDivider dividerHeight={dividerHeight} isFirstVisit />
-            <div ref={dividerStart} aria-hidden="true"></div>
+            <div ref={dividerStart} aria-hidden="true" />
           </div>
         </>
       );
@@ -122,7 +121,7 @@ export default function Homepage(props) {
         </p>
         <div tw="flex justify-center relative mt-32">
           <GrayDivider dividerHeight={dividerHeight} />
-          <div ref={dividerStart} aria-hidden="true"></div>
+          <div ref={dividerStart} aria-hidden="true" />
         </div>
       </>
     );
@@ -136,12 +135,12 @@ export default function Homepage(props) {
           {renderLogoAndSubtitleAndDivider()}
         </div>
         <Blog posts={posts} />
-        <div ref={dividerEnd} aria-hidden="true"></div>
+        <div ref={dividerEnd} aria-hidden="true" />
       </section>
       <footer tw="pb-24 xl:pb-32">
         <header tw="text-center text-white mb-24 max-w-lg xl:max-w-2xl mx-auto">
           <h2 tw="font-heading font-bold text-3xl sm:text-4xl xl:text-5xl mb-2 sm:mb-3 xl:mb-4">
-            Read what's next.
+            Read what&apos;s next.
           </h2>
           <p tw="font-body font-normal text-lg sm:text-xl xl:text-2xl">
             Get my latest blog posts sent straight to your inbox.
@@ -154,3 +153,34 @@ export default function Homepage(props) {
     </>
   );
 }
+
+Homepage.propTypes = {
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      node: PropTypes.shape({
+        fields: PropTypes.shape({
+          slug: PropTypes.string.isRequired,
+        }).isRequired,
+        frontmatter: PropTypes.shape({
+          alt: PropTypes.string.isRequired,
+          date: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
+          thumbnail: PropTypes.shape({
+            childCloudinaryAsset: PropTypes.shape({
+              fluid: PropTypes.shape({
+                aspectRatio: PropTypes.number.isRequired,
+                base64: PropTypes.string,
+                sizes: PropTypes.string.isRequired,
+                src: PropTypes.string.isRequired,
+                srcSet: PropTypes.string.isRequired,
+              }).isRequired,
+            }).isRequired,
+          }).isRequired,
+          title: PropTypes.string.isRequired,
+        }).isRequired,
+        id: PropTypes.string.isRequired,
+        timeToRead: PropTypes.number.isRequired,
+      }).isRequired,
+    }).isRequired
+  ).isRequired,
+};

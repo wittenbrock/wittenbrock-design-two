@@ -82,6 +82,12 @@ const globalCSS = css`
     height: 100%;
   }
 
+  // Make sure that svg icons are always visible on iOS Safari
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+
   /* Tailwind.config has a hard time with content: url() */
   figcaption::before {
     content: url('${CameraIcon}');
@@ -124,10 +130,10 @@ const globalCSS = css`
 `;
 
 export default function PageWrapper(props) {
-  const { children, ...rest } = props;
+  const { children } = props;
 
   return (
-    <div {...rest}>
+    <div>
       <GlobalStyles />
       <Global styles={globalCSS} />
       {children}

@@ -13,11 +13,13 @@ const isOdd = integer => Boolean(integer % 2);
 const generateLinkStyles = number => {
   if (number === 0) {
     return tw`${defaultLinkStyles}`;
-  } else if (isOdd(number)) {
-    return tw`${defaultLinkStyles} lg:ml-auto lg:-mt-48`;
-  } else {
-    return tw`${defaultLinkStyles} lg:-mt-12`;
   }
+
+  if (isOdd(number)) {
+    return tw`${defaultLinkStyles} lg:ml-auto lg:-mt-48`;
+  }
+
+  return tw`${defaultLinkStyles} lg:-mt-12`;
 };
 
 const StyledLink = styled(Link)`
@@ -46,8 +48,8 @@ const imageStyles = [
 
 export default function BlogCard(props) {
   const { post, index } = props;
-  const slug = post.fields.slug;
-  const timeToRead = post.timeToRead;
+  const { timeToRead } = post;
+  const { slug } = post.fields;
   const thumbnail = post.frontmatter.thumbnail.childCloudinaryAsset.fluid;
   const { alt, title, date, description } = post.frontmatter;
 
@@ -82,16 +84,27 @@ export default function BlogCard(props) {
 BlogCard.propTypes = {
   index: PropTypes.number.isRequired,
   post: PropTypes.shape({
-    timeToRead: PropTypes.number.isRequired,
     fields: PropTypes.shape({
       slug: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
     frontmatter: PropTypes.shape({
       alt: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      thumbnail: PropTypes.object.isRequired,
-    }),
+      thumbnail: PropTypes.shape({
+        childCloudinaryAsset: PropTypes.shape({
+          fluid: PropTypes.shape({
+            aspectRatio: PropTypes.number.isRequired,
+            base64: PropTypes.string,
+            sizes: PropTypes.string.isRequired,
+            src: PropTypes.string.isRequired,
+            srcSet: PropTypes.string.isRequired,
+          }).isRequired,
+        }).isRequired,
+      }).isRequired,
+      title: PropTypes.string.isRequired,
+    }).isRequired,
+    id: PropTypes.string.isRequired,
+    timeToRead: PropTypes.number.isRequired,
   }).isRequired,
 };

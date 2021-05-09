@@ -63,14 +63,14 @@ const invalidStyles = css`
 `;
 
 // Creates an input or textarea field with a label and error message
-export default function FormField({ label, ...props }) {
+export default function FormField(props) {
   const [field, meta] = useField(props);
-  const { type } = props;
+  const { label, type, id, name } = props;
   const fieldValidationError = meta.touched && meta.error;
 
   return (
     <p tw="pb-6 sm:pb-8 relative">
-      <label tw="sr-only" htmlFor={props.id || props.name}>
+      <label tw="sr-only" htmlFor={id || name}>
         {label}
       </label>
 
@@ -82,7 +82,9 @@ export default function FormField({ label, ...props }) {
             pulsateBackGentle,
             fieldValidationError && invalidStyles,
           ]}
+          // eslint-disable-next-line
           {...field}
+          // eslint-disable-next-line
           {...props}
         />
       )}
@@ -96,9 +98,11 @@ export default function FormField({ label, ...props }) {
             pulsateBackGentle,
             fieldValidationError && invalidStyles,
           ]}
+          // eslint-disable-next-line
           {...field}
+          // eslint-disable-next-line
           {...props}
-        ></textarea>
+        />
       )}
 
       {/* Create an error message */}
@@ -112,8 +116,9 @@ export default function FormField({ label, ...props }) {
 }
 
 FormField.propTypes = {
-  type: PropTypes.oneOf(['text', 'hidden', 'email', 'textarea']).isRequired,
-  id: PropTypes.string,
-  name: PropTypes.string,
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['text', 'hidden', 'email', 'textarea']).isRequired,
 };

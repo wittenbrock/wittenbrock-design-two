@@ -66,7 +66,9 @@ const createDropCap = string => {
 
 export default function BlogPost(props) {
   const { pageContext } = props;
-  const { post, portrait } = props.data;
+  const {
+    data: { post, portrait },
+  } = props;
 
   const prevPost = pageContext.prev
     ? {
@@ -131,6 +133,7 @@ export default function BlogPost(props) {
             <div
               id="post-content"
               css={[tw`prose prose-sm sm:prose py-10`, dropCapFirstLetter]}
+              // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{ __html: postHTML }}
             />
           </article>
@@ -247,6 +250,52 @@ export const query = graphql`
 `;
 
 BlogPost.propTypes = {
-  data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired,
+  pageContext: PropTypes.shape({
+    next: PropTypes.shape({
+      fields: PropTypes.shape({
+        slug: PropTypes.string.isRequired,
+      }).isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }),
+    prev: PropTypes.shape({
+      fields: PropTypes.shape({
+        slug: PropTypes.string.isRequired,
+      }).isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+    }),
+    slug: PropTypes.string,
+  }).isRequired,
+  data: PropTypes.shape({
+    portrait: PropTypes.shape({
+      childCloudinaryAsset: PropTypes.shape({
+        fixed: PropTypes.shape({
+          base64: PropTypes.string,
+          height: PropTypes.number.isRequired,
+          src: PropTypes.string.isRequired,
+          srcSet: PropTypes.string.isRequired,
+          width: PropTypes.number.isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
+    post: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        date: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        thumbnail: PropTypes.shape({
+          childCloudinaryAsset: PropTypes.shape({
+            fixed: PropTypes.shape({
+              src: PropTypes.string.isRequired,
+            }).isRequired,
+          }).isRequired,
+        }).isRequired,
+        title: PropTypes.string.isRequired,
+        updated: PropTypes.string,
+      }).isRequired,
+      html: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };

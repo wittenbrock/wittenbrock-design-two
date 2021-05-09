@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import tw from 'twin.macro';
 
 import {
@@ -14,6 +15,7 @@ import {
 // Animated logo seen on wittenbrockdesign.com's homepage
 export default function WittenbrockDesignLogoAnimated(props) {
   const { isFirstVisit } = props;
+
   return (
     <figure tw="h-32 md:h-40 xl:h-48 w-32 md:w-40 xl:w-48">
       <svg
@@ -73,3 +75,11 @@ export default function WittenbrockDesignLogoAnimated(props) {
     </figure>
   );
 }
+
+WittenbrockDesignLogoAnimated.defaultProps = {
+  isFirstVisit: false,
+};
+
+WittenbrockDesignLogoAnimated.propTypes = {
+  isFirstVisit: PropTypes.bool,
+};

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import tw from 'twin.macro';
+import 'twin.macro';
 
 import { PageWrapper, SEO } from '../components';
 import website from '../../website';
@@ -15,8 +14,8 @@ export default function PageNotFound() {
           Page Not Found
         </h1>
         <p tw="font-body font-normal text-lg sm:text-xl xl:text-2xl mb-16">
-          It looks like you've clicked a broken link or entered a URL that
-          doesn't exist on this site.
+          It looks like you&apos;ve clicked a broken link or entered a URL that
+          doesn&apos;t exist on this site.
         </p>
         <HomeButton />
       </section>

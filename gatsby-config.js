@@ -1,8 +1,8 @@
-require(`dotenv`).config();
+require('dotenv').config();
+const website = require('./website');
+const tailwindColors = require('./tailwind-colors.js');
 
-const website = require(`./website`);
-const tailwindColors = require(`./tailwind-colors.js`);
-const pathPrefix = website.pathPrefix === `/` ? `` : website.pathPrefix;
+const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix;
 
 module.exports = {
   pathPrefix: website.pathPrefix,
@@ -19,18 +19,18 @@ module.exports = {
     author: website.author,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-eslint',
     {
-      resolve: `gatsby-plugin-gtag`,
+      resolve: 'gatsby-plugin-gtag',
       options: {
-        trackingId: `UA-133453058-1`,
+        trackingId: 'UA-133453058-1',
         head: true,
         anonymize: true,
       },
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: 'gatsby-plugin-feed',
       options: {
         query: `
           {
@@ -76,49 +76,49 @@ module.exports = {
                 }
               }
             `,
-            output: `/rss.xml`,
-            title: `RSS Feed | Wittenbrock Design`,
+            output: '/rss.xml',
+            title: 'RSS Feed | Wittenbrock Design',
           },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: website.title,
         short_name: website.titleAlt,
         description: website.description,
-        start_url: `/`,
+        start_url: '/',
         background_color: website.backgroundColor,
         theme_color: website.themeColor,
-        display: `standalone`,
+        display: 'standalone',
         icon: website.favicon,
       },
     },
-    `gatsby-plugin-emotion`,
+    'gatsby-plugin-emotion',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/icons`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `blog-posts`,
+        name: 'blog-posts',
         path: `${__dirname}/src/pages/blog`,
       },
     },
     {
-      resolve: `gatsby-transformer-cloudinary`,
+      resolve: 'gatsby-transformer-cloudinary',
       options: {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
@@ -126,9 +126,9 @@ module.exports = {
         uploadFolder: 'wittenbrock-design-assets',
       },
     },
-    `gatsby-plugin-eslint`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-plugin-eslint',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
@@ -136,17 +136,17 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-prismjs',
             options: {
               noInlineHighlight: true,
             },
           },
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 670,
               backgroundColor: tailwindColors.indigo.darkest,
@@ -158,7 +158,7 @@ module.exports = {
       },
     },
     // Must be placed at the end
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
+    'gatsby-plugin-offline',
+    'gatsby-plugin-netlify',
   ],
 };

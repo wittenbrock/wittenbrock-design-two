@@ -35,12 +35,12 @@ export default function RssIcon(props) {
   );
 }
 
-RssIcon.propTypes = {
-  size: PropTypes.string,
-  color: PropTypes.string,
+RssIcon.defaultProps = {
+  size: 'large',
+  color: 'white',
 };
 
-RssIcon.defaultProps = {
-  size: `large`,
-  color: `white`,
+RssIcon.propTypes = {
+  size: PropTypes.oneOf(['small', 'large']),
+  color: PropTypes.oneOf(['white', 'gray']),
 };

@@ -28,6 +28,7 @@ const formStyles = css`
 // A helper function to encode the form's submission the way Netlify expects it
 const encode = data => {
   return Object.keys(data)
+    // eslint-disable-next-line prefer-template
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
@@ -59,10 +60,12 @@ export default function ContactForm() {
           body: encode({ "form-name": "contact-william", ...values })
         })
           .then(() => {
+            // eslint-disable-next-line no-alert
             alert(`Your message was sent successfully. Thank you!`);
             actions.resetForm();
           })
           .catch(error => {
+            // eslint-disable-next-line no-alert
             alert(
               `Oops! An error occurred while submitting the form. Please refresh the page and try again.
               

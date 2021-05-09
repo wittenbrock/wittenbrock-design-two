@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import tw from 'twin.macro';
 
 import { pulsateBack } from '../components/Buttons';
@@ -16,7 +17,7 @@ export default function LinkedinIcon(props) {
         color === `gray` ? tw`text-gray-300` : tw`text-white`,
       ]}
     >
-      <span tw="sr-only">Visit William's LinkedIn profile.</span>
+      <span tw="sr-only">Visit William&apos;s LinkedIn profile.</span>
       <svg
         fill="currentColor"
         viewBox="0 0 24 24"
@@ -33,3 +34,13 @@ export default function LinkedinIcon(props) {
     </a>
   );
 }
+
+LinkedinIcon.defaultProps = {
+  size: 'large',
+  color: 'white',
+};
+
+LinkedinIcon.propTypes = {
+  size: PropTypes.oneOf(['small', 'large']),
+  color: PropTypes.oneOf(['white', 'gray']),
+};

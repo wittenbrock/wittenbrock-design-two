@@ -1,6 +1,6 @@
 import React from 'react';
-import 'twin.macro';
 import { keyframes } from '@emotion/react';
+import PropTypes from 'prop-types';
 import { css } from 'twin.macro';
 
 import tailwindColors from '../../tailwind-colors';
@@ -37,7 +37,7 @@ export default function GrayDivider(props) {
     animation: ${moveVerticalLineKeyframes} 4s ease-in 4.5s forwards;
   `;
 
-  const GrayDivider = () => (
+  const GrayDividerStatic = () => (
     <svg
       tw="absolute"
       xmlns="http://www.w3.org/2000/svg"
@@ -135,5 +135,14 @@ export default function GrayDivider(props) {
     </svg>
   );
 
-  return isFirstVisit ? <GrayDividerAnimated /> : <GrayDivider />;
+  return isFirstVisit ? <GrayDividerAnimated /> : <GrayDividerStatic />;
 }
+
+GrayDivider.defaultProps = {
+  isFirstVisit: false,
+};
+
+GrayDivider.propTypes = {
+  isFirstVisit: PropTypes.bool,
+  dividerHeight: PropTypes.number.isRequired,
+};
