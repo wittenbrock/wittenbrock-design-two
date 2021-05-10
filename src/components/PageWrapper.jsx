@@ -82,12 +82,6 @@ const globalCSS = css`
     height: 100%;
   }
 
-  // Make sure that svg icons are always visible on iOS Safari
-  svg {
-    height: 100%;
-    width: 100%;
-  }
-
   /* Tailwind.config has a hard time with content: url() */
   figcaption::before {
     content: url('${CameraIcon}');
