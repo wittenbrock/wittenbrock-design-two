@@ -1,6 +1,6 @@
 [build.environment]
-  NODE_VERSION = "16.0.0"
-  NPM_VERSION = "7.10.0"
+  NODE_VERSION = "16.1.0"
+  NPM_VERSION = "7.11.2"
 
 [build]
   publish = "public"
