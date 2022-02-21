@@ -1,11 +1,21 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - init: rm -rf /workspace/wittenbrock-design-two/node_modules && npm install
-    command: npm run clean && npm start
+  # Open a terminal window to the left
+  - openMode: split-left
+    # When Gitpod first initializes, install npm packages
+    init: npm install
+    # Each time Gitpod starts, switch the terminal to z shell
+    command: zsh
+  # Open a terminal window to the right
+  - openMode: split-right
+    # Each time Gitpod starts, switch the terminal to z shell
+    command: zsh
+
 ports:
   - port: 8000
     onOpen: notify
+# visibility: private
 github:
   prebuilds:
     # enable for the main/default branch (defaults to true)
@@ -24,3 +34,23 @@ github:
     addBadge: false
     # add a label once the prebuild is ready to pull requests (defaults to false)
     addLabel: false
+
+vscode:
+  extensions:
+    - bungcip.better-toml
+    - naumovs.color-highlight
+    - tobermory.es6-string-html
+    - dbaeumer.vscode-eslint
+    - github.vscode-pull-request-github
+    - eamodio.gitlens
+    - graphql.vscode-graphql
+    - kumar-harsh.graphql-for-vscode
+    - silvenon.mdx
+    - christian-kohler.npm-intellisense
+    - zhuangtongfa.material-theme
+    - christian-kohler.path-intellisense
+    - esbenp.prettier-vscode
+    - jpoissonnier.vscode-styled-components
+    - ms-azuretools.vscode-docker
+    - pflannery.vscode-versionlens
+    - bradlc.vscode-tailwindcss
